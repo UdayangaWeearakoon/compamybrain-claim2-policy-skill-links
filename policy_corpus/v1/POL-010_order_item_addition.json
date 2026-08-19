@@ -1,0 +1,26 @@
+{
+  "policy_id": "POL-010",
+  "family": "Order Item Addition Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "order_issue",
+  "source_subflows": [
+    "manage_create"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-010-R1",
+      "statement": "Before adding an item to an order, the agent must verify identity using full name, account ID, and order ID via Verify Identity."
+    },
+    {
+      "rule_id": "POL-010-R2",
+      "statement": "If the order has not yet shipped (status Order Received), the new item may be added directly to the existing order."
+    },
+    {
+      "rule_id": "POL-010-R3",
+      "statement": "If the order has already shipped (In Transit, Out for Delivery, or Delivered), only Silver and Gold members may receive the new item as an expedited, no-fee separate shipment; other membership levels are not eligible for this accommodation."
+    }
+  ]
+}

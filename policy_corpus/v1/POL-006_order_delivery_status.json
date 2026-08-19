@@ -1,0 +1,22 @@
+{
+  "policy_id": "POL-006",
+  "family": "Order Delivery Status Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "order_issue",
+  "source_subflows": [
+    "status_delivery_time"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-006-R1",
+      "statement": "Before reporting delivery status, the agent must verify identity using full name, account ID, and order ID via Verify Identity."
+    },
+    {
+      "rule_id": "POL-006-R2",
+      "statement": "The agent must query Ask the Oracle to determine whether the delivery delay was a company error before making any commitment to the customer."
+    }
+  ]
+}

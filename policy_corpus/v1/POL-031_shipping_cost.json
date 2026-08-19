@@ -1,0 +1,30 @@
+{
+  "policy_id": "POL-031",
+  "family": "Shipping Cost Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "shipping_issue",
+  "source_subflows": [
+    "cost"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-031-R1",
+      "statement": "The agent must validate the purchase using username, email address, and order ID via Validate Purchase."
+    },
+    {
+      "rule_id": "POL-031-R2",
+      "statement": "The agent must record the shipping status as one of: Order Received, In Transit, Out for Delivery, or Delivered, via Shipping Status."
+    },
+    {
+      "rule_id": "POL-031-R3",
+      "statement": "If status is Order Received or In Transit, the agent must waive the shipping fee entirely via Update Order rather than issuing a partial refund."
+    },
+    {
+      "rule_id": "POL-031-R4",
+      "statement": "If status is Out for Delivery or Delivered, the agent must instead refund the standard shipping fee of $8.00 via Offer Refund, since the fee cannot be waived after shipment."
+    }
+  ]
+}

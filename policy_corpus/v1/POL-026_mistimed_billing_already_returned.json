@@ -1,0 +1,30 @@
+{
+  "policy_id": "POL-026",
+  "family": "Mistimed Billing Policy (Already Returned)",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "purchase_dispute",
+  "source_subflows": [
+    "mistimed_billing_already_returned"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-026-R1",
+      "statement": "Before evaluating the claim, the agent must validate the purchase using username, email address, and order ID via Validate Purchase."
+    },
+    {
+      "rule_id": "POL-026-R2",
+      "statement": "The agent must record the number of days the customer has waited for the refund via Record Reason; a wait of more than 7 days is treated as a valid company error and proceeds directly to crediting the account."
+    },
+    {
+      "rule_id": "POL-026-R3",
+      "statement": "If the wait is 7 days or less, only Gold members are eligible to receive a credit anyway; all other membership levels must be denied and the order must not be updated."
+    },
+    {
+      "rule_id": "POL-026-R4",
+      "statement": "An approved credit must be processed by entering 'give credit' via Update Order."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "policy_id": "POL-024",
+  "family": "Out-of-Stock Single Item Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "purchase_dispute",
+  "source_subflows": [
+    "out_of_stock_one_item"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-024-R1",
+      "statement": "The agent must record the affected item's brand and type via Record Reason."
+    },
+    {
+      "rule_id": "POL-024-R2",
+      "statement": "The agent must notify the Purchasing Department via Notify Internal Team by entering 'purchasing department'."
+    },
+    {
+      "rule_id": "POL-024-R3",
+      "statement": "A back-order via Make Purchase may be offered only if the customer remains unsatisfied after notification, and must use the same credit card already on file."
+    }
+  ]
+}

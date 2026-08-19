@@ -1,0 +1,28 @@
+{
+  "policy_id": "POL-032",
+  "family": "Subscription Status Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "subscription_inquiry",
+  "source_subflows": [
+    "status_active",
+    "status_due_amount",
+    "status_due_date"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-032-R1",
+      "statement": "Before reporting subscription status, the agent must verify identity using full name, account ID, and order ID via Verify Identity."
+    },
+    {
+      "rule_id": "POL-032-R2",
+      "statement": "The agent must query Subscription Status to obtain the active/cancelled state, due amount, and due date, and report all three to the customer."
+    },
+    {
+      "rule_id": "POL-032-R3",
+      "statement": "The agent must send an account-login link via Send Link and ensure the customer knows their username, constructing it as first-letter-of-first-name + last name + 1 if unknown."
+    }
+  ]
+}

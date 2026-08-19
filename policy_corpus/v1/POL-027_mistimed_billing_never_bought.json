@@ -1,0 +1,30 @@
+{
+  "policy_id": "POL-027",
+  "family": "Mistimed Billing Policy (Never Bought)",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "purchase_dispute",
+  "source_subflows": [
+    "mistimed_billing_never_bought"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-027-R1",
+      "statement": "Before evaluating the claim, the agent must validate the purchase using username, email address, and order ID via Validate Purchase."
+    },
+    {
+      "rule_id": "POL-027-R2",
+      "statement": "The agent must query Ask the Oracle; if the Oracle confirms the customer is correct, the agent proceeds directly to crediting the account."
+    },
+    {
+      "rule_id": "POL-027-R3",
+      "statement": "If the Oracle indicates customer error, only Gold members are eligible to receive a credit anyway; all other membership levels must be denied and the order must not be updated."
+    },
+    {
+      "rule_id": "POL-027-R4",
+      "statement": "An approved credit must be processed by entering 'give credit' via Update Order."
+    }
+  ]
+}

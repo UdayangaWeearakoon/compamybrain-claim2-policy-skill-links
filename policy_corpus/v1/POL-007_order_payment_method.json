@@ -1,0 +1,26 @@
+{
+  "policy_id": "POL-007",
+  "family": "Order Payment Method Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "order_issue",
+  "source_subflows": [
+    "status_payment_method"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-007-R1",
+      "statement": "Before changing a payment method, the agent must verify identity using full name, account ID, and order ID via Verify Identity."
+    },
+    {
+      "rule_id": "POL-007-R2",
+      "statement": "A payment method change may be applied immediately only if the shipping status is Order Received or In Transit; if the status is Out for Delivery or Delivered, the new payment method may only apply to future orders."
+    },
+    {
+      "rule_id": "POL-007-R3",
+      "statement": "The new payment method must be one of: credit card, debit card, or paypal."
+    }
+  ]
+}

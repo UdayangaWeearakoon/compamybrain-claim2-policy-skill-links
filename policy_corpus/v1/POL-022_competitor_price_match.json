@@ -1,0 +1,31 @@
+{
+  "policy_id": "POL-022",
+  "family": "Competitor Price Match Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "purchase_dispute",
+  "source_subflows": [
+    "bad_price_competitor",
+    "bad_price_yesterday"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-022-R1",
+      "statement": "The agent must pull up the account using full name or account ID via Pull up Account before addressing a price dispute."
+    },
+    {
+      "rule_id": "POL-022-R2",
+      "statement": "The agent must record the dispute reason as one of: competitor or yesterday, via Record Reason."
+    },
+    {
+      "rule_id": "POL-022-R3",
+      "statement": "The agent must verify identity using full name, account ID, and order ID via Verify Identity before offering any compensation."
+    },
+    {
+      "rule_id": "POL-022-R4",
+      "statement": "If the customer remains unsatisfied after being told prices are dynamic, the agent may offer a discount via Promo Code with no further identity or eligibility check required."
+    }
+  ]
+}

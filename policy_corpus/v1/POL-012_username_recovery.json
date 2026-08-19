@@ -1,0 +1,26 @@
+{
+  "policy_id": "POL-012",
+  "family": "Username Recovery Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "account_access",
+  "source_subflows": [
+    "recover_username"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-012-R1",
+      "statement": "To recover a username, the agent must collect at least 3 of the following 4 identity items: full name, zip code, phone number, or email address, via Verify Identity."
+    },
+    {
+      "rule_id": "POL-012-R2",
+      "statement": "The recovered username must be constructed as the first letter of the first name plus the full last name plus the digit 1 (e.g., John Smith -> jsmith1)."
+    },
+    {
+      "rule_id": "POL-012-R3",
+      "statement": "If this username-recovery step occurs as part of Validate Purchase or another external flow, the agent must treat the constructed username as valid and continue, even if the system flags it as invalid."
+    }
+  ]
+}

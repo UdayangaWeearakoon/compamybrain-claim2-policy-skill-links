@@ -1,0 +1,26 @@
+{
+  "policy_id": "POL-030",
+  "family": "Missing Item Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "shipping_issue",
+  "source_subflows": [
+    "missing"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-030-R1",
+      "statement": "The agent must validate the purchase using username, email address, and order ID via Validate Purchase."
+    },
+    {
+      "rule_id": "POL-030-R2",
+      "statement": "The agent must record the number of days the customer has been waiting via Record Reason."
+    },
+    {
+      "rule_id": "POL-030-R3",
+      "statement": "A replacement order (new shipment) via Update Order and Make Purchase may only be initiated if the customer has been waiting 7 days (one week) or longer; waits under 7 days do not qualify for a replacement shipment."
+    }
+  ]
+}
