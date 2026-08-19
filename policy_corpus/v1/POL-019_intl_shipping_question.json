@@ -1,0 +1,26 @@
+{
+  "policy_id": "POL-019",
+  "family": "International Shipping Question Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "manage_account",
+  "source_subflows": [
+    "status_shipping_question"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-019-R1",
+      "statement": "Before answering an international (to/from out-of-country) shipping eligibility question, the agent must pull up the account using full name or account ID via Pull up Account."
+    },
+    {
+      "rule_id": "POL-019-R2",
+      "statement": "The agent must query Ask the Oracle to determine whether the account is eligible for free international shipping before answering."
+    },
+    {
+      "rule_id": "POL-019-R3",
+      "statement": "Every resolved international shipping inquiry must conclude with the agent asking if the customer needs anything else."
+    }
+  ]
+}

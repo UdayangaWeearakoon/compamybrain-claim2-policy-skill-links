@@ -1,0 +1,27 @@
+{
+  "policy_id": "POL-016",
+  "family": "Site Performance Troubleshooting Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "troubleshoot_site",
+  "source_subflows": [
+    "search_results",
+    "slow_speed"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-016-R1",
+      "statement": "For search or site-speed issues, the agent must first attempt Log Out/In or Try Again before escalating to the Website Team."
+    },
+    {
+      "rule_id": "POL-016-R2",
+      "statement": "Escalation to the Website Team via Notify Internal Team requires entering 'website team' as the value, and must occur only after the basic troubleshooting steps have been offered."
+    },
+    {
+      "rule_id": "POL-016-R3",
+      "statement": "The agent may complete the purchase on the customer's behalf via Make Purchase only after collecting the credit card number, expiration date, and the brand/item phrase."
+    }
+  ]
+}

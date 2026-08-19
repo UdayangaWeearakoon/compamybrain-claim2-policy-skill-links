@@ -1,0 +1,26 @@
+{
+  "policy_id": "POL-008",
+  "family": "Order Quantity Discrepancy Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "order_issue",
+  "source_subflows": [
+    "status_quantity"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-008-R1",
+      "statement": "Before resolving a quantity discrepancy, the agent must verify identity using full name, account ID, and order ID via Verify Identity."
+    },
+    {
+      "rule_id": "POL-008-R2",
+      "statement": "The agent must query Ask the Oracle; if the Oracle indicates the charge record was accurate as billed (no company error), no refund action is taken and the conversation ends."
+    },
+    {
+      "rule_id": "POL-008-R3",
+      "statement": "If the Oracle confirms the company's mistake, refund eligibility depends on shipping status: Order Received status permits an immediate refund; In Transit, Out for Delivery, or Delivered status requires the customer to wait until the item arrives and contact support again before any refund is offered."
+    }
+  ]
+}

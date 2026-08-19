@@ -1,0 +1,30 @@
+{
+  "policy_id": "POL-034",
+  "family": "Subscription Extension Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "subscription_inquiry",
+  "source_subflows": [
+    "manage_extension"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-034-R1",
+      "statement": "Before evaluating an extension request, the agent must verify identity using full name, account ID, and order ID via Verify Identity."
+    },
+    {
+      "rule_id": "POL-034-R2",
+      "statement": "Extension eligibility is gated strictly by membership level: Gold members always qualify; Silver members qualify only if the payment is no more than 1 day late; Bronze and Guest members never qualify."
+    },
+    {
+      "rule_id": "POL-034-R3",
+      "statement": "An approved extension must be granted by entering 'extend subscription' via Update Account."
+    },
+    {
+      "rule_id": "POL-034-R4",
+      "statement": "A denied extension request must be escalated to the manager via Notify Internal Team, after collecting the customer's phone number via Enter Details."
+    }
+  ]
+}

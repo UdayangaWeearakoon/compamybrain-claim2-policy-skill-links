@@ -1,0 +1,397 @@
+{
+  "corpus_version": "v1",
+  "generated_at": "2026-08-18T16:22:58.143845+00:00",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "num_policies": 37,
+  "num_source_subflows_covered": 55,
+  "policies": [
+    {
+      "policy_id": "POL-001",
+      "file": "POL-001_refund_initiation.json",
+      "family": "Refund Initiation Policy",
+      "flow": "product_defect",
+      "source_subflows": [
+        "refund_initiate"
+      ],
+      "num_rules": 4
+    },
+    {
+      "policy_id": "POL-002",
+      "file": "POL-002_refund_update.json",
+      "family": "Refund Update Policy",
+      "flow": "product_defect",
+      "source_subflows": [
+        "refund_update"
+      ],
+      "num_rules": 3
+    },
+    {
+      "policy_id": "POL-003",
+      "file": "POL-003_refund_status.json",
+      "family": "Refund Status Policy",
+      "flow": "product_defect",
+      "source_subflows": [
+        "refund_status"
+      ],
+      "num_rules": 4
+    },
+    {
+      "policy_id": "POL-004",
+      "file": "POL-004_product_returns.json",
+      "family": "Product Return Policy",
+      "flow": "product_defect",
+      "source_subflows": [
+        "return_stain",
+        "return_color",
+        "return_size"
+      ],
+      "num_rules": 5
+    },
+    {
+      "policy_id": "POL-005",
+      "file": "POL-005_order_fee_dispute.json",
+      "family": "Order Fee Dispute Policy",
+      "flow": "order_issue",
+      "source_subflows": [
+        "status_mystery_fee"
+      ],
+      "num_rules": 3
+    },
+    {
+      "policy_id": "POL-006",
+      "file": "POL-006_order_delivery_status.json",
+      "family": "Order Delivery Status Policy",
+      "flow": "order_issue",
+      "source_subflows": [
+        "status_delivery_time"
+      ],
+      "num_rules": 2
+    },
+    {
+      "policy_id": "POL-007",
+      "file": "POL-007_order_payment_method.json",
+      "family": "Order Payment Method Policy",
+      "flow": "order_issue",
+      "source_subflows": [
+        "status_payment_method"
+      ],
+      "num_rules": 3
+    },
+    {
+      "policy_id": "POL-008",
+      "file": "POL-008_order_quantity_discrepancy.json",
+      "family": "Order Quantity Discrepancy Policy",
+      "flow": "order_issue",
+      "source_subflows": [
+        "status_quantity"
+      ],
+      "num_rules": 3
+    },
+    {
+      "policy_id": "POL-009",
+      "file": "POL-009_subscription_tier_change.json",
+      "family": "Order Shipping Tier Change Policy",
+      "flow": "order_issue",
+      "source_subflows": [
+        "manage_upgrade",
+        "manage_downgrade"
+      ],
+      "num_rules": 4
+    },
+    {
+      "policy_id": "POL-010",
+      "file": "POL-010_order_item_addition.json",
+      "family": "Order Item Addition Policy",
+      "flow": "order_issue",
+      "source_subflows": [
+        "manage_create"
+      ],
+      "num_rules": 3
+    },
+    {
+      "policy_id": "POL-011",
+      "file": "POL-011_order_cancellation.json",
+      "family": "Order Cancellation Policy",
+      "flow": "order_issue",
+      "source_subflows": [
+        "manage_cancel"
+      ],
+      "num_rules": 3
+    },
+    {
+      "policy_id": "POL-012",
+      "file": "POL-012_username_recovery.json",
+      "family": "Username Recovery Policy",
+      "flow": "account_access",
+      "source_subflows": [
+        "recover_username"
+      ],
+      "num_rules": 3
+    },
+    {
+      "policy_id": "POL-013",
+      "file": "POL-013_password_recovery.json",
+      "family": "Password Recovery Policy",
+      "flow": "account_access",
+      "source_subflows": [
+        "recover_password"
+      ],
+      "num_rules": 2
+    },
+    {
+      "policy_id": "POL-014",
+      "file": "POL-014_two_factor_reset.json",
+      "family": "Two-Factor Reset Policy",
+      "flow": "account_access",
+      "source_subflows": [
+        "reset_2fa"
+      ],
+      "num_rules": 3
+    },
+    {
+      "policy_id": "POL-015",
+      "file": "POL-015_card_cart_troubleshooting.json",
+      "family": "Payment Card and Cart Troubleshooting Policy",
+      "flow": "troubleshoot_site",
+      "source_subflows": [
+        "credit_card",
+        "shopping_cart"
+      ],
+      "num_rules": 3
+    },
+    {
+      "policy_id": "POL-016",
+      "file": "POL-016_site_performance_troubleshooting.json",
+      "family": "Site Performance Troubleshooting Policy",
+      "flow": "troubleshoot_site",
+      "source_subflows": [
+        "search_results",
+        "slow_speed"
+      ],
+      "num_rules": 3
+    },
+    {
+      "policy_id": "POL-017",
+      "file": "POL-017_addon_service.json",
+      "family": "Add-on Service Dispute Policy",
+      "flow": "manage_account",
+      "source_subflows": [
+        "status_service_added"
+      ],
+      "num_rules": 3
+    },
+    {
+      "policy_id": "POL-018",
+      "file": "POL-018_service_removal.json",
+      "family": "Service Removal Dispute Policy",
+      "flow": "manage_account",
+      "source_subflows": [
+        "status_service_removed"
+      ],
+      "num_rules": 3
+    },
+    {
+      "policy_id": "POL-019",
+      "file": "POL-019_intl_shipping_question.json",
+      "family": "International Shipping Question Policy",
+      "flow": "manage_account",
+      "source_subflows": [
+        "status_shipping_question"
+      ],
+      "num_rules": 3
+    },
+    {
+      "policy_id": "POL-020",
+      "file": "POL-020_missing_credit_investigation.json",
+      "family": "Missing Credit Investigation Policy",
+      "flow": "manage_account",
+      "source_subflows": [
+        "status_credit_missing"
+      ],
+      "num_rules": 3
+    },
+    {
+      "policy_id": "POL-021",
+      "file": "POL-021_account_profile_update.json",
+      "family": "Account Profile Update Policy",
+      "flow": "manage_account",
+      "source_subflows": [
+        "manage_change_address",
+        "manage_change_name",
+        "manage_change_phone",
+        "manage_payment_method"
+      ],
+      "num_rules": 4
+    },
+    {
+      "policy_id": "POL-022",
+      "file": "POL-022_competitor_price_match.json",
+      "family": "Competitor Price Match Policy",
+      "flow": "purchase_dispute",
+      "source_subflows": [
+        "bad_price_competitor",
+        "bad_price_yesterday"
+      ],
+      "num_rules": 4
+    },
+    {
+      "policy_id": "POL-023",
+      "file": "POL-023_out_of_stock_general.json",
+      "family": "Out-of-Stock General Policy",
+      "flow": "purchase_dispute",
+      "source_subflows": [
+        "out_of_stock_general"
+      ],
+      "num_rules": 2
+    },
+    {
+      "policy_id": "POL-024",
+      "file": "POL-024_out_of_stock_single_item.json",
+      "family": "Out-of-Stock Single Item Policy",
+      "flow": "purchase_dispute",
+      "source_subflows": [
+        "out_of_stock_one_item"
+      ],
+      "num_rules": 3
+    },
+    {
+      "policy_id": "POL-025",
+      "file": "POL-025_promo_code_dispute.json",
+      "family": "Promo Code Dispute Policy",
+      "flow": "purchase_dispute",
+      "source_subflows": [
+        "promo_code_invalid",
+        "promo_code_out_of_date"
+      ],
+      "num_rules": 4
+    },
+    {
+      "policy_id": "POL-026",
+      "file": "POL-026_mistimed_billing_already_returned.json",
+      "family": "Mistimed Billing Policy (Already Returned)",
+      "flow": "purchase_dispute",
+      "source_subflows": [
+        "mistimed_billing_already_returned"
+      ],
+      "num_rules": 4
+    },
+    {
+      "policy_id": "POL-027",
+      "file": "POL-027_mistimed_billing_never_bought.json",
+      "family": "Mistimed Billing Policy (Never Bought)",
+      "flow": "purchase_dispute",
+      "source_subflows": [
+        "mistimed_billing_never_bought"
+      ],
+      "num_rules": 4
+    },
+    {
+      "policy_id": "POL-028",
+      "file": "POL-028_shipping_status.json",
+      "family": "Shipping Status Inquiry Policy",
+      "flow": "shipping_issue",
+      "source_subflows": [
+        "status"
+      ],
+      "num_rules": 3
+    },
+    {
+      "policy_id": "POL-029",
+      "file": "POL-029_shipping_management.json",
+      "family": "Shipping Management Policy",
+      "flow": "shipping_issue",
+      "source_subflows": [
+        "manage"
+      ],
+      "num_rules": 3
+    },
+    {
+      "policy_id": "POL-030",
+      "file": "POL-030_missing_item.json",
+      "family": "Missing Item Policy",
+      "flow": "shipping_issue",
+      "source_subflows": [
+        "missing"
+      ],
+      "num_rules": 3
+    },
+    {
+      "policy_id": "POL-031",
+      "file": "POL-031_shipping_cost.json",
+      "family": "Shipping Cost Policy",
+      "flow": "shipping_issue",
+      "source_subflows": [
+        "cost"
+      ],
+      "num_rules": 4
+    },
+    {
+      "policy_id": "POL-032",
+      "file": "POL-032_subscription_status.json",
+      "family": "Subscription Status Policy",
+      "flow": "subscription_inquiry",
+      "source_subflows": [
+        "status_active",
+        "status_due_amount",
+        "status_due_date"
+      ],
+      "num_rules": 3
+    },
+    {
+      "policy_id": "POL-033",
+      "file": "POL-033_bill_payment.json",
+      "family": "Subscription Bill Payment Policy",
+      "flow": "subscription_inquiry",
+      "source_subflows": [
+        "manage_pay_bill"
+      ],
+      "num_rules": 3
+    },
+    {
+      "policy_id": "POL-034",
+      "file": "POL-034_subscription_extension.json",
+      "family": "Subscription Extension Policy",
+      "flow": "subscription_inquiry",
+      "source_subflows": [
+        "manage_extension"
+      ],
+      "num_rules": 4
+    },
+    {
+      "policy_id": "POL-035",
+      "file": "POL-035_billing_dispute.json",
+      "family": "Subscription Billing Dispute Policy",
+      "flow": "subscription_inquiry",
+      "source_subflows": [
+        "manage_dispute_bill"
+      ],
+      "num_rules": 4
+    },
+    {
+      "policy_id": "POL-036",
+      "file": "POL-036_single_item_faq.json",
+      "family": "Single-Item Product FAQ Policy",
+      "flow": "single_item_query",
+      "source_subflows": [
+        "boots",
+        "shirt",
+        "jeans",
+        "jacket"
+      ],
+      "num_rules": 4
+    },
+    {
+      "policy_id": "POL-037",
+      "file": "POL-037_storewide_faq.json",
+      "family": "Storewide FAQ Policy",
+      "flow": "storewide_query",
+      "source_subflows": [
+        "pricing",
+        "membership",
+        "timing",
+        "policy"
+      ],
+      "num_rules": 4
+    }
+  ]
+}

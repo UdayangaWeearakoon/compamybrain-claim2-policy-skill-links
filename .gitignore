@@ -1,0 +1,38 @@
+# OS junk
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Editors
+.vscode/
+.idea/
+
+# Local secrets / env
+.env
+
+# --- ABCD raw dataset (abcd-master/) -------------------------------------
+# ABCD is MIT licensed (Chen et al. 2021, arXiv:2104.00783) and could
+# legally be vendored here, but we deliberately don't: it's a large,
+# third-party, independently-updated artifact, not something this repo
+# produces. The small manual/taxonomy files this repo actually transforms
+# (guidelines.json, kb.json, ontology.json) stay tracked for reproducibility.
+# Everyone else fetches the two large files below from the source instead
+# -- see README.md, "Getting the data".
+abcd-master/data/abcd_v1.1.json.gz
+abcd-master/data/utterances.json
+
+# --- Frozen research artifacts -------------------------------------------
+# policy_corpus/v1/ is a hashed, frozen artifact and MUST stay tracked.
+# Do not add it here. Future phase outputs (skill_library/, ground_truth/,
+# results/) should be tracked the same way once frozen -- only exclude
+# scratch/intermediate working files, never a frozen artifact itself.

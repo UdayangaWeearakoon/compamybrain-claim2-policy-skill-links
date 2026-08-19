@@ -1,0 +1,36 @@
+{
+  "policy_id": "POL-004",
+  "family": "Product Return Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "product_defect",
+  "source_subflows": [
+    "return_stain",
+    "return_color",
+    "return_size"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-004-R1",
+      "statement": "Before processing any return, the agent must validate the purchase using username, email address, and order ID via Validate Purchase."
+    },
+    {
+      "rule_id": "POL-004-R2",
+      "statement": "Return eligibility is gated by membership level: Gold members receive unlimited returns; Silver members are eligible within 6 months of purchase, or with a receipt, or if the item is in original packaging; Bronze members are eligible within 90 days, or with a receipt, or in original packaging; Guest members are eligible within 30 days, or with a receipt."
+    },
+    {
+      "rule_id": "POL-004-R3",
+      "statement": "Guest members without a receipt and outside the 30-day window must be denied the return."
+    },
+    {
+      "rule_id": "POL-004-R4",
+      "statement": "Approved returns require the customer's full shipping address (street, city, state, zip) entered as a single line via Enter Details."
+    },
+    {
+      "rule_id": "POL-004-R5",
+      "statement": "The return processing method must be one of: By Mail, In Store, or Drop off Center."
+    }
+  ]
+}

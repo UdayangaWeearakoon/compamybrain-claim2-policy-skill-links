@@ -1,0 +1,26 @@
+{
+  "policy_id": "POL-002",
+  "family": "Refund Update Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "product_defect",
+  "source_subflows": [
+    "refund_update"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-002-R1",
+      "statement": "Before modifying an existing refund, the agent must validate the purchase using the customer's username, email address, and order ID via Validate Purchase."
+    },
+    {
+      "rule_id": "POL-002-R2",
+      "statement": "When a customer adds an item to an existing refund, the new total refund amount equals the previous refund amount plus the price of the new item."
+    },
+    {
+      "rule_id": "POL-002-R3",
+      "statement": "The updated refund total must be entered without a dollar sign and submitted via Offer Refund."
+    }
+  ]
+}

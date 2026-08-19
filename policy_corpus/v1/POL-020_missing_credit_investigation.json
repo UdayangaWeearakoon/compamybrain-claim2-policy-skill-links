@@ -1,0 +1,26 @@
+{
+  "policy_id": "POL-020",
+  "family": "Missing Credit Investigation Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "manage_account",
+  "source_subflows": [
+    "status_credit_missing"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-020-R1",
+      "statement": "The agent must record the origin of the credit as one of: subscription refund, previous purchase, or promotional package, via Record Reason."
+    },
+    {
+      "rule_id": "POL-020-R2",
+      "statement": "The agent must query Ask the Oracle to determine whether the credit is genuinely missing; if the Oracle says No, the agent must attribute this to a display issue and take no credit action."
+    },
+    {
+      "rule_id": "POL-020-R3",
+      "statement": "If the Oracle confirms the credit is missing, the agent must add the amount requested by the customer, or a standard amount of $40 if the customer does not know, and issue it via Promo Code."
+    }
+  ]
+}

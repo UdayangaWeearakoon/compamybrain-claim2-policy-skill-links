@@ -1,0 +1,31 @@
+{
+  "policy_id": "POL-025",
+  "family": "Promo Code Dispute Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "purchase_dispute",
+  "source_subflows": [
+    "promo_code_invalid",
+    "promo_code_out_of_date"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-025-R1",
+      "statement": "A promo code dispute is classified as 'out of date' if the code was issued more than 7 days ago, and 'invalid' otherwise; both classifications follow the same resolution procedure."
+    },
+    {
+      "rule_id": "POL-025-R2",
+      "statement": "The agent must query Ask the Oracle to determine whether the customer made an error; if the Oracle confirms the customer is correct, the agent proceeds directly to issuing a new promo code."
+    },
+    {
+      "rule_id": "POL-025-R3",
+      "statement": "If the Oracle indicates customer error, new-code eligibility is gated by membership: Gold, Silver, and Bronze members all qualify for a replacement promo code regardless of the error; Guest members do not qualify and must be denied."
+    },
+    {
+      "rule_id": "POL-025-R4",
+      "statement": "Replacement promo codes are issued via Promo Code with no additional information entered into the form."
+    }
+  ]
+}

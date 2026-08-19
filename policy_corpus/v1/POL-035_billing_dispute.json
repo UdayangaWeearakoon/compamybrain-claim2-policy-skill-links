@@ -1,0 +1,30 @@
+{
+  "policy_id": "POL-035",
+  "family": "Subscription Billing Dispute Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "subscription_inquiry",
+  "source_subflows": [
+    "manage_dispute_bill"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-035-R1",
+      "statement": "Before evaluating a billing dispute, the agent must verify identity using full name, account ID, and order ID via Verify Identity."
+    },
+    {
+      "rule_id": "POL-035-R2",
+      "statement": "Refund eligibility is gated by membership level: Gold members always receive the disputed amount; Silver members receive a refund only if the disputed amount is less than $10; Bronze and Guest members are evaluated via Ask the Oracle."
+    },
+    {
+      "rule_id": "POL-035-R3",
+      "statement": "For Bronze and Guest members, a Yes response from Ask the Oracle grants the refund and a No response denies it."
+    },
+    {
+      "rule_id": "POL-035-R4",
+      "statement": "The refund amount owed equals the amount the customer was charged minus the amount they were supposed to be charged (e.g., charged $60, owed $50, refund $10)."
+    }
+  ]
+}

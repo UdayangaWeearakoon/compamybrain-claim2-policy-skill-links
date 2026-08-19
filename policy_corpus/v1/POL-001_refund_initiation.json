@@ -1,0 +1,30 @@
+{
+  "policy_id": "POL-001",
+  "family": "Refund Initiation Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "product_defect",
+  "source_subflows": [
+    "refund_initiate"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-001-R1",
+      "statement": "Before offering a refund, the agent must validate the purchase using the customer's username, email address, and order ID via Validate Purchase."
+    },
+    {
+      "rule_id": "POL-001-R2",
+      "statement": "Refund method must be one of: gift card, add value, paper check, or credit card. Gift card and paper check refunds require the customer's full mailing address; add value and credit card refunds require the account ID."
+    },
+    {
+      "rule_id": "POL-001-R3",
+      "statement": "If the customer does not know the refund amount, the agent must enter a default refund amount of $50."
+    },
+    {
+      "rule_id": "POL-001-R4",
+      "statement": "The refund amount must be entered without a dollar sign and submitted via Offer Refund before the refund is considered complete."
+    }
+  ]
+}

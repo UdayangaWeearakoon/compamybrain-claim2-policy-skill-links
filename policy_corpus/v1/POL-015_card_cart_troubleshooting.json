@@ -1,0 +1,27 @@
+{
+  "policy_id": "POL-015",
+  "family": "Payment Card and Cart Troubleshooting Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "troubleshoot_site",
+  "source_subflows": [
+    "credit_card",
+    "shopping_cart"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-015-R1",
+      "statement": "Card and cart troubleshooting must be attempted via Try Again or Log Out/In before any account or purchase action is taken."
+    },
+    {
+      "rule_id": "POL-015-R2",
+      "statement": "If the customer suspects an expired card, the agent must enter 'troubleshoot' via Enter Details rather than escalating."
+    },
+    {
+      "rule_id": "POL-015-R3",
+      "statement": "The agent may complete the purchase on the customer's behalf via Make Purchase only after collecting the credit card number, expiration date, and the brand/item phrase."
+    }
+  ]
+}

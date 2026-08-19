@@ -1,0 +1,33 @@
+{
+  "policy_id": "POL-037",
+  "family": "Storewide FAQ Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "storewide_query",
+  "source_subflows": [
+    "pricing",
+    "membership",
+    "timing",
+    "policy"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-037-R1",
+      "statement": "FAQ answers are limited to the following four topics: pricing, timing, membership, and policy; questions outside these four topics must not be answered from this FAQ index."
+    },
+    {
+      "rule_id": "POL-037-R2",
+      "statement": "The agent must select the correct topic toggle (pricing/timing/membership/policy) before retrieving an answer, since this selection is itself a recorded, scored action."
+    },
+    {
+      "rule_id": "POL-037-R3",
+      "statement": "The agent must select the correct answer from the list of 4 topic-specific options via Select Answer."
+    },
+    {
+      "rule_id": "POL-037-R4",
+      "statement": "The system-generated FAQ response is incomplete by design; the agent must restate the answer in natural language rather than copy-pasting the raw system text."
+    }
+  ]
+}

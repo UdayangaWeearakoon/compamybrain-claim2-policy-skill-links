@@ -1,0 +1,26 @@
+{
+  "policy_id": "POL-011",
+  "family": "Order Cancellation Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "order_issue",
+  "source_subflows": [
+    "manage_cancel"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-011-R1",
+      "statement": "Before cancelling or returning an order, the agent must verify identity using full name, account ID, and order ID via Verify Identity."
+    },
+    {
+      "rule_id": "POL-011-R2",
+      "statement": "If shipping status is Order Received, the agent must immediately offer a refund and remove the item from the order."
+    },
+    {
+      "rule_id": "POL-011-R3",
+      "statement": "If shipping status is In Transit, Out for Delivery, or Delivered, refund eligibility is gated by membership: Bronze, Silver, and Gold members receive an immediate refund and must call back after the item arrives to complete the return; Guest members must wait for the item to arrive before any return process begins, with no immediate refund."
+    }
+  ]
+}

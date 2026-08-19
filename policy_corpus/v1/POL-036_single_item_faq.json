@@ -1,0 +1,33 @@
+{
+  "policy_id": "POL-036",
+  "family": "Single-Item Product FAQ Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "single_item_query",
+  "source_subflows": [
+    "boots",
+    "shirt",
+    "jeans",
+    "jacket"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-036-R1",
+      "statement": "FAQ answers are limited to the following four product topics: boots, jacket, jeans, and shirt; questions about any other product must not be answered from this FAQ index."
+    },
+    {
+      "rule_id": "POL-036-R2",
+      "statement": "The agent must select the correct product toggle (boots/shirt/jeans/jacket) before retrieving an answer, since this selection is itself a recorded, scored action."
+    },
+    {
+      "rule_id": "POL-036-R3",
+      "statement": "The agent must select the correct answer from the list of 8 topic-specific options via Select Answer."
+    },
+    {
+      "rule_id": "POL-036-R4",
+      "statement": "The system-generated FAQ response is incomplete by design; the agent must restate the answer in natural language rather than copy-pasting the raw system text."
+    }
+  ]
+}

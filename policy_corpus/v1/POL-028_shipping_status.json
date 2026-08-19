@@ -1,0 +1,26 @@
+{
+  "policy_id": "POL-028",
+  "family": "Shipping Status Inquiry Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "shipping_issue",
+  "source_subflows": [
+    "status"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-028-R1",
+      "statement": "Before resolving a shipping status inquiry, the agent must verify identity using full name, account ID, and order ID via Verify Identity, and validate the purchase using username, email address, and order ID via Validate Purchase."
+    },
+    {
+      "rule_id": "POL-028-R2",
+      "statement": "The agent must query Ask the Oracle to resolve any yes/no shipping question the customer raises."
+    },
+    {
+      "rule_id": "POL-028-R3",
+      "statement": "If the Oracle response is unfavorable to the customer, the agent must resolve it via Update Order using one of: change date, change address, change item, or change price."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "policy_id": "POL-033",
+  "family": "Subscription Bill Payment Policy",
+  "version": "v1",
+  "effective_timestamp": "2021-06-01T00:00:00Z",
+  "flow": "subscription_inquiry",
+  "source_subflows": [
+    "manage_pay_bill"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": null,
+  "rules": [
+    {
+      "rule_id": "POL-033-R1",
+      "statement": "Before processing a subscription payment, the agent must verify identity using full name, account ID, and order ID via Verify Identity."
+    },
+    {
+      "rule_id": "POL-033-R2",
+      "statement": "The standard subscription price is $99 per year; if the customer does not know the amount owed, the agent must use the Subscription Status query to determine it, defaulting to $99 if the query returns $0."
+    },
+    {
+      "rule_id": "POL-033-R3",
+      "statement": "A subscription payment is finalized by entering 'renew subscription' via Update Account."
+    }
+  ]
+}
