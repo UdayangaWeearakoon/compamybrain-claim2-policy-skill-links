@@ -1,0 +1,5 @@
+condition,variant,invalidation_recall,recall_ci,invalidation_precision,precision_ci,silent_wrong_action_rate,swa_ci,n_flagged,n_true_positive,n_positive_class
+A (SKILLGUARD contract validation),primary,0.000,"[0.000, 0.000]",0.000,"[0.000, 0.000]",1.000,"[1.000, 1.000]",6,0,40
+A (SKILLGUARD contract validation),partial_inclusive,0.000,"[0.000, 0.000]",0.000,"[0.000, 0.000]",1.000,"[1.000, 1.000]",6,0,62
+"B (dependency links, section-level)",primary,1.000,"[1.000, 1.000]",0.526,"[0.405, 0.644]",0.000,"[0.000, 0.000]",76,40,40
+"B (dependency links, section-level)",partial_inclusive,1.000,"[1.000, 1.000]",0.816,"[0.725, 0.896]",0.000,"[0.000, 0.000]",76,62,62
