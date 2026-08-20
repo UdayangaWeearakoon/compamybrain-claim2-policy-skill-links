@@ -67,6 +67,11 @@ results/            Raw flag tables + execution logs for both conditions
 scripts/            (continued) run_condition_a.py, run_condition_b.py,
                     measure_silent_wrong_action.py, validate_step4.py,
                     test_leakage_check.py, freeze_and_hash_step4.py
+  scoring/          Phase 5: main results table, Condition B error slice, ablations
+  RESULTS.md        Phase 5 interpretation: verdict, error structure, ablations,
+                    shared-gap placement, threats to validity
+scripts/            (continued) score_conditions.py, slice_condition_b_errors.py,
+                    run_ablations.py, freeze_and_hash_step5.py
 ```
 
 ## Getting the data
@@ -134,7 +139,24 @@ Or download directly from the links in the
       `1924fd17d3d90aac9a6c71ef33cb3eceb7fa1f3deaccc43ec71118b61424a69c`.
       Scoring, CIs, error slices and ablations are Step 5 by design; see
       `results/RUN_NOTES.md`.
-- [ ] Phase 5 — Results table, bootstrap CIs, error slices, ablations
+- [x] **Phase 5 — Results table, bootstrap CIs, error slices, ablations.**
+      Scored both conditions against the frozen labels with bootstrap CIs
+      (1000 resamples over skills, seed 20260820). **Verdict: HOLDS** against
+      the preregistered threshold — invalidation recall 1.000 (B) vs 0.000 (A),
+      silent wrong action rate 0.000 (B) vs 1.000 (A). Condition B precision
+      0.526 primary / 0.816 partial-inclusive. Caveat recorded rather than
+      buried: A's precision of 0.000 reflects that its 6 flags are *correct*
+      environment-drift detections scored as non-positives by the invalidation
+      labels, so the precision half of the test is satisfied trivially, not
+      informatively. Condition B has **zero** false negatives; its error mass is
+      entirely false-positive, dominated (61.1%) by the partial class.
+      Ablations: link granularity shows **no** tradeoff on this corpus (identical
+      flag sets, diagnosed); removing negative controls moves B's precision by
+      **0.0 pts** (they are true negatives), with a link-free counterfactual
+      detector supplied to demonstrate the inflation they actually guard against
+      (+4.7 pts). Phase 5 fingerprint:
+      `c09e79caeb22fcca5557a8e9a869c5ad04bbc745b32ff786b1b121ce50acd536`.
+      See `results/RESULTS.md`.
 
 ## Experimental hygiene
 
