@@ -1,0 +1,30 @@
+{
+  "subflow": null,
+  "flow": null,
+  "branch": null,
+  "policy_id": null,
+  "policy_version": null,
+  "rule_ids": [],
+  "precondition": "The agent captures a free-form detail (address, phone, troubleshoot flag, PIN) via Enter Details. The capture mechanic is identical everywhere it's used; what differs is which policy, if any, gates what happens with the captured value afterward -- capture itself is not a testable rule. (subcluster: account_access)",
+  "action_sequence": [
+    {
+      "button": "enter-details",
+      "values": [
+        "919182"
+      ]
+    }
+  ],
+  "postcondition": "No policy-governed consequence follows from this step alone; observed across 3 distinct subflows (recover_password, recover_username, reset_2fa).",
+  "provenance_convo_ids": [
+    1733,
+    2652,
+    4529,
+    4816,
+    7225
+  ],
+  "provenance_count_in_cluster": 511,
+  "cluster_size": 1592,
+  "is_negative_control": true,
+  "negative_control_name": "Generic Enter Details capture (account_access)",
+  "skill_id": "SK-131"
+}

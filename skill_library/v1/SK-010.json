@@ -1,0 +1,60 @@
+{
+  "subflow": "return_size",
+  "flow": "product_defect",
+  "branch": "bronze",
+  "policy_id": "POL-004",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-004-R1",
+    "POL-004-R2",
+    "POL-004-R4",
+    "POL-004-R5"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'return_size' (flow: Product Defect). Customer's membership level is bronze. Governing policy: Product Return Policy (POL-004 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "albert sanders"
+      ]
+    },
+    {
+      "button": "validate-purchase",
+      "values": [
+        "as448756",
+        "as448756@email.com",
+        "8782928455"
+      ]
+    },
+    {
+      "button": "membership",
+      "values": [
+        "bronze"
+      ]
+    },
+    {
+      "button": "enter-details",
+      "values": [
+        "0750 2nd ave monterey, ny 77158"
+      ]
+    },
+    {
+      "button": "update-order",
+      "values": [
+        "by mail"
+      ]
+    }
+  ],
+  "postcondition": "The order is updated per the requested change",
+  "provenance_convo_ids": [
+    815,
+    824,
+    890,
+    1613,
+    1732
+  ],
+  "provenance_count_in_cluster": 50,
+  "cluster_size": 99,
+  "is_negative_control": false,
+  "skill_id": "SK-010"
+}

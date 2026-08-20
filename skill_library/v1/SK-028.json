@@ -1,0 +1,54 @@
+{
+  "subflow": "manage_downgrade",
+  "flow": "order_issue",
+  "branch": "gold",
+  "policy_id": "POL-009",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-009-R1",
+    "POL-009-R2",
+    "POL-009-R3",
+    "POL-009-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_downgrade' (flow: Order Issue). Customer's membership level is gold. Governing policy: Order Shipping Tier Change Policy (POL-009 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "rodriguez domingo"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "rodriguez domingo",
+        "g2yxmw05jo",
+        "8993108331"
+      ]
+    },
+    {
+      "button": "shipping-status",
+      "values": [
+        "in transit"
+      ]
+    },
+    {
+      "button": "membership",
+      "values": [
+        "gold"
+      ]
+    }
+  ],
+  "postcondition": "The membership-privileges check is recorded, gating the next step",
+  "provenance_convo_ids": [
+    1214,
+    1899,
+    2728,
+    3620,
+    4153
+  ],
+  "provenance_count_in_cluster": 10,
+  "cluster_size": 50,
+  "is_negative_control": false,
+  "skill_id": "SK-028"
+}

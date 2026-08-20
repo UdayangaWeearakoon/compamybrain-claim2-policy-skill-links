@@ -1,0 +1,30 @@
+{
+  "subflow": null,
+  "flow": null,
+  "branch": null,
+  "policy_id": null,
+  "policy_version": null,
+  "rule_ids": [],
+  "precondition": "The agent enters a target into Notify Internal Team. The *decision* to escalate is policy-governed case by case (see e.g. POL-003, POL-016, POL-023), but the notify-team mechanic itself -- pick a target, click the button -- recurs identically across unrelated policies and carries no eligibility logic of its own. (subcluster: manager)",
+  "action_sequence": [
+    {
+      "button": "notify-team",
+      "values": [
+        "manager"
+      ]
+    }
+  ],
+  "postcondition": "No policy-governed consequence follows from this step alone; observed across 13 distinct subflows (manage_dispute_bill, manage_extension, mistimed_billing_already_returned, mistimed_billing_never_bought, pricing, promo_code_invalid...).",
+  "provenance_convo_ids": [
+    504,
+    3172,
+    3592,
+    5697,
+    9355
+  ],
+  "provenance_count_in_cluster": 57,
+  "cluster_size": 440,
+  "is_negative_control": true,
+  "negative_control_name": "Generic internal escalation notification (manager)",
+  "skill_id": "SK-124"
+}

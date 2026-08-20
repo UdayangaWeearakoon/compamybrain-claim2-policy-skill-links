@@ -1,0 +1,53 @@
+{
+  "subflow": "manage",
+  "flow": "shipping_issue",
+  "branch": null,
+  "policy_id": "POL-029",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-029-R1",
+    "POL-029-R2",
+    "POL-029-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage' (flow: Shipping Issue). Governing policy: Shipping Management Policy (POL-029 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "crystal minh"
+      ]
+    },
+    {
+      "button": "shipping-status",
+      "values": [
+        "in transit"
+      ]
+    },
+    {
+      "button": "validate-purchase",
+      "values": [
+        "cminh948",
+        "cminh948@email.com",
+        "4870952797"
+      ]
+    },
+    {
+      "button": "update-order",
+      "values": [
+        "change order"
+      ]
+    }
+  ],
+  "postcondition": "The order is updated per the requested change",
+  "provenance_convo_ids": [
+    390,
+    729,
+    1031,
+    1065,
+    1334
+  ],
+  "provenance_count_in_cluster": 73,
+  "cluster_size": 73,
+  "is_negative_control": false,
+  "skill_id": "SK-089"
+}

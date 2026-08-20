@@ -1,0 +1,42 @@
+{
+  "subflow": "membership",
+  "flow": "storewide_query",
+  "branch": null,
+  "policy_id": "POL-037",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-037-R1",
+    "POL-037-R2",
+    "POL-037-R3",
+    "POL-037-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'membership' (flow: Storewide Query). Governing policy: Storewide FAQ Policy (POL-037 v1).",
+  "action_sequence": [
+    {
+      "button": "search-faq",
+      "values": []
+    },
+    {
+      "button": "search-timing",
+      "values": []
+    },
+    {
+      "button": "select-faq",
+      "values": [
+        "timing_4"
+      ]
+    }
+  ],
+  "postcondition": "The 'select-faq' action is taken as the final step.",
+  "provenance_convo_ids": [
+    320,
+    615,
+    623,
+    1216,
+    1255
+  ],
+  "provenance_count_in_cluster": 124,
+  "cluster_size": 124,
+  "is_negative_control": false,
+  "skill_id": "SK-115"
+}

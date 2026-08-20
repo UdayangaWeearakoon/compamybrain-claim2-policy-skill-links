@@ -1,0 +1,45 @@
+{
+  "subflow": "out_of_stock_one_item",
+  "flow": "purchase_dispute",
+  "branch": null,
+  "policy_id": "POL-024",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-024-R1",
+    "POL-024-R2",
+    "POL-024-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'out_of_stock_one_item' (flow: Purchase Dispute). Governing policy: Out-of-Stock Single Item Policy (POL-024 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "david williams"
+      ]
+    },
+    {
+      "button": "record-reason",
+      "values": [
+        "tommy hilfiger jacket"
+      ]
+    },
+    {
+      "button": "notify-team",
+      "values": [
+        "purchasing department"
+      ]
+    }
+  ],
+  "postcondition": "The issue is escalated internally rather than resolved directly by the agent",
+  "provenance_convo_ids": [
+    1007,
+    1960,
+    2921,
+    2965,
+    3915
+  ],
+  "provenance_count_in_cluster": 26,
+  "cluster_size": 26,
+  "is_negative_control": false,
+  "skill_id": "SK-076"
+}

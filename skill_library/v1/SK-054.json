@@ -1,0 +1,43 @@
+{
+  "subflow": "status_service_added",
+  "flow": "manage_account",
+  "branch": null,
+  "policy_id": "POL-017",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-017-R1",
+    "POL-017-R2",
+    "POL-017-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status_service_added' (flow: Manage Account). Governing policy: Add-on Service Dispute Policy (POL-017 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "crystal minh"
+      ]
+    },
+    {
+      "button": "record-reason",
+      "values": [
+        "email"
+      ]
+    },
+    {
+      "button": "ask-the-oracle",
+      "values": []
+    }
+  ],
+  "postcondition": "A system determination is retrieved, gating the next step",
+  "provenance_convo_ids": [
+    1196,
+    2292,
+    2674,
+    2761,
+    3498
+  ],
+  "provenance_count_in_cluster": 35,
+  "cluster_size": 35,
+  "is_negative_control": false,
+  "skill_id": "SK-054"
+}

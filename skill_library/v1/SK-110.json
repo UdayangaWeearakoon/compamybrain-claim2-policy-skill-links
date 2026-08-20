@@ -1,0 +1,52 @@
+{
+  "subflow": "manage_dispute_bill",
+  "flow": "subscription_inquiry",
+  "branch": "guest",
+  "policy_id": "POL-035",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-035-R1",
+    "POL-035-R2",
+    "POL-035-R3",
+    "POL-035-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_dispute_bill' (flow: Subscription Inquiry). Customer's membership level is guest. Governing policy: Subscription Billing Dispute Policy (POL-035 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "joseph banter"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "joseph banter",
+        "qg4ppjghgz",
+        "8420533828"
+      ]
+    },
+    {
+      "button": "ask-the-oracle",
+      "values": []
+    },
+    {
+      "button": "offer-refund",
+      "values": [
+        "40"
+      ]
+    }
+  ],
+  "postcondition": "A refund is issued to the customer",
+  "provenance_convo_ids": [
+    2608,
+    4622,
+    6277,
+    6790,
+    7334
+  ],
+  "provenance_count_in_cluster": 7,
+  "cluster_size": 35,
+  "is_negative_control": false,
+  "skill_id": "SK-110"
+}

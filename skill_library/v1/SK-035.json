@@ -1,0 +1,57 @@
+{
+  "subflow": "manage_cancel",
+  "flow": "order_issue",
+  "branch": "bronze",
+  "policy_id": "POL-011",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-011-R1",
+    "POL-011-R2",
+    "POL-011-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_cancel' (flow: Order Issue). Customer's membership level is bronze. Governing policy: Order Cancellation Policy (POL-011 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "joyce wu"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "joyce wu",
+        "8bi9zmrmbz",
+        "1002591298"
+      ]
+    },
+    {
+      "button": "shipping-status",
+      "values": [
+        "delivered"
+      ]
+    },
+    {
+      "button": "membership",
+      "values": [
+        "bronze"
+      ]
+    },
+    {
+      "button": "offer-refund",
+      "values": [
+        "49"
+      ]
+    }
+  ],
+  "postcondition": "A refund is issued to the customer",
+  "provenance_convo_ids": [
+    3447,
+    5540,
+    7955
+  ],
+  "provenance_count_in_cluster": 3,
+  "cluster_size": 21,
+  "is_negative_control": false,
+  "skill_id": "SK-035"
+}

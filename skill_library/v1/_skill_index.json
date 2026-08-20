@@ -1,0 +1,1065 @@
+{
+  "num_skills": 131,
+  "num_linked": 115,
+  "num_negative_control": 16,
+  "audit_exclusions_applied": [
+    {
+      "skill_id": "SK-053",
+      "reason": "Both audit annotators: escalates before troubleshooting, reversing POL-016-R1's required order; includes an action no linked rule covers."
+    },
+    {
+      "skill_id": "SK-090",
+      "reason": "Both audit annotators: action sequence shares no substantive action with POL-029's rules -- clustering picked an off-policy real dialogue pattern as the cluster representative."
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "SK-001",
+      "file": "SK-001.json",
+      "policy_id": "POL-001",
+      "subflow": "refund_initiate",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-002",
+      "file": "SK-002.json",
+      "policy_id": "POL-001",
+      "subflow": "refund_initiate",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-003",
+      "file": "SK-003.json",
+      "policy_id": "POL-001",
+      "subflow": "refund_initiate",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-004",
+      "file": "SK-004.json",
+      "policy_id": "POL-002",
+      "subflow": "refund_update",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-005",
+      "file": "SK-005.json",
+      "policy_id": "POL-002",
+      "subflow": "refund_update",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-006",
+      "file": "SK-006.json",
+      "policy_id": "POL-002",
+      "subflow": "refund_update",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-007",
+      "file": "SK-007.json",
+      "policy_id": "POL-003",
+      "subflow": "refund_status",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-008",
+      "file": "SK-008.json",
+      "policy_id": "POL-003",
+      "subflow": "refund_status",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-009",
+      "file": "SK-009.json",
+      "policy_id": "POL-003",
+      "subflow": "refund_status",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-010",
+      "file": "SK-010.json",
+      "policy_id": "POL-004",
+      "subflow": "return_size",
+      "branch": "bronze",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-011",
+      "file": "SK-011.json",
+      "policy_id": "POL-004",
+      "subflow": "return_size",
+      "branch": "gold",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-012",
+      "file": "SK-012.json",
+      "policy_id": "POL-004",
+      "subflow": "return_size",
+      "branch": "guest",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-013",
+      "file": "SK-013.json",
+      "policy_id": "POL-004",
+      "subflow": "return_size",
+      "branch": "silver",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-014",
+      "file": "SK-014.json",
+      "policy_id": "POL-005",
+      "subflow": "status_mystery_fee",
+      "branch": "bronze",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-015",
+      "file": "SK-015.json",
+      "policy_id": "POL-005",
+      "subflow": "status_mystery_fee",
+      "branch": "gold",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-016",
+      "file": "SK-016.json",
+      "policy_id": "POL-005",
+      "subflow": "status_mystery_fee",
+      "branch": "guest",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-017",
+      "file": "SK-017.json",
+      "policy_id": "POL-005",
+      "subflow": "status_mystery_fee",
+      "branch": "silver",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-018",
+      "file": "SK-018.json",
+      "policy_id": "POL-006",
+      "subflow": "status_delivery_time",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-019",
+      "file": "SK-019.json",
+      "policy_id": "POL-006",
+      "subflow": "status_delivery_time",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-020",
+      "file": "SK-020.json",
+      "policy_id": "POL-006",
+      "subflow": "status_delivery_time",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-021",
+      "file": "SK-021.json",
+      "policy_id": "POL-007",
+      "subflow": "status_payment_method",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-022",
+      "file": "SK-022.json",
+      "policy_id": "POL-007",
+      "subflow": "status_payment_method",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-023",
+      "file": "SK-023.json",
+      "policy_id": "POL-007",
+      "subflow": "status_payment_method",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-024",
+      "file": "SK-024.json",
+      "policy_id": "POL-008",
+      "subflow": "status_quantity",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-025",
+      "file": "SK-025.json",
+      "policy_id": "POL-008",
+      "subflow": "status_quantity",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-026",
+      "file": "SK-026.json",
+      "policy_id": "POL-008",
+      "subflow": "status_quantity",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-027",
+      "file": "SK-027.json",
+      "policy_id": "POL-009",
+      "subflow": "manage_downgrade",
+      "branch": "bronze",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-028",
+      "file": "SK-028.json",
+      "policy_id": "POL-009",
+      "subflow": "manage_downgrade",
+      "branch": "gold",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-029",
+      "file": "SK-029.json",
+      "policy_id": "POL-009",
+      "subflow": "manage_downgrade",
+      "branch": "guest",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-030",
+      "file": "SK-030.json",
+      "policy_id": "POL-009",
+      "subflow": "manage_downgrade",
+      "branch": "silver",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-031",
+      "file": "SK-031.json",
+      "policy_id": "POL-010",
+      "subflow": "manage_create",
+      "branch": "bronze",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-032",
+      "file": "SK-032.json",
+      "policy_id": "POL-010",
+      "subflow": "manage_create",
+      "branch": "gold",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-033",
+      "file": "SK-033.json",
+      "policy_id": "POL-010",
+      "subflow": "manage_create",
+      "branch": "guest",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-034",
+      "file": "SK-034.json",
+      "policy_id": "POL-010",
+      "subflow": "manage_create",
+      "branch": "silver",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-035",
+      "file": "SK-035.json",
+      "policy_id": "POL-011",
+      "subflow": "manage_cancel",
+      "branch": "bronze",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-036",
+      "file": "SK-036.json",
+      "policy_id": "POL-011",
+      "subflow": "manage_cancel",
+      "branch": "gold",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-037",
+      "file": "SK-037.json",
+      "policy_id": "POL-011",
+      "subflow": "manage_cancel",
+      "branch": "guest",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-038",
+      "file": "SK-038.json",
+      "policy_id": "POL-011",
+      "subflow": "manage_cancel",
+      "branch": "silver",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-039",
+      "file": "SK-039.json",
+      "policy_id": "POL-012",
+      "subflow": "recover_username",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-040",
+      "file": "SK-040.json",
+      "policy_id": "POL-012",
+      "subflow": "recover_username",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-041",
+      "file": "SK-041.json",
+      "policy_id": "POL-012",
+      "subflow": "recover_username",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-042",
+      "file": "SK-042.json",
+      "policy_id": "POL-013",
+      "subflow": "recover_password",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-043",
+      "file": "SK-043.json",
+      "policy_id": "POL-013",
+      "subflow": "recover_password",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-044",
+      "file": "SK-044.json",
+      "policy_id": "POL-013",
+      "subflow": "recover_password",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-045",
+      "file": "SK-045.json",
+      "policy_id": "POL-014",
+      "subflow": "reset_2fa",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-046",
+      "file": "SK-046.json",
+      "policy_id": "POL-014",
+      "subflow": "reset_2fa",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-047",
+      "file": "SK-047.json",
+      "policy_id": "POL-014",
+      "subflow": "reset_2fa",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-048",
+      "file": "SK-048.json",
+      "policy_id": "POL-015",
+      "subflow": "credit_card",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-049",
+      "file": "SK-049.json",
+      "policy_id": "POL-015",
+      "subflow": "credit_card",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-050",
+      "file": "SK-050.json",
+      "policy_id": "POL-015",
+      "subflow": "credit_card",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-051",
+      "file": "SK-051.json",
+      "policy_id": "POL-016",
+      "subflow": "search_results",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-052",
+      "file": "SK-052.json",
+      "policy_id": "POL-016",
+      "subflow": "search_results",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-054",
+      "file": "SK-054.json",
+      "policy_id": "POL-017",
+      "subflow": "status_service_added",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-055",
+      "file": "SK-055.json",
+      "policy_id": "POL-017",
+      "subflow": "status_service_added",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-056",
+      "file": "SK-056.json",
+      "policy_id": "POL-017",
+      "subflow": "status_service_added",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-057",
+      "file": "SK-057.json",
+      "policy_id": "POL-018",
+      "subflow": "status_service_removed",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-058",
+      "file": "SK-058.json",
+      "policy_id": "POL-018",
+      "subflow": "status_service_removed",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-059",
+      "file": "SK-059.json",
+      "policy_id": "POL-018",
+      "subflow": "status_service_removed",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-060",
+      "file": "SK-060.json",
+      "policy_id": "POL-019",
+      "subflow": "status_shipping_question",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-061",
+      "file": "SK-061.json",
+      "policy_id": "POL-019",
+      "subflow": "status_shipping_question",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-062",
+      "file": "SK-062.json",
+      "policy_id": "POL-019",
+      "subflow": "status_shipping_question",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-063",
+      "file": "SK-063.json",
+      "policy_id": "POL-020",
+      "subflow": "status_credit_missing",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-064",
+      "file": "SK-064.json",
+      "policy_id": "POL-020",
+      "subflow": "status_credit_missing",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-065",
+      "file": "SK-065.json",
+      "policy_id": "POL-020",
+      "subflow": "status_credit_missing",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-066",
+      "file": "SK-066.json",
+      "policy_id": "POL-021",
+      "subflow": "manage_change_address",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-067",
+      "file": "SK-067.json",
+      "policy_id": "POL-021",
+      "subflow": "manage_change_address",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-068",
+      "file": "SK-068.json",
+      "policy_id": "POL-021",
+      "subflow": "manage_change_address",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-069",
+      "file": "SK-069.json",
+      "policy_id": "POL-022",
+      "subflow": "bad_price_competitor",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-070",
+      "file": "SK-070.json",
+      "policy_id": "POL-022",
+      "subflow": "bad_price_competitor",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-071",
+      "file": "SK-071.json",
+      "policy_id": "POL-022",
+      "subflow": "bad_price_competitor",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-072",
+      "file": "SK-072.json",
+      "policy_id": "POL-023",
+      "subflow": "out_of_stock_general",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-073",
+      "file": "SK-073.json",
+      "policy_id": "POL-023",
+      "subflow": "out_of_stock_general",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-074",
+      "file": "SK-074.json",
+      "policy_id": "POL-023",
+      "subflow": "out_of_stock_general",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-075",
+      "file": "SK-075.json",
+      "policy_id": "POL-024",
+      "subflow": "out_of_stock_one_item",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-076",
+      "file": "SK-076.json",
+      "policy_id": "POL-024",
+      "subflow": "out_of_stock_one_item",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-077",
+      "file": "SK-077.json",
+      "policy_id": "POL-024",
+      "subflow": "out_of_stock_one_item",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-078",
+      "file": "SK-078.json",
+      "policy_id": "POL-025",
+      "subflow": "promo_code_invalid",
+      "branch": "bronze",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-079",
+      "file": "SK-079.json",
+      "policy_id": "POL-025",
+      "subflow": "promo_code_invalid",
+      "branch": "gold",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-080",
+      "file": "SK-080.json",
+      "policy_id": "POL-025",
+      "subflow": "promo_code_invalid",
+      "branch": "guest",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-081",
+      "file": "SK-081.json",
+      "policy_id": "POL-025",
+      "subflow": "promo_code_invalid",
+      "branch": "silver",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-082",
+      "file": "SK-082.json",
+      "policy_id": "POL-026",
+      "subflow": "mistimed_billing_already_returned",
+      "branch": "gold",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-083",
+      "file": "SK-083.json",
+      "policy_id": "POL-026",
+      "subflow": "mistimed_billing_already_returned",
+      "branch": "non-gold",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-084",
+      "file": "SK-084.json",
+      "policy_id": "POL-027",
+      "subflow": "mistimed_billing_never_bought",
+      "branch": "gold",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-085",
+      "file": "SK-085.json",
+      "policy_id": "POL-027",
+      "subflow": "mistimed_billing_never_bought",
+      "branch": "non-gold",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-086",
+      "file": "SK-086.json",
+      "policy_id": "POL-028",
+      "subflow": "status",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-087",
+      "file": "SK-087.json",
+      "policy_id": "POL-028",
+      "subflow": "status",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-088",
+      "file": "SK-088.json",
+      "policy_id": "POL-028",
+      "subflow": "status",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-089",
+      "file": "SK-089.json",
+      "policy_id": "POL-029",
+      "subflow": "manage",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-091",
+      "file": "SK-091.json",
+      "policy_id": "POL-029",
+      "subflow": "manage",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-092",
+      "file": "SK-092.json",
+      "policy_id": "POL-030",
+      "subflow": "missing",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-093",
+      "file": "SK-093.json",
+      "policy_id": "POL-030",
+      "subflow": "missing",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-094",
+      "file": "SK-094.json",
+      "policy_id": "POL-030",
+      "subflow": "missing",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-095",
+      "file": "SK-095.json",
+      "policy_id": "POL-031",
+      "subflow": "cost",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-096",
+      "file": "SK-096.json",
+      "policy_id": "POL-031",
+      "subflow": "cost",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-097",
+      "file": "SK-097.json",
+      "policy_id": "POL-031",
+      "subflow": "cost",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-098",
+      "file": "SK-098.json",
+      "policy_id": "POL-032",
+      "subflow": "status_due_date",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-099",
+      "file": "SK-099.json",
+      "policy_id": "POL-032",
+      "subflow": "status_due_date",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-100",
+      "file": "SK-100.json",
+      "policy_id": "POL-032",
+      "subflow": "status_due_date",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-101",
+      "file": "SK-101.json",
+      "policy_id": "POL-033",
+      "subflow": "manage_pay_bill",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-102",
+      "file": "SK-102.json",
+      "policy_id": "POL-033",
+      "subflow": "manage_pay_bill",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-103",
+      "file": "SK-103.json",
+      "policy_id": "POL-033",
+      "subflow": "manage_pay_bill",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-104",
+      "file": "SK-104.json",
+      "policy_id": "POL-034",
+      "subflow": "manage_extension",
+      "branch": "bronze",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-105",
+      "file": "SK-105.json",
+      "policy_id": "POL-034",
+      "subflow": "manage_extension",
+      "branch": "gold",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-106",
+      "file": "SK-106.json",
+      "policy_id": "POL-034",
+      "subflow": "manage_extension",
+      "branch": "guest",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-107",
+      "file": "SK-107.json",
+      "policy_id": "POL-034",
+      "subflow": "manage_extension",
+      "branch": "silver",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-108",
+      "file": "SK-108.json",
+      "policy_id": "POL-035",
+      "subflow": "manage_dispute_bill",
+      "branch": "bronze",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-109",
+      "file": "SK-109.json",
+      "policy_id": "POL-035",
+      "subflow": "manage_dispute_bill",
+      "branch": "gold",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-110",
+      "file": "SK-110.json",
+      "policy_id": "POL-035",
+      "subflow": "manage_dispute_bill",
+      "branch": "guest",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-111",
+      "file": "SK-111.json",
+      "policy_id": "POL-035",
+      "subflow": "manage_dispute_bill",
+      "branch": "silver",
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-112",
+      "file": "SK-112.json",
+      "policy_id": "POL-036",
+      "subflow": "boots",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-113",
+      "file": "SK-113.json",
+      "policy_id": "POL-036",
+      "subflow": "boots",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-114",
+      "file": "SK-114.json",
+      "policy_id": "POL-036",
+      "subflow": "boots",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-115",
+      "file": "SK-115.json",
+      "policy_id": "POL-037",
+      "subflow": "membership",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-116",
+      "file": "SK-116.json",
+      "policy_id": "POL-037",
+      "subflow": "membership",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-117",
+      "file": "SK-117.json",
+      "policy_id": "POL-037",
+      "subflow": "membership",
+      "branch": null,
+      "is_negative_control": false
+    },
+    {
+      "skill_id": "SK-118",
+      "file": "SK-118.json",
+      "policy_id": null,
+      "subflow": null,
+      "branch": null,
+      "is_negative_control": true
+    },
+    {
+      "skill_id": "SK-119",
+      "file": "SK-119.json",
+      "policy_id": null,
+      "subflow": null,
+      "branch": null,
+      "is_negative_control": true
+    },
+    {
+      "skill_id": "SK-120",
+      "file": "SK-120.json",
+      "policy_id": null,
+      "subflow": null,
+      "branch": null,
+      "is_negative_control": true
+    },
+    {
+      "skill_id": "SK-121",
+      "file": "SK-121.json",
+      "policy_id": null,
+      "subflow": null,
+      "branch": null,
+      "is_negative_control": true
+    },
+    {
+      "skill_id": "SK-122",
+      "file": "SK-122.json",
+      "policy_id": null,
+      "subflow": null,
+      "branch": null,
+      "is_negative_control": true
+    },
+    {
+      "skill_id": "SK-123",
+      "file": "SK-123.json",
+      "policy_id": null,
+      "subflow": null,
+      "branch": null,
+      "is_negative_control": true
+    },
+    {
+      "skill_id": "SK-124",
+      "file": "SK-124.json",
+      "policy_id": null,
+      "subflow": null,
+      "branch": null,
+      "is_negative_control": true
+    },
+    {
+      "skill_id": "SK-125",
+      "file": "SK-125.json",
+      "policy_id": null,
+      "subflow": null,
+      "branch": null,
+      "is_negative_control": true
+    },
+    {
+      "skill_id": "SK-126",
+      "file": "SK-126.json",
+      "policy_id": null,
+      "subflow": null,
+      "branch": null,
+      "is_negative_control": true
+    },
+    {
+      "skill_id": "SK-127",
+      "file": "SK-127.json",
+      "policy_id": null,
+      "subflow": null,
+      "branch": null,
+      "is_negative_control": true
+    },
+    {
+      "skill_id": "SK-128",
+      "file": "SK-128.json",
+      "policy_id": null,
+      "subflow": null,
+      "branch": null,
+      "is_negative_control": true
+    },
+    {
+      "skill_id": "SK-129",
+      "file": "SK-129.json",
+      "policy_id": null,
+      "subflow": null,
+      "branch": null,
+      "is_negative_control": true
+    },
+    {
+      "skill_id": "SK-130",
+      "file": "SK-130.json",
+      "policy_id": null,
+      "subflow": null,
+      "branch": null,
+      "is_negative_control": true
+    },
+    {
+      "skill_id": "SK-131",
+      "file": "SK-131.json",
+      "policy_id": null,
+      "subflow": null,
+      "branch": null,
+      "is_negative_control": true
+    },
+    {
+      "skill_id": "SK-132",
+      "file": "SK-132.json",
+      "policy_id": null,
+      "subflow": null,
+      "branch": null,
+      "is_negative_control": true
+    },
+    {
+      "skill_id": "SK-133",
+      "file": "SK-133.json",
+      "policy_id": null,
+      "subflow": null,
+      "branch": null,
+      "is_negative_control": true
+    }
+  ]
+}

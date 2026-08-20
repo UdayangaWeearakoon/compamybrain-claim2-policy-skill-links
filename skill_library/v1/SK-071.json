@@ -1,0 +1,44 @@
+{
+  "subflow": "bad_price_competitor",
+  "flow": "purchase_dispute",
+  "branch": null,
+  "policy_id": "POL-022",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-022-R1",
+    "POL-022-R2",
+    "POL-022-R3",
+    "POL-022-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'bad_price_competitor' (flow: Purchase Dispute). Governing policy: Competitor Price Match Policy (POL-022 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "alessandro phoenix"
+      ]
+    },
+    {
+      "button": "record-reason",
+      "values": [
+        "competitor"
+      ]
+    },
+    {
+      "button": "promo-code",
+      "values": []
+    }
+  ],
+  "postcondition": "A promo code is generated and issued to the customer",
+  "provenance_convo_ids": [
+    302,
+    1907,
+    2283,
+    2468,
+    2792
+  ],
+  "provenance_count_in_cluster": 12,
+  "cluster_size": 12,
+  "is_negative_control": false,
+  "skill_id": "SK-071"
+}

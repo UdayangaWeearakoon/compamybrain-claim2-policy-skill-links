@@ -1,0 +1,54 @@
+{
+  "subflow": "cost",
+  "flow": "shipping_issue",
+  "branch": null,
+  "policy_id": "POL-031",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-031-R1",
+    "POL-031-R2",
+    "POL-031-R3",
+    "POL-031-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'cost' (flow: Shipping Issue). Governing policy: Shipping Cost Policy (POL-031 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "norman bouchard"
+      ]
+    },
+    {
+      "button": "validate-purchase",
+      "values": [
+        "nbouchard919",
+        "nbouchard919@email.com",
+        "5406712662"
+      ]
+    },
+    {
+      "button": "shipping-status",
+      "values": [
+        "in transit"
+      ]
+    },
+    {
+      "button": "update-order",
+      "values": [
+        "waive fee"
+      ]
+    }
+  ],
+  "postcondition": "The order is updated per the requested change",
+  "provenance_convo_ids": [
+    833,
+    1503,
+    2239,
+    3598,
+    3879
+  ],
+  "provenance_count_in_cluster": 38,
+  "cluster_size": 38,
+  "is_negative_control": false,
+  "skill_id": "SK-096"
+}

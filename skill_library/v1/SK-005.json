@@ -1,0 +1,41 @@
+{
+  "subflow": "refund_update",
+  "flow": "product_defect",
+  "branch": null,
+  "policy_id": "POL-002",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-002-R1",
+    "POL-002-R2",
+    "POL-002-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'refund_update' (flow: Product Defect). Governing policy: Refund Update Policy (POL-002 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "albert sanders"
+      ]
+    },
+    {
+      "button": "validate-purchase",
+      "values": [
+        "albertsanders187",
+        "albertsanders187@email.com",
+        "1119201379"
+      ]
+    }
+  ],
+  "postcondition": "The purchase is validated, gating the next step",
+  "provenance_convo_ids": [
+    1060,
+    2235,
+    2781,
+    2923,
+    2982
+  ],
+  "provenance_count_in_cluster": 11,
+  "cluster_size": 11,
+  "is_negative_control": false,
+  "skill_id": "SK-005"
+}

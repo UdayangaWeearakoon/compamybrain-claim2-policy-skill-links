@@ -1,0 +1,54 @@
+{
+  "subflow": "manage_change_address",
+  "flow": "manage_account",
+  "branch": null,
+  "policy_id": "POL-021",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-021-R1",
+    "POL-021-R2",
+    "POL-021-R3",
+    "POL-021-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_change_address' (flow: Manage Account). Governing policy: Account Profile Update Policy (POL-021 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "sanya afzal"
+      ]
+    },
+    {
+      "button": "record-reason",
+      "values": [
+        "1909 lexington ave brighton, wa 39949"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "39949",
+        "sanyaa54",
+        "sanyaa54@email.com"
+      ]
+    },
+    {
+      "button": "update-account",
+      "values": [
+        "1908 lexington ave brighton, wa 39949"
+      ]
+    }
+  ],
+  "postcondition": "The account is updated per the requested change",
+  "provenance_convo_ids": [
+    111,
+    171,
+    543,
+    570,
+    574
+  ],
+  "provenance_count_in_cluster": 75,
+  "cluster_size": 75,
+  "is_negative_control": false,
+  "skill_id": "SK-066"
+}

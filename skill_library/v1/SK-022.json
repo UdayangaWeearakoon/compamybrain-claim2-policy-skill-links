@@ -1,0 +1,47 @@
+{
+  "subflow": "status_payment_method",
+  "flow": "order_issue",
+  "branch": null,
+  "policy_id": "POL-007",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-007-R1",
+    "POL-007-R2",
+    "POL-007-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status_payment_method' (flow: Order Issue). Governing policy: Order Payment Method Policy (POL-007 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "albert sanders"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "albert sanders",
+        "2un7fukm3v",
+        "8347130714"
+      ]
+    },
+    {
+      "button": "shipping-status",
+      "values": [
+        "out for delivery"
+      ]
+    }
+  ],
+  "postcondition": "The shipping status is recorded, gating the next step",
+  "provenance_convo_ids": [
+    572,
+    1103,
+    1671,
+    1890,
+    2184
+  ],
+  "provenance_count_in_cluster": 14,
+  "cluster_size": 14,
+  "is_negative_control": false,
+  "skill_id": "SK-022"
+}

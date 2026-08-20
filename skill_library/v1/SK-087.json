@@ -1,0 +1,59 @@
+{
+  "subflow": "status",
+  "flow": "shipping_issue",
+  "branch": null,
+  "policy_id": "POL-028",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-028-R1",
+    "POL-028-R2",
+    "POL-028-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status' (flow: Shipping Issue). Governing policy: Shipping Status Inquiry Policy (POL-028 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "albert sanders"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "albert sanders",
+        "ujez8glfhv",
+        "1135512314"
+      ]
+    },
+    {
+      "button": "validate-purchase",
+      "values": [
+        "as589242",
+        "as589242@email.com",
+        "1135512314"
+      ]
+    },
+    {
+      "button": "ask-the-oracle",
+      "values": []
+    },
+    {
+      "button": "update-order",
+      "values": [
+        "change item"
+      ]
+    }
+  ],
+  "postcondition": "The order is updated per the requested change",
+  "provenance_convo_ids": [
+    1722,
+    2352,
+    2469,
+    4544,
+    5140
+  ],
+  "provenance_count_in_cluster": 34,
+  "cluster_size": 34,
+  "is_negative_control": false,
+  "skill_id": "SK-087"
+}

@@ -1,0 +1,30 @@
+{
+  "subflow": null,
+  "flow": null,
+  "branch": null,
+  "policy_id": null,
+  "policy_version": null,
+  "rule_ids": [],
+  "precondition": "The agent captures a free-form detail (address, phone, troubleshoot flag, PIN) via Enter Details. The capture mechanic is identical everywhere it's used; what differs is which policy, if any, gates what happens with the captured value afterward -- capture itself is not a testable rule. (subcluster: product_defect)",
+  "action_sequence": [
+    {
+      "button": "enter-details",
+      "values": [
+        "(977) 625-2661"
+      ]
+    }
+  ],
+  "postcondition": "No policy-governed consequence follows from this step alone; observed across 6 distinct subflows (refund_initiate, refund_status, refund_update, return_color, return_size, return_stain).",
+  "provenance_convo_ids": [
+    1657,
+    2298,
+    3592,
+    6376,
+    8694
+  ],
+  "provenance_count_in_cluster": 461,
+  "cluster_size": 1592,
+  "is_negative_control": true,
+  "negative_control_name": "Generic Enter Details capture (product_defect)",
+  "skill_id": "SK-132"
+}

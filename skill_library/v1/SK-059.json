@@ -1,0 +1,33 @@
+{
+  "subflow": "status_service_removed",
+  "flow": "manage_account",
+  "branch": null,
+  "policy_id": "POL-018",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-018-R1",
+    "POL-018-R2",
+    "POL-018-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status_service_removed' (flow: Manage Account). Governing policy: Service Removal Dispute Policy (POL-018 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "rodriguez domingo"
+      ]
+    }
+  ],
+  "postcondition": "The 'pull-up-account' action is taken as the final step.",
+  "provenance_convo_ids": [
+    1641,
+    4548,
+    5270,
+    7016,
+    8889
+  ],
+  "provenance_count_in_cluster": 6,
+  "cluster_size": 6,
+  "is_negative_control": false,
+  "skill_id": "SK-059"
+}

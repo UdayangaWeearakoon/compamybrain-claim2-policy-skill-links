@@ -1,0 +1,39 @@
+{
+  "subflow": "reset_2fa",
+  "flow": "account_access",
+  "branch": null,
+  "policy_id": "POL-014",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-014-R1",
+    "POL-014-R2",
+    "POL-014-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'reset_2fa' (flow: Account Access). Governing policy: Two-Factor Reset Policy (POL-014 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "joyce wu"
+      ]
+    },
+    {
+      "button": "enter-details",
+      "values": [
+        "joycewu32@gmail.com"
+      ]
+    }
+  ],
+  "postcondition": "The requested detail is recorded, pending a further step",
+  "provenance_convo_ids": [
+    437,
+    4377,
+    4404,
+    5052,
+    5794
+  ],
+  "provenance_count_in_cluster": 16,
+  "cluster_size": 16,
+  "is_negative_control": false,
+  "skill_id": "SK-046"
+}

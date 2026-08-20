@@ -1,0 +1,44 @@
+{
+  "subflow": "promo_code_invalid",
+  "flow": "purchase_dispute",
+  "branch": "guest",
+  "policy_id": "POL-025",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-025-R1",
+    "POL-025-R2",
+    "POL-025-R3",
+    "POL-025-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'promo_code_invalid' (flow: Purchase Dispute). Customer's membership level is guest. Governing policy: Promo Code Dispute Policy (POL-025 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "chloe zhang"
+      ]
+    },
+    {
+      "button": "ask-the-oracle",
+      "values": []
+    },
+    {
+      "button": "membership",
+      "values": [
+        "guest"
+      ]
+    }
+  ],
+  "postcondition": "The membership-privileges check is recorded, gating the next step",
+  "provenance_convo_ids": [
+    545,
+    1763,
+    3189,
+    3329,
+    3739
+  ],
+  "provenance_count_in_cluster": 16,
+  "cluster_size": 47,
+  "is_negative_control": false,
+  "skill_id": "SK-080"
+}

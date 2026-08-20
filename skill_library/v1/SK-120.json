@@ -1,0 +1,30 @@
+{
+  "subflow": null,
+  "flow": null,
+  "branch": null,
+  "policy_id": null,
+  "policy_version": null,
+  "rule_ids": [],
+  "precondition": "The agent asks for the customer's full name or account ID and clicks Pull up Account to load their record. This is a data-fetch mechanic shared by the opening step of most flows; the Phase 1 corpus does not encode it as a testable rule because no eligibility or amount depends on it -- it is not gated, it is prerequisite plumbing. (subcluster: order_issue)",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "sanya afzal"
+      ]
+    }
+  ],
+  "postcondition": "No policy-governed consequence follows from this step alone; observed across 8 distinct subflows (manage_cancel, manage_create, manage_downgrade, manage_upgrade, status_delivery_time, status_mystery_fee...).",
+  "provenance_convo_ids": [
+    5395,
+    5599,
+    8080,
+    8640,
+    9738
+  ],
+  "provenance_count_in_cluster": 791,
+  "cluster_size": 5356,
+  "is_negative_control": true,
+  "negative_control_name": "Universal account identification (Pull up Account) (order_issue)",
+  "skill_id": "SK-120"
+}

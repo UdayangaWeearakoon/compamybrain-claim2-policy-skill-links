@@ -1,0 +1,53 @@
+{
+  "subflow": "missing",
+  "flow": "shipping_issue",
+  "branch": null,
+  "policy_id": "POL-030",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-030-R1",
+    "POL-030-R2",
+    "POL-030-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'missing' (flow: Shipping Issue). Governing policy: Missing Item Policy (POL-030 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "crystal minh"
+      ]
+    },
+    {
+      "button": "validate-purchase",
+      "values": [
+        "cm963882",
+        "cm963882@email.com",
+        "1355058491"
+      ]
+    },
+    {
+      "button": "update-order",
+      "values": [
+        "9872 circle drive monterey, ny 84876"
+      ]
+    },
+    {
+      "button": "make-purchase",
+      "values": [
+        "tommy hilfiger shirt"
+      ]
+    }
+  ],
+  "postcondition": "The purchase/back-order is completed on the customer's behalf",
+  "provenance_convo_ids": [
+    1386,
+    2064,
+    3931,
+    4124,
+    4351
+  ],
+  "provenance_count_in_cluster": 16,
+  "cluster_size": 16,
+  "is_negative_control": false,
+  "skill_id": "SK-094"
+}

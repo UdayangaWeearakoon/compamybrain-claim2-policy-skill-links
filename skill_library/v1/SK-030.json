@@ -1,0 +1,48 @@
+{
+  "subflow": "manage_downgrade",
+  "flow": "order_issue",
+  "branch": "silver",
+  "policy_id": "POL-009",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-009-R1",
+    "POL-009-R2",
+    "POL-009-R3",
+    "POL-009-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_downgrade' (flow: Order Issue). Customer's membership level is silver. Governing policy: Order Shipping Tier Change Policy (POL-009 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "david williams"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "david williams",
+        "ikq5bwdgoe",
+        "7395071550"
+      ]
+    },
+    {
+      "button": "shipping-status",
+      "values": [
+        "in transit"
+      ]
+    }
+  ],
+  "postcondition": "The shipping status is recorded, gating the next step",
+  "provenance_convo_ids": [
+    2127,
+    2137,
+    2823,
+    3032,
+    4044
+  ],
+  "provenance_count_in_cluster": 8,
+  "cluster_size": 48,
+  "is_negative_control": false,
+  "skill_id": "SK-030"
+}

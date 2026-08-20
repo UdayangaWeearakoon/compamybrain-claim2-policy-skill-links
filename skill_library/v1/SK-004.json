@@ -1,0 +1,53 @@
+{
+  "subflow": "refund_update",
+  "flow": "product_defect",
+  "branch": null,
+  "policy_id": "POL-002",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-002-R1",
+    "POL-002-R2",
+    "POL-002-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'refund_update' (flow: Product Defect). Governing policy: Refund Update Policy (POL-002 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "albert sanders"
+      ]
+    },
+    {
+      "button": "validate-purchase",
+      "values": [
+        "alberts2",
+        "alberts2@email.com",
+        "5581075586"
+      ]
+    },
+    {
+      "button": "record-reason",
+      "values": [
+        "michael kors boots"
+      ]
+    },
+    {
+      "button": "offer-refund",
+      "values": [
+        "164"
+      ]
+    }
+  ],
+  "postcondition": "A refund is issued to the customer",
+  "provenance_convo_ids": [
+    296,
+    419,
+    612,
+    698,
+    706
+  ],
+  "provenance_count_in_cluster": 86,
+  "cluster_size": 86,
+  "is_negative_control": false,
+  "skill_id": "SK-004"
+}

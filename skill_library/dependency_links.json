@@ -1,0 +1,1546 @@
+{
+  "num_skills": 131,
+  "num_linked": 115,
+  "num_negative_control": 16,
+  "links": [
+    {
+      "skill_id": "SK-001",
+      "policy_id": "POL-001",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-001-R1",
+        "POL-001-R2",
+        "POL-001-R3",
+        "POL-001-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-002",
+      "policy_id": "POL-001",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-001-R1",
+        "POL-001-R2",
+        "POL-001-R3",
+        "POL-001-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-003",
+      "policy_id": "POL-001",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-001-R1",
+        "POL-001-R2",
+        "POL-001-R3",
+        "POL-001-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-004",
+      "policy_id": "POL-002",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-002-R1",
+        "POL-002-R2",
+        "POL-002-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-005",
+      "policy_id": "POL-002",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-002-R1",
+        "POL-002-R2",
+        "POL-002-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-006",
+      "policy_id": "POL-002",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-002-R1",
+        "POL-002-R2",
+        "POL-002-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-007",
+      "policy_id": "POL-003",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-003-R1",
+        "POL-003-R2",
+        "POL-003-R3",
+        "POL-003-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-008",
+      "policy_id": "POL-003",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-003-R1",
+        "POL-003-R2",
+        "POL-003-R3",
+        "POL-003-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-009",
+      "policy_id": "POL-003",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-003-R1",
+        "POL-003-R2",
+        "POL-003-R3",
+        "POL-003-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-010",
+      "policy_id": "POL-004",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-004-R1",
+        "POL-004-R2",
+        "POL-004-R4",
+        "POL-004-R5"
+      ],
+      "is_negative_control": false,
+      "branch": "bronze"
+    },
+    {
+      "skill_id": "SK-011",
+      "policy_id": "POL-004",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-004-R1",
+        "POL-004-R2",
+        "POL-004-R4",
+        "POL-004-R5"
+      ],
+      "is_negative_control": false,
+      "branch": "gold"
+    },
+    {
+      "skill_id": "SK-012",
+      "policy_id": "POL-004",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-004-R1",
+        "POL-004-R2",
+        "POL-004-R3",
+        "POL-004-R4",
+        "POL-004-R5"
+      ],
+      "is_negative_control": false,
+      "branch": "guest"
+    },
+    {
+      "skill_id": "SK-013",
+      "policy_id": "POL-004",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-004-R1",
+        "POL-004-R2",
+        "POL-004-R4",
+        "POL-004-R5"
+      ],
+      "is_negative_control": false,
+      "branch": "silver"
+    },
+    {
+      "skill_id": "SK-014",
+      "policy_id": "POL-005",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-005-R1",
+        "POL-005-R2",
+        "POL-005-R3"
+      ],
+      "is_negative_control": false,
+      "branch": "bronze"
+    },
+    {
+      "skill_id": "SK-015",
+      "policy_id": "POL-005",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-005-R1",
+        "POL-005-R2",
+        "POL-005-R3"
+      ],
+      "is_negative_control": false,
+      "branch": "gold"
+    },
+    {
+      "skill_id": "SK-016",
+      "policy_id": "POL-005",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-005-R1",
+        "POL-005-R2",
+        "POL-005-R3"
+      ],
+      "is_negative_control": false,
+      "branch": "guest"
+    },
+    {
+      "skill_id": "SK-017",
+      "policy_id": "POL-005",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-005-R1",
+        "POL-005-R2",
+        "POL-005-R3"
+      ],
+      "is_negative_control": false,
+      "branch": "silver"
+    },
+    {
+      "skill_id": "SK-018",
+      "policy_id": "POL-006",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-006-R1",
+        "POL-006-R2"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-019",
+      "policy_id": "POL-006",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-006-R1",
+        "POL-006-R2"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-020",
+      "policy_id": "POL-006",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-006-R1",
+        "POL-006-R2"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-021",
+      "policy_id": "POL-007",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-007-R1",
+        "POL-007-R2",
+        "POL-007-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-022",
+      "policy_id": "POL-007",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-007-R1",
+        "POL-007-R2",
+        "POL-007-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-023",
+      "policy_id": "POL-007",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-007-R1",
+        "POL-007-R2",
+        "POL-007-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-024",
+      "policy_id": "POL-008",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-008-R1",
+        "POL-008-R2",
+        "POL-008-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-025",
+      "policy_id": "POL-008",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-008-R1",
+        "POL-008-R2",
+        "POL-008-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-026",
+      "policy_id": "POL-008",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-008-R1",
+        "POL-008-R2",
+        "POL-008-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-027",
+      "policy_id": "POL-009",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-009-R1",
+        "POL-009-R2",
+        "POL-009-R3",
+        "POL-009-R4"
+      ],
+      "is_negative_control": false,
+      "branch": "bronze"
+    },
+    {
+      "skill_id": "SK-028",
+      "policy_id": "POL-009",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-009-R1",
+        "POL-009-R2",
+        "POL-009-R3",
+        "POL-009-R4"
+      ],
+      "is_negative_control": false,
+      "branch": "gold"
+    },
+    {
+      "skill_id": "SK-029",
+      "policy_id": "POL-009",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-009-R1",
+        "POL-009-R2",
+        "POL-009-R3",
+        "POL-009-R4"
+      ],
+      "is_negative_control": false,
+      "branch": "guest"
+    },
+    {
+      "skill_id": "SK-030",
+      "policy_id": "POL-009",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-009-R1",
+        "POL-009-R2",
+        "POL-009-R3",
+        "POL-009-R4"
+      ],
+      "is_negative_control": false,
+      "branch": "silver"
+    },
+    {
+      "skill_id": "SK-031",
+      "policy_id": "POL-010",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-010-R1",
+        "POL-010-R2"
+      ],
+      "is_negative_control": false,
+      "branch": "bronze"
+    },
+    {
+      "skill_id": "SK-032",
+      "policy_id": "POL-010",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-010-R1",
+        "POL-010-R2",
+        "POL-010-R3"
+      ],
+      "is_negative_control": false,
+      "branch": "gold"
+    },
+    {
+      "skill_id": "SK-033",
+      "policy_id": "POL-010",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-010-R1",
+        "POL-010-R2"
+      ],
+      "is_negative_control": false,
+      "branch": "guest"
+    },
+    {
+      "skill_id": "SK-034",
+      "policy_id": "POL-010",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-010-R1",
+        "POL-010-R2",
+        "POL-010-R3"
+      ],
+      "is_negative_control": false,
+      "branch": "silver"
+    },
+    {
+      "skill_id": "SK-035",
+      "policy_id": "POL-011",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-011-R1",
+        "POL-011-R2",
+        "POL-011-R3"
+      ],
+      "is_negative_control": false,
+      "branch": "bronze"
+    },
+    {
+      "skill_id": "SK-036",
+      "policy_id": "POL-011",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-011-R1",
+        "POL-011-R2",
+        "POL-011-R3"
+      ],
+      "is_negative_control": false,
+      "branch": "gold"
+    },
+    {
+      "skill_id": "SK-037",
+      "policy_id": "POL-011",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-011-R1",
+        "POL-011-R2",
+        "POL-011-R3"
+      ],
+      "is_negative_control": false,
+      "branch": "guest"
+    },
+    {
+      "skill_id": "SK-038",
+      "policy_id": "POL-011",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-011-R1",
+        "POL-011-R2",
+        "POL-011-R3"
+      ],
+      "is_negative_control": false,
+      "branch": "silver"
+    },
+    {
+      "skill_id": "SK-039",
+      "policy_id": "POL-012",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-012-R1",
+        "POL-012-R2",
+        "POL-012-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-040",
+      "policy_id": "POL-012",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-012-R1",
+        "POL-012-R2",
+        "POL-012-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-041",
+      "policy_id": "POL-012",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-012-R1",
+        "POL-012-R2",
+        "POL-012-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-042",
+      "policy_id": "POL-013",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-013-R1",
+        "POL-013-R2"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-043",
+      "policy_id": "POL-013",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-013-R1",
+        "POL-013-R2"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-044",
+      "policy_id": "POL-013",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-013-R1",
+        "POL-013-R2"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-045",
+      "policy_id": "POL-014",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-014-R1",
+        "POL-014-R2",
+        "POL-014-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-046",
+      "policy_id": "POL-014",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-014-R1",
+        "POL-014-R2",
+        "POL-014-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-047",
+      "policy_id": "POL-014",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-014-R1",
+        "POL-014-R2",
+        "POL-014-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-048",
+      "policy_id": "POL-015",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-015-R1",
+        "POL-015-R2",
+        "POL-015-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-049",
+      "policy_id": "POL-015",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-015-R1",
+        "POL-015-R2",
+        "POL-015-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-050",
+      "policy_id": "POL-015",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-015-R1",
+        "POL-015-R2",
+        "POL-015-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-051",
+      "policy_id": "POL-016",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-016-R1",
+        "POL-016-R2",
+        "POL-016-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-052",
+      "policy_id": "POL-016",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-016-R1",
+        "POL-016-R2",
+        "POL-016-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-054",
+      "policy_id": "POL-017",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-017-R1",
+        "POL-017-R2",
+        "POL-017-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-055",
+      "policy_id": "POL-017",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-017-R1",
+        "POL-017-R2",
+        "POL-017-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-056",
+      "policy_id": "POL-017",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-017-R1",
+        "POL-017-R2",
+        "POL-017-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-057",
+      "policy_id": "POL-018",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-018-R1",
+        "POL-018-R2",
+        "POL-018-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-058",
+      "policy_id": "POL-018",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-018-R1",
+        "POL-018-R2",
+        "POL-018-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-059",
+      "policy_id": "POL-018",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-018-R1",
+        "POL-018-R2",
+        "POL-018-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-060",
+      "policy_id": "POL-019",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-019-R1",
+        "POL-019-R2",
+        "POL-019-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-061",
+      "policy_id": "POL-019",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-019-R1",
+        "POL-019-R2",
+        "POL-019-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-062",
+      "policy_id": "POL-019",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-019-R1",
+        "POL-019-R2",
+        "POL-019-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-063",
+      "policy_id": "POL-020",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-020-R1",
+        "POL-020-R2",
+        "POL-020-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-064",
+      "policy_id": "POL-020",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-020-R1",
+        "POL-020-R2",
+        "POL-020-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-065",
+      "policy_id": "POL-020",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-020-R1",
+        "POL-020-R2",
+        "POL-020-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-066",
+      "policy_id": "POL-021",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-021-R1",
+        "POL-021-R2",
+        "POL-021-R3",
+        "POL-021-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-067",
+      "policy_id": "POL-021",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-021-R1",
+        "POL-021-R2",
+        "POL-021-R3",
+        "POL-021-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-068",
+      "policy_id": "POL-021",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-021-R1",
+        "POL-021-R2",
+        "POL-021-R3",
+        "POL-021-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-069",
+      "policy_id": "POL-022",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-022-R1",
+        "POL-022-R2",
+        "POL-022-R3",
+        "POL-022-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-070",
+      "policy_id": "POL-022",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-022-R1",
+        "POL-022-R2",
+        "POL-022-R3",
+        "POL-022-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-071",
+      "policy_id": "POL-022",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-022-R1",
+        "POL-022-R2",
+        "POL-022-R3",
+        "POL-022-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-072",
+      "policy_id": "POL-023",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-023-R1",
+        "POL-023-R2"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-073",
+      "policy_id": "POL-023",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-023-R1",
+        "POL-023-R2"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-074",
+      "policy_id": "POL-023",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-023-R1",
+        "POL-023-R2"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-075",
+      "policy_id": "POL-024",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-024-R1",
+        "POL-024-R2",
+        "POL-024-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-076",
+      "policy_id": "POL-024",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-024-R1",
+        "POL-024-R2",
+        "POL-024-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-077",
+      "policy_id": "POL-024",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-024-R1",
+        "POL-024-R2",
+        "POL-024-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-078",
+      "policy_id": "POL-025",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-025-R1",
+        "POL-025-R2",
+        "POL-025-R3",
+        "POL-025-R4"
+      ],
+      "is_negative_control": false,
+      "branch": "bronze"
+    },
+    {
+      "skill_id": "SK-079",
+      "policy_id": "POL-025",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-025-R1",
+        "POL-025-R2",
+        "POL-025-R3",
+        "POL-025-R4"
+      ],
+      "is_negative_control": false,
+      "branch": "gold"
+    },
+    {
+      "skill_id": "SK-080",
+      "policy_id": "POL-025",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-025-R1",
+        "POL-025-R2",
+        "POL-025-R3",
+        "POL-025-R4"
+      ],
+      "is_negative_control": false,
+      "branch": "guest"
+    },
+    {
+      "skill_id": "SK-081",
+      "policy_id": "POL-025",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-025-R1",
+        "POL-025-R2",
+        "POL-025-R3",
+        "POL-025-R4"
+      ],
+      "is_negative_control": false,
+      "branch": "silver"
+    },
+    {
+      "skill_id": "SK-082",
+      "policy_id": "POL-026",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-026-R1",
+        "POL-026-R2",
+        "POL-026-R3",
+        "POL-026-R4"
+      ],
+      "is_negative_control": false,
+      "branch": "gold"
+    },
+    {
+      "skill_id": "SK-083",
+      "policy_id": "POL-026",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-026-R1",
+        "POL-026-R2",
+        "POL-026-R4"
+      ],
+      "is_negative_control": false,
+      "branch": "non-gold"
+    },
+    {
+      "skill_id": "SK-084",
+      "policy_id": "POL-027",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-027-R1",
+        "POL-027-R2",
+        "POL-027-R3",
+        "POL-027-R4"
+      ],
+      "is_negative_control": false,
+      "branch": "gold"
+    },
+    {
+      "skill_id": "SK-085",
+      "policy_id": "POL-027",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-027-R1",
+        "POL-027-R2",
+        "POL-027-R4"
+      ],
+      "is_negative_control": false,
+      "branch": "non-gold"
+    },
+    {
+      "skill_id": "SK-086",
+      "policy_id": "POL-028",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-028-R1",
+        "POL-028-R2",
+        "POL-028-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-087",
+      "policy_id": "POL-028",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-028-R1",
+        "POL-028-R2",
+        "POL-028-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-088",
+      "policy_id": "POL-028",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-028-R1",
+        "POL-028-R2",
+        "POL-028-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-089",
+      "policy_id": "POL-029",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-029-R1",
+        "POL-029-R2",
+        "POL-029-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-091",
+      "policy_id": "POL-029",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-029-R1",
+        "POL-029-R2",
+        "POL-029-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-092",
+      "policy_id": "POL-030",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-030-R1",
+        "POL-030-R2",
+        "POL-030-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-093",
+      "policy_id": "POL-030",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-030-R1",
+        "POL-030-R2",
+        "POL-030-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-094",
+      "policy_id": "POL-030",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-030-R1",
+        "POL-030-R2",
+        "POL-030-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-095",
+      "policy_id": "POL-031",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-031-R1",
+        "POL-031-R2",
+        "POL-031-R3",
+        "POL-031-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-096",
+      "policy_id": "POL-031",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-031-R1",
+        "POL-031-R2",
+        "POL-031-R3",
+        "POL-031-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-097",
+      "policy_id": "POL-031",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-031-R1",
+        "POL-031-R2",
+        "POL-031-R3",
+        "POL-031-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-098",
+      "policy_id": "POL-032",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-032-R1",
+        "POL-032-R2",
+        "POL-032-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-099",
+      "policy_id": "POL-032",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-032-R1",
+        "POL-032-R2",
+        "POL-032-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-100",
+      "policy_id": "POL-032",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-032-R1",
+        "POL-032-R2",
+        "POL-032-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-101",
+      "policy_id": "POL-033",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-033-R1",
+        "POL-033-R2",
+        "POL-033-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-102",
+      "policy_id": "POL-033",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-033-R1",
+        "POL-033-R2",
+        "POL-033-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-103",
+      "policy_id": "POL-033",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-033-R1",
+        "POL-033-R2",
+        "POL-033-R3"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-104",
+      "policy_id": "POL-034",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-034-R1",
+        "POL-034-R2",
+        "POL-034-R3",
+        "POL-034-R4"
+      ],
+      "is_negative_control": false,
+      "branch": "bronze"
+    },
+    {
+      "skill_id": "SK-105",
+      "policy_id": "POL-034",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-034-R1",
+        "POL-034-R2",
+        "POL-034-R3",
+        "POL-034-R4"
+      ],
+      "is_negative_control": false,
+      "branch": "gold"
+    },
+    {
+      "skill_id": "SK-106",
+      "policy_id": "POL-034",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-034-R1",
+        "POL-034-R2",
+        "POL-034-R3",
+        "POL-034-R4"
+      ],
+      "is_negative_control": false,
+      "branch": "guest"
+    },
+    {
+      "skill_id": "SK-107",
+      "policy_id": "POL-034",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-034-R1",
+        "POL-034-R2",
+        "POL-034-R3",
+        "POL-034-R4"
+      ],
+      "is_negative_control": false,
+      "branch": "silver"
+    },
+    {
+      "skill_id": "SK-108",
+      "policy_id": "POL-035",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-035-R1",
+        "POL-035-R2",
+        "POL-035-R3",
+        "POL-035-R4"
+      ],
+      "is_negative_control": false,
+      "branch": "bronze"
+    },
+    {
+      "skill_id": "SK-109",
+      "policy_id": "POL-035",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-035-R1",
+        "POL-035-R2",
+        "POL-035-R4"
+      ],
+      "is_negative_control": false,
+      "branch": "gold"
+    },
+    {
+      "skill_id": "SK-110",
+      "policy_id": "POL-035",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-035-R1",
+        "POL-035-R2",
+        "POL-035-R3",
+        "POL-035-R4"
+      ],
+      "is_negative_control": false,
+      "branch": "guest"
+    },
+    {
+      "skill_id": "SK-111",
+      "policy_id": "POL-035",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-035-R1",
+        "POL-035-R2",
+        "POL-035-R4"
+      ],
+      "is_negative_control": false,
+      "branch": "silver"
+    },
+    {
+      "skill_id": "SK-112",
+      "policy_id": "POL-036",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-036-R1",
+        "POL-036-R2",
+        "POL-036-R3",
+        "POL-036-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-113",
+      "policy_id": "POL-036",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-036-R1",
+        "POL-036-R2",
+        "POL-036-R3",
+        "POL-036-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-114",
+      "policy_id": "POL-036",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-036-R1",
+        "POL-036-R2",
+        "POL-036-R3",
+        "POL-036-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-115",
+      "policy_id": "POL-037",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-037-R1",
+        "POL-037-R2",
+        "POL-037-R3",
+        "POL-037-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-116",
+      "policy_id": "POL-037",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-037-R1",
+        "POL-037-R2",
+        "POL-037-R3",
+        "POL-037-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-117",
+      "policy_id": "POL-037",
+      "policy_version": "v1",
+      "rule_ids": [
+        "POL-037-R1",
+        "POL-037-R2",
+        "POL-037-R3",
+        "POL-037-R4"
+      ],
+      "is_negative_control": false,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-118",
+      "policy_id": null,
+      "policy_version": null,
+      "rule_ids": [],
+      "is_negative_control": true,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-119",
+      "policy_id": null,
+      "policy_version": null,
+      "rule_ids": [],
+      "is_negative_control": true,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-120",
+      "policy_id": null,
+      "policy_version": null,
+      "rule_ids": [],
+      "is_negative_control": true,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-121",
+      "policy_id": null,
+      "policy_version": null,
+      "rule_ids": [],
+      "is_negative_control": true,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-122",
+      "policy_id": null,
+      "policy_version": null,
+      "rule_ids": [],
+      "is_negative_control": true,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-123",
+      "policy_id": null,
+      "policy_version": null,
+      "rule_ids": [],
+      "is_negative_control": true,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-124",
+      "policy_id": null,
+      "policy_version": null,
+      "rule_ids": [],
+      "is_negative_control": true,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-125",
+      "policy_id": null,
+      "policy_version": null,
+      "rule_ids": [],
+      "is_negative_control": true,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-126",
+      "policy_id": null,
+      "policy_version": null,
+      "rule_ids": [],
+      "is_negative_control": true,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-127",
+      "policy_id": null,
+      "policy_version": null,
+      "rule_ids": [],
+      "is_negative_control": true,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-128",
+      "policy_id": null,
+      "policy_version": null,
+      "rule_ids": [],
+      "is_negative_control": true,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-129",
+      "policy_id": null,
+      "policy_version": null,
+      "rule_ids": [],
+      "is_negative_control": true,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-130",
+      "policy_id": null,
+      "policy_version": null,
+      "rule_ids": [],
+      "is_negative_control": true,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-131",
+      "policy_id": null,
+      "policy_version": null,
+      "rule_ids": [],
+      "is_negative_control": true,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-132",
+      "policy_id": null,
+      "policy_version": null,
+      "rule_ids": [],
+      "is_negative_control": true,
+      "branch": null
+    },
+    {
+      "skill_id": "SK-133",
+      "policy_id": null,
+      "policy_version": null,
+      "rule_ids": [],
+      "is_negative_control": true,
+      "branch": null
+    }
+  ]
+}

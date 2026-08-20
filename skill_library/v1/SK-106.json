@@ -1,0 +1,60 @@
+{
+  "subflow": "manage_extension",
+  "flow": "subscription_inquiry",
+  "branch": "guest",
+  "policy_id": "POL-034",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-034-R1",
+    "POL-034-R2",
+    "POL-034-R3",
+    "POL-034-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_extension' (flow: Subscription Inquiry). Customer's membership level is guest. Governing policy: Subscription Extension Policy (POL-034 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "joseph banter"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "joseph banter",
+        "h7jjfqvvz5",
+        "5745317397"
+      ]
+    },
+    {
+      "button": "membership",
+      "values": [
+        "guest"
+      ]
+    },
+    {
+      "button": "enter-details",
+      "values": [
+        "(319) 418-8601"
+      ]
+    },
+    {
+      "button": "notify-team",
+      "values": [
+        "manager"
+      ]
+    }
+  ],
+  "postcondition": "The issue is escalated internally rather than resolved directly by the agent",
+  "provenance_convo_ids": [
+    1631,
+    2460,
+    3228,
+    3268,
+    5871
+  ],
+  "provenance_count_in_cluster": 12,
+  "cluster_size": 34,
+  "is_negative_control": false,
+  "skill_id": "SK-106"
+}

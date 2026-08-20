@@ -1,0 +1,42 @@
+{
+  "subflow": "refund_status",
+  "flow": "product_defect",
+  "branch": null,
+  "policy_id": "POL-003",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-003-R1",
+    "POL-003-R2",
+    "POL-003-R3",
+    "POL-003-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'refund_status' (flow: Product Defect). Governing policy: Refund Status Policy (POL-003 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "alessandro phoenix"
+      ]
+    },
+    {
+      "button": "validate-purchase",
+      "values": [
+        "aphoenix939",
+        "aphoenix939@email.com",
+        "7916676427"
+      ]
+    }
+  ],
+  "postcondition": "The purchase is validated, gating the next step",
+  "provenance_convo_ids": [
+    275,
+    406,
+    622,
+    707,
+    898
+  ],
+  "provenance_count_in_cluster": 120,
+  "cluster_size": 120,
+  "is_negative_control": false,
+  "skill_id": "SK-007"
+}

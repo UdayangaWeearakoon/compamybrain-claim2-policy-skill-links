@@ -1,0 +1,52 @@
+{
+  "subflow": "mistimed_billing_never_bought",
+  "flow": "purchase_dispute",
+  "branch": "gold",
+  "policy_id": "POL-027",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-027-R1",
+    "POL-027-R2",
+    "POL-027-R3",
+    "POL-027-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'mistimed_billing_never_bought' (flow: Purchase Dispute). Customer's membership level is gold. Governing policy: Mistimed Billing Policy (Never Bought) (POL-027 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "albert sanders"
+      ]
+    },
+    {
+      "button": "validate-purchase",
+      "values": [
+        "asanders373",
+        "asanders373@email.com",
+        "7105237800"
+      ]
+    },
+    {
+      "button": "ask-the-oracle",
+      "values": []
+    },
+    {
+      "button": "update-order",
+      "values": [
+        "give credit"
+      ]
+    }
+  ],
+  "postcondition": "The order is updated per the requested change",
+  "provenance_convo_ids": [
+    678,
+    2684,
+    3752,
+    4009,
+    5215
+  ],
+  "provenance_count_in_cluster": 10,
+  "cluster_size": 27,
+  "is_negative_control": false,
+  "skill_id": "SK-084"
+}

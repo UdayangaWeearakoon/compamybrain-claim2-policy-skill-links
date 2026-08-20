@@ -1,0 +1,53 @@
+{
+  "subflow": "manage_dispute_bill",
+  "flow": "subscription_inquiry",
+  "branch": "silver",
+  "policy_id": "POL-035",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-035-R1",
+    "POL-035-R2",
+    "POL-035-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_dispute_bill' (flow: Subscription Inquiry). Customer's membership level is silver. Governing policy: Subscription Billing Dispute Policy (POL-035 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "joyce wu"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "joyce wu",
+        "gq821uufoo",
+        "4336830962"
+      ]
+    },
+    {
+      "button": "membership",
+      "values": [
+        "silver"
+      ]
+    },
+    {
+      "button": "offer-refund",
+      "values": [
+        "10"
+      ]
+    }
+  ],
+  "postcondition": "A refund is issued to the customer",
+  "provenance_convo_ids": [
+    3805,
+    4374,
+    4474,
+    4623,
+    4865
+  ],
+  "provenance_count_in_cluster": 14,
+  "cluster_size": 36,
+  "is_negative_control": false,
+  "skill_id": "SK-111"
+}

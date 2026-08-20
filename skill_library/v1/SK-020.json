@@ -1,0 +1,44 @@
+{
+  "subflow": "status_delivery_time",
+  "flow": "order_issue",
+  "branch": null,
+  "policy_id": "POL-006",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-006-R1",
+    "POL-006-R2"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status_delivery_time' (flow: Order Issue). Governing policy: Order Delivery Status Policy (POL-006 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "david williams"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "david williams",
+        "ebc3uidyrq",
+        "8891646777"
+      ]
+    },
+    {
+      "button": "ask-the-oracle",
+      "values": []
+    }
+  ],
+  "postcondition": "A system determination is retrieved, gating the next step",
+  "provenance_convo_ids": [
+    919,
+    2128,
+    3248,
+    4084,
+    6319
+  ],
+  "provenance_count_in_cluster": 10,
+  "cluster_size": 10,
+  "is_negative_control": false,
+  "skill_id": "SK-020"
+}

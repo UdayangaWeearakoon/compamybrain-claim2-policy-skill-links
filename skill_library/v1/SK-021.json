@@ -1,0 +1,53 @@
+{
+  "subflow": "status_payment_method",
+  "flow": "order_issue",
+  "branch": null,
+  "policy_id": "POL-007",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-007-R1",
+    "POL-007-R2",
+    "POL-007-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status_payment_method' (flow: Order Issue). Governing policy: Order Payment Method Policy (POL-007 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "norman bouchard"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "norman bouchard",
+        "i52ksz6k05",
+        "3150669907"
+      ]
+    },
+    {
+      "button": "shipping-status",
+      "values": [
+        "delivered"
+      ]
+    },
+    {
+      "button": "update-order",
+      "values": [
+        "debit card"
+      ]
+    }
+  ],
+  "postcondition": "The order is updated per the requested change",
+  "provenance_convo_ids": [
+    1521,
+    1713,
+    2114,
+    2185,
+    2333
+  ],
+  "provenance_count_in_cluster": 44,
+  "cluster_size": 44,
+  "is_negative_control": false,
+  "skill_id": "SK-021"
+}

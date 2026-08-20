@@ -1,0 +1,51 @@
+{
+  "subflow": "status_mystery_fee",
+  "flow": "order_issue",
+  "branch": "guest",
+  "policy_id": "POL-005",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-005-R1",
+    "POL-005-R2",
+    "POL-005-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status_mystery_fee' (flow: Order Issue). Customer's membership level is guest. Governing policy: Order Fee Dispute Policy (POL-005 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "muecqxdidh"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "alessandro phoenix",
+        "muecqxdidh",
+        "6784162648"
+      ]
+    },
+    {
+      "button": "ask-the-oracle",
+      "values": []
+    },
+    {
+      "button": "update-order",
+      "values": [
+        "7.49"
+      ]
+    }
+  ],
+  "postcondition": "The order is updated per the requested change",
+  "provenance_convo_ids": [
+    2852,
+    3229,
+    3280,
+    3854,
+    4147
+  ],
+  "provenance_count_in_cluster": 10,
+  "cluster_size": 30,
+  "is_negative_control": false,
+  "skill_id": "SK-016"
+}

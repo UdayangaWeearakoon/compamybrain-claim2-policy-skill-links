@@ -1,0 +1,28 @@
+{
+  "subflow": null,
+  "flow": null,
+  "branch": null,
+  "policy_id": null,
+  "policy_version": null,
+  "rule_ids": [],
+  "precondition": "The agent's first response to a site/account glitch is to suggest retrying or logging out and back in, before any policy-specific branch is reached. This reflex appears at the start of multiple unrelated troubleshoot_site subflows and is not itself an eligibility-testable rule. (subcluster: log-out-in)",
+  "action_sequence": [
+    {
+      "button": "log-out-in",
+      "values": []
+    }
+  ],
+  "postcondition": "No policy-governed consequence follows from this step alone; observed across 4 distinct subflows (credit_card, search_results, shopping_cart, slow_speed).",
+  "provenance_convo_ids": [
+    3529,
+    5178,
+    5588,
+    7600,
+    10410
+  ],
+  "provenance_count_in_cluster": 265,
+  "cluster_size": 548,
+  "is_negative_control": true,
+  "negative_control_name": "Generic troubleshooting reflex (Try Again / Log Out-In) (log-out-in)",
+  "skill_id": "SK-126"
+}

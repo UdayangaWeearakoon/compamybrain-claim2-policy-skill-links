@@ -1,0 +1,43 @@
+{
+  "subflow": "status_service_removed",
+  "flow": "manage_account",
+  "branch": null,
+  "policy_id": "POL-018",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-018-R1",
+    "POL-018-R2",
+    "POL-018-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status_service_removed' (flow: Manage Account). Governing policy: Service Removal Dispute Policy (POL-018 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "crystal minh"
+      ]
+    },
+    {
+      "button": "record-reason",
+      "values": [
+        "spouse"
+      ]
+    },
+    {
+      "button": "ask-the-oracle",
+      "values": []
+    }
+  ],
+  "postcondition": "A system determination is retrieved, gating the next step",
+  "provenance_convo_ids": [
+    811,
+    2079,
+    2246,
+    2745,
+    3132
+  ],
+  "provenance_count_in_cluster": 41,
+  "cluster_size": 41,
+  "is_negative_control": false,
+  "skill_id": "SK-057"
+}

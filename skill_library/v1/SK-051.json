@@ -1,0 +1,35 @@
+{
+  "subflow": "search_results",
+  "flow": "troubleshoot_site",
+  "branch": null,
+  "policy_id": "POL-016",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-016-R1",
+    "POL-016-R2",
+    "POL-016-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'search_results' (flow: Troubleshoot Site). Governing policy: Site Performance Troubleshooting Policy (POL-016 v1).",
+  "action_sequence": [
+    {
+      "button": "log-out-in",
+      "values": []
+    },
+    {
+      "button": "instructions",
+      "values": []
+    }
+  ],
+  "postcondition": "The 'instructions' action is taken as the final step.",
+  "provenance_convo_ids": [
+    496,
+    1658,
+    1799,
+    1900,
+    2165
+  ],
+  "provenance_count_in_cluster": 76,
+  "cluster_size": 76,
+  "is_negative_control": false,
+  "skill_id": "SK-051"
+}

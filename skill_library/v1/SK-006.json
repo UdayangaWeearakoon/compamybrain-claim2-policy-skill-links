@@ -1,0 +1,57 @@
+{
+  "subflow": "refund_update",
+  "flow": "product_defect",
+  "branch": null,
+  "policy_id": "POL-002",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-002-R1",
+    "POL-002-R2",
+    "POL-002-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'refund_update' (flow: Product Defect). Governing policy: Refund Update Policy (POL-002 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "chloe zhang"
+      ]
+    },
+    {
+      "button": "validate-purchase",
+      "values": [
+        "cz719361",
+        "cz719361@email.com",
+        "9482113639"
+      ]
+    },
+    {
+      "button": "record-reason",
+      "values": [
+        "tommy hilfiger jeans"
+      ]
+    },
+    {
+      "button": "offer-refund",
+      "values": [
+        ""
+      ]
+    },
+    {
+      "button": "offer-refund",
+      "values": [
+        "154"
+      ]
+    }
+  ],
+  "postcondition": "A refund is issued to the customer",
+  "provenance_convo_ids": [
+    665,
+    3382,
+    5905
+  ],
+  "provenance_count_in_cluster": 3,
+  "cluster_size": 3,
+  "is_negative_control": false,
+  "skill_id": "SK-006"
+}

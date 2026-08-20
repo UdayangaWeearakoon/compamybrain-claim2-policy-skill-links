@@ -1,0 +1,59 @@
+{
+  "subflow": "manage_create",
+  "flow": "order_issue",
+  "branch": "silver",
+  "policy_id": "POL-010",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-010-R1",
+    "POL-010-R2",
+    "POL-010-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_create' (flow: Order Issue). Customer's membership level is silver. Governing policy: Order Item Addition Policy (POL-010 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "chloe zhang"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "chloe zhang",
+        "l9wkrgwwwz",
+        "5578011814"
+      ]
+    },
+    {
+      "button": "shipping-status",
+      "values": [
+        "delivered"
+      ]
+    },
+    {
+      "button": "membership",
+      "values": [
+        "silver"
+      ]
+    },
+    {
+      "button": "make-purchase",
+      "values": [
+        "calvin klein jacket"
+      ]
+    }
+  ],
+  "postcondition": "The purchase/back-order is completed on the customer's behalf",
+  "provenance_convo_ids": [
+    1184,
+    4133,
+    5503,
+    7226,
+    7509
+  ],
+  "provenance_count_in_cluster": 8,
+  "cluster_size": 25,
+  "is_negative_control": false,
+  "skill_id": "SK-034"
+}

@@ -1,0 +1,55 @@
+{
+  "subflow": "status_due_date",
+  "flow": "subscription_inquiry",
+  "branch": null,
+  "policy_id": "POL-032",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-032-R1",
+    "POL-032-R2",
+    "POL-032-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status_due_date' (flow: Subscription Inquiry). Governing policy: Subscription Status Policy (POL-032 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "chloe zhang"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "chloe zhang",
+        "wsaoscon3a",
+        "1828779867"
+      ]
+    },
+    {
+      "button": "subscription-status",
+      "values": []
+    },
+    {
+      "button": "send-link",
+      "values": []
+    },
+    {
+      "button": "enter-details",
+      "values": [
+        "20"
+      ]
+    }
+  ],
+  "postcondition": "The requested detail is recorded, pending a further step",
+  "provenance_convo_ids": [
+    3046,
+    3816,
+    4184,
+    5078,
+    5105
+  ],
+  "provenance_count_in_cluster": 38,
+  "cluster_size": 38,
+  "is_negative_control": false,
+  "skill_id": "SK-099"
+}

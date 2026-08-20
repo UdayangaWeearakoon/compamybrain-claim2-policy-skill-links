@@ -1,0 +1,42 @@
+{
+  "subflow": "out_of_stock_general",
+  "flow": "purchase_dispute",
+  "branch": null,
+  "policy_id": "POL-023",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-023-R1",
+    "POL-023-R2"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'out_of_stock_general' (flow: Purchase Dispute). Governing policy: Out-of-Stock General Policy (POL-023 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "rodriguez domingo"
+      ]
+    },
+    {
+      "button": "notify-team",
+      "values": [
+        "purchasing department"
+      ]
+    },
+    {
+      "button": "promo-code",
+      "values": []
+    }
+  ],
+  "postcondition": "A promo code is generated and issued to the customer",
+  "provenance_convo_ids": [
+    970,
+    2378,
+    3513,
+    3814,
+    3886
+  ],
+  "provenance_count_in_cluster": 27,
+  "cluster_size": 27,
+  "is_negative_control": false,
+  "skill_id": "SK-073"
+}
