@@ -1,0 +1,49 @@
+{
+  "policy_id": "POL-005",
+  "family": "Order Fee Dispute Policy",
+  "version": "v2",
+  "effective_timestamp": "2026-01-15T00:00:00Z",
+  "flow": "order_issue",
+  "source_subflows": [
+    "status_mystery_fee"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": "v1",
+  "rules": [
+    {
+      "rule_id": "POL-005-R3",
+      "statement": "If the Oracle does not confirm company error, fee removal eligibility is gated by membership: Gold and Silver members always have the extra fee removed; Guest and Bronze members do not, and the fee stands."
+    },
+    {
+      "rule_id": "POL-005-R2",
+      "statement": "The agent is required to query Ask the Oracle to determine whether the fee was a company error; in the event that the Oracle confirms company error, the fee must be removed regardless of membership level."
+    },
+    {
+      "rule_id": "POL-005-R1",
+      "statement": "Before adjudicating a mystery fee, the agent must verify identity using full name, account ID, order ID, and phone number via Verify Identity."
+    }
+  ],
+  "_change_log": [
+    {
+      "rule_id": "POL-005-R1",
+      "change_type": "real_supersession",
+      "v1_statement": "Before adjudicating a mystery fee, the agent must verify identity using full name, account ID, and order ID via Verify Identity.",
+      "v2_statement": "Before adjudicating a mystery fee, the agent must verify identity using full name, account ID, order ID, and phone number via Verify Identity.",
+      "note": "Adds a 4th required identity field (phone number). Every skill's recorded Verify Identity call used exactly 3 values, so it no longer satisfies the precondition -- a blanket flip, not value-dependent."
+    },
+    {
+      "rule_id": "POL-005-R2",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "The agent must query Ask the Oracle to determine whether the fee was a company error; if the Oracle confirms company error, the fee must be removed regardless of membership level.",
+      "v2_statement": "The agent is required to query Ask the Oracle to determine whether the fee was a company error; in the event that the Oracle confirms company error, the fee must be removed regardless of membership level.",
+      "note": "Distractor: connector-word reword only, no testable content changed."
+    },
+    {
+      "rule_id": "POL-005-R3",
+      "change_type": "unchanged",
+      "v1_statement": "If the Oracle does not confirm company error, fee removal eligibility is gated by membership: Gold and Silver members always have the extra fee removed; Guest and Bronze members do not, and the fee stands.",
+      "v2_statement": "If the Oracle does not confirm company error, fee removal eligibility is gated by membership: Gold and Silver members always have the extra fee removed; Guest and Bronze members do not, and the fee stands."
+    }
+  ],
+  "_change_summary": "real_supersession"
+}

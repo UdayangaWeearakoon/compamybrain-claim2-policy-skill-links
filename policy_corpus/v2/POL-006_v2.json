@@ -1,0 +1,39 @@
+{
+  "policy_id": "POL-006",
+  "family": "Order Delivery Status Policy",
+  "version": "v2",
+  "effective_timestamp": "2026-01-15T00:00:00Z",
+  "flow": "order_issue",
+  "source_subflows": [
+    "status_delivery_time"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": "v1",
+  "rules": [
+    {
+      "rule_id": "POL-006-R2",
+      "statement": "The agent is required to query Ask the Oracle to determine whether the delivery delay was a company error prior to making any commitment to the customer."
+    },
+    {
+      "rule_id": "POL-006-R1",
+      "statement": "Before reporting delivery status, the agent must verify identity using full name, account ID, order ID, and phone number via Verify Identity."
+    }
+  ],
+  "_change_log": [
+    {
+      "rule_id": "POL-006-R1",
+      "change_type": "real_supersession",
+      "v1_statement": "Before reporting delivery status, the agent must verify identity using full name, account ID, and order ID via Verify Identity.",
+      "v2_statement": "Before reporting delivery status, the agent must verify identity using full name, account ID, order ID, and phone number via Verify Identity.",
+      "note": "Same verification hardening."
+    },
+    {
+      "rule_id": "POL-006-R2",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "The agent must query Ask the Oracle to determine whether the delivery delay was a company error before making any commitment to the customer.",
+      "v2_statement": "The agent is required to query Ask the Oracle to determine whether the delivery delay was a company error prior to making any commitment to the customer.",
+      "note": "Distractor: connector-word reword only, no testable content changed."
+    }
+  ],
+  "_change_summary": "real_supersession"
+}

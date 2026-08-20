@@ -1,0 +1,49 @@
+{
+  "policy_id": "POL-017",
+  "family": "Add-on Service Dispute Policy",
+  "version": "v2",
+  "effective_timestamp": "2026-01-15T00:00:00Z",
+  "flow": "manage_account",
+  "source_subflows": [
+    "status_service_added"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": "v1",
+  "rules": [
+    {
+      "rule_id": "POL-017-R3",
+      "statement": "If the Oracle confirms the error, the extra service must be removed via Update Account, and the agent must offer a refund of $60 as the standard erroneous-service-charge amount."
+    },
+    {
+      "rule_id": "POL-017-R2",
+      "statement": "The agent must query Ask the Oracle to confirm whether an extra service was actually added in error; if the Oracle says No, the agent must explain the misunderstanding and take no account or refund action."
+    },
+    {
+      "rule_id": "POL-017-R1",
+      "statement": "The agent is required to record the source of the reported issue as one of: email, spouse, or news, via Record Reason."
+    }
+  ],
+  "_change_log": [
+    {
+      "rule_id": "POL-017-R1",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "The agent must record the source of the reported issue as one of: email, spouse, or news, via Record Reason.",
+      "v2_statement": "The agent is required to record the source of the reported issue as one of: email, spouse, or news, via Record Reason.",
+      "note": "Distractor: connector-word reword only, no testable content changed."
+    },
+    {
+      "rule_id": "POL-017-R2",
+      "change_type": "unchanged",
+      "v1_statement": "The agent must query Ask the Oracle to confirm whether an extra service was actually added in error; if the Oracle says No, the agent must explain the misunderstanding and take no account or refund action.",
+      "v2_statement": "The agent must query Ask the Oracle to confirm whether an extra service was actually added in error; if the Oracle says No, the agent must explain the misunderstanding and take no account or refund action."
+    },
+    {
+      "rule_id": "POL-017-R3",
+      "change_type": "real_supersession",
+      "v1_statement": "If the Oracle confirms the error, the extra service must be removed via Update Account, and the agent must offer a refund of $40 as the standard erroneous-service-charge amount.",
+      "v2_statement": "If the Oracle confirms the error, the extra service must be removed via Update Account, and the agent must offer a refund of $60 as the standard erroneous-service-charge amount.",
+      "note": "Raises the standard refund amount $40->$60. Value-dependent: only wrong for skills whose recorded refund value reflects the old standard amount."
+    }
+  ],
+  "_change_summary": "real_supersession"
+}

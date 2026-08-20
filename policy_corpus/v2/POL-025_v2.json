@@ -1,0 +1,60 @@
+{
+  "policy_id": "POL-025",
+  "family": "Promo Code Dispute Policy",
+  "version": "v2",
+  "effective_timestamp": "2026-01-15T00:00:00Z",
+  "flow": "purchase_dispute",
+  "source_subflows": [
+    "promo_code_invalid",
+    "promo_code_out_of_date"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": "v1",
+  "rules": [
+    {
+      "rule_id": "POL-025-R4",
+      "statement": "Replacement promo codes are issued via Promo Code with no additional information entered into the form."
+    },
+    {
+      "rule_id": "POL-025-R3",
+      "statement": "If the Oracle indicates customer error, new-code eligibility is gated by membership: Gold, Silver, and Bronze members all qualify for a replacement promo code regardless of the error; Guest members do not qualify and must be denied."
+    },
+    {
+      "rule_id": "POL-025-R2",
+      "statement": "The agent is required to query Ask the Oracle to determine whether the customer made an error; in the event that the Oracle confirms the customer is correct, the agent proceeds directly to issuing a new promo code."
+    },
+    {
+      "rule_id": "POL-025-R1",
+      "statement": "A promo code dispute is classified as 'out of date' if the code was issued more than 14 days ago, and 'invalid' otherwise; both classifications follow the same resolution procedure."
+    }
+  ],
+  "_change_log": [
+    {
+      "rule_id": "POL-025-R1",
+      "change_type": "real_supersession",
+      "v1_statement": "A promo code dispute is classified as 'out of date' if the code was issued more than 7 days ago, and 'invalid' otherwise; both classifications follow the same resolution procedure.",
+      "v2_statement": "A promo code dispute is classified as 'out of date' if the code was issued more than 14 days ago, and 'invalid' otherwise; both classifications follow the same resolution procedure.",
+      "note": "Doubles the out-of-date threshold 7->14 days. Value-dependent on the actual code age in each case."
+    },
+    {
+      "rule_id": "POL-025-R2",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "The agent must query Ask the Oracle to determine whether the customer made an error; if the Oracle confirms the customer is correct, the agent proceeds directly to issuing a new promo code.",
+      "v2_statement": "The agent is required to query Ask the Oracle to determine whether the customer made an error; in the event that the Oracle confirms the customer is correct, the agent proceeds directly to issuing a new promo code.",
+      "note": "Distractor: connector-word reword only, no testable content changed."
+    },
+    {
+      "rule_id": "POL-025-R3",
+      "change_type": "unchanged",
+      "v1_statement": "If the Oracle indicates customer error, new-code eligibility is gated by membership: Gold, Silver, and Bronze members all qualify for a replacement promo code regardless of the error; Guest members do not qualify and must be denied.",
+      "v2_statement": "If the Oracle indicates customer error, new-code eligibility is gated by membership: Gold, Silver, and Bronze members all qualify for a replacement promo code regardless of the error; Guest members do not qualify and must be denied."
+    },
+    {
+      "rule_id": "POL-025-R4",
+      "change_type": "unchanged",
+      "v1_statement": "Replacement promo codes are issued via Promo Code with no additional information entered into the form.",
+      "v2_statement": "Replacement promo codes are issued via Promo Code with no additional information entered into the form."
+    }
+  ],
+  "_change_summary": "real_supersession"
+}

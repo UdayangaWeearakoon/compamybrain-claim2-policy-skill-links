@@ -1,0 +1,49 @@
+{
+  "policy_id": "POL-008",
+  "family": "Order Quantity Discrepancy Policy",
+  "version": "v2",
+  "effective_timestamp": "2026-01-15T00:00:00Z",
+  "flow": "order_issue",
+  "source_subflows": [
+    "status_quantity"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": "v1",
+  "rules": [
+    {
+      "rule_id": "POL-008-R3",
+      "statement": "If the Oracle confirms the company's mistake, refund eligibility depends on shipping status: Order Received status permits an immediate refund; In Transit, Out for Delivery, or Delivered status requires the customer to wait until the item arrives and contact support again before any refund is offered."
+    },
+    {
+      "rule_id": "POL-008-R2",
+      "statement": "The agent is required to query Ask the Oracle; in the event that the Oracle indicates the charge record was accurate as billed (no company error), no refund action is taken and the conversation ends."
+    },
+    {
+      "rule_id": "POL-008-R1",
+      "statement": "Before resolving a quantity discrepancy, the agent must verify identity using full name, account ID, order ID, and phone number via Verify Identity."
+    }
+  ],
+  "_change_log": [
+    {
+      "rule_id": "POL-008-R1",
+      "change_type": "real_supersession",
+      "v1_statement": "Before resolving a quantity discrepancy, the agent must verify identity using full name, account ID, and order ID via Verify Identity.",
+      "v2_statement": "Before resolving a quantity discrepancy, the agent must verify identity using full name, account ID, order ID, and phone number via Verify Identity.",
+      "note": "Same verification hardening."
+    },
+    {
+      "rule_id": "POL-008-R2",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "The agent must query Ask the Oracle; if the Oracle indicates the charge record was accurate as billed (no company error), no refund action is taken and the conversation ends.",
+      "v2_statement": "The agent is required to query Ask the Oracle; in the event that the Oracle indicates the charge record was accurate as billed (no company error), no refund action is taken and the conversation ends.",
+      "note": "Distractor: connector-word reword only, no testable content changed."
+    },
+    {
+      "rule_id": "POL-008-R3",
+      "change_type": "unchanged",
+      "v1_statement": "If the Oracle confirms the company's mistake, refund eligibility depends on shipping status: Order Received status permits an immediate refund; In Transit, Out for Delivery, or Delivered status requires the customer to wait until the item arrives and contact support again before any refund is offered.",
+      "v2_statement": "If the Oracle confirms the company's mistake, refund eligibility depends on shipping status: Order Received status permits an immediate refund; In Transit, Out for Delivery, or Delivered status requires the customer to wait until the item arrives and contact support again before any refund is offered."
+    }
+  ],
+  "_change_summary": "real_supersession"
+}

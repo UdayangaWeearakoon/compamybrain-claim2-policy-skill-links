@@ -1,0 +1,49 @@
+{
+  "policy_id": "POL-020",
+  "family": "Missing Credit Investigation Policy",
+  "version": "v2",
+  "effective_timestamp": "2026-01-15T00:00:00Z",
+  "flow": "manage_account",
+  "source_subflows": [
+    "status_credit_missing"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": "v1",
+  "rules": [
+    {
+      "rule_id": "POL-020-R3",
+      "statement": "If the Oracle confirms the credit is missing, the agent must add the amount requested by the customer, or a standard amount of $60 if the customer does not know, and issue it via Promo Code."
+    },
+    {
+      "rule_id": "POL-020-R2",
+      "statement": "The agent must query Ask the Oracle to determine whether the credit is genuinely missing; if the Oracle says No, the agent must attribute this to a display issue and take no credit action."
+    },
+    {
+      "rule_id": "POL-020-R1",
+      "statement": "The agent is required to record the origin of the credit as one of: subscription refund, previous purchase, or promotional package, via Record Reason."
+    }
+  ],
+  "_change_log": [
+    {
+      "rule_id": "POL-020-R1",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "The agent must record the origin of the credit as one of: subscription refund, previous purchase, or promotional package, via Record Reason.",
+      "v2_statement": "The agent is required to record the origin of the credit as one of: subscription refund, previous purchase, or promotional package, via Record Reason.",
+      "note": "Distractor: connector-word reword only, no testable content changed."
+    },
+    {
+      "rule_id": "POL-020-R2",
+      "change_type": "unchanged",
+      "v1_statement": "The agent must query Ask the Oracle to determine whether the credit is genuinely missing; if the Oracle says No, the agent must attribute this to a display issue and take no credit action.",
+      "v2_statement": "The agent must query Ask the Oracle to determine whether the credit is genuinely missing; if the Oracle says No, the agent must attribute this to a display issue and take no credit action."
+    },
+    {
+      "rule_id": "POL-020-R3",
+      "change_type": "real_supersession",
+      "v1_statement": "If the Oracle confirms the credit is missing, the agent must add the amount requested by the customer, or a standard amount of $40 if the customer does not know, and issue it via Promo Code.",
+      "v2_statement": "If the Oracle confirms the credit is missing, the agent must add the amount requested by the customer, or a standard amount of $60 if the customer does not know, and issue it via Promo Code.",
+      "note": "Raises the standard missing-credit amount $40->$60. Value-dependent."
+    }
+  ],
+  "_change_summary": "real_supersession"
+}

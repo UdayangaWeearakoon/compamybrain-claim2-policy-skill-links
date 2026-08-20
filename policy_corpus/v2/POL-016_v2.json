@@ -1,0 +1,51 @@
+{
+  "policy_id": "POL-016",
+  "family": "Site Performance Troubleshooting Policy",
+  "version": "v2",
+  "effective_timestamp": "2026-01-15T00:00:00Z",
+  "flow": "troubleshoot_site",
+  "source_subflows": [
+    "search_results",
+    "slow_speed"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": "v1",
+  "rules": [
+    {
+      "rule_id": "POL-016-R3",
+      "statement": "The agent is permitted to complete the purchase on the customer's behalf via Make Purchase only after collecting the credit card number, expiration date, and the brand/item phrase."
+    },
+    {
+      "rule_id": "POL-016-R2",
+      "statement": "Escalation to the Website Team via Notify Internal Team requires entering 'website team' as the value, and is required to occur only after the basic troubleshooting steps have been offered."
+    },
+    {
+      "rule_id": "POL-016-R1",
+      "statement": "For search or site-speed issues, the agent is required to first attempt Log Out/In or Try Again prior to escalating to the Website Team."
+    }
+  ],
+  "_change_log": [
+    {
+      "rule_id": "POL-016-R1",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "For search or site-speed issues, the agent must first attempt Log Out/In or Try Again before escalating to the Website Team.",
+      "v2_statement": "For search or site-speed issues, the agent is required to first attempt Log Out/In or Try Again prior to escalating to the Website Team.",
+      "note": "Whole-document distractor: connector-word reword only."
+    },
+    {
+      "rule_id": "POL-016-R2",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "Escalation to the Website Team via Notify Internal Team requires entering 'website team' as the value, and must occur only after the basic troubleshooting steps have been offered.",
+      "v2_statement": "Escalation to the Website Team via Notify Internal Team requires entering 'website team' as the value, and is required to occur only after the basic troubleshooting steps have been offered.",
+      "note": "Whole-document distractor: connector-word reword only."
+    },
+    {
+      "rule_id": "POL-016-R3",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "The agent may complete the purchase on the customer's behalf via Make Purchase only after collecting the credit card number, expiration date, and the brand/item phrase.",
+      "v2_statement": "The agent is permitted to complete the purchase on the customer's behalf via Make Purchase only after collecting the credit card number, expiration date, and the brand/item phrase.",
+      "note": "Whole-document distractor: connector-word reword only."
+    }
+  ],
+  "_change_summary": "cosmetic_only"
+}

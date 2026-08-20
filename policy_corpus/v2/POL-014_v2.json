@@ -1,0 +1,50 @@
+{
+  "policy_id": "POL-014",
+  "family": "Two-Factor Reset Policy",
+  "version": "v2",
+  "effective_timestamp": "2026-01-15T00:00:00Z",
+  "flow": "account_access",
+  "source_subflows": [
+    "reset_2fa"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": "v1",
+  "rules": [
+    {
+      "rule_id": "POL-014-R3",
+      "statement": "Every 2FA reset conversation is required to conclude with the agent sending a security best-practices link via Send Link."
+    },
+    {
+      "rule_id": "POL-014-R2",
+      "statement": "If the email address is unavailable, the agent is permitted to substitute either the PIN number or a correct answer to the security question ('What is your mother's maiden name?') in place of the email address."
+    },
+    {
+      "rule_id": "POL-014-R1",
+      "statement": "To send a 2FA reset code, the agent is required to obtain the customer's email address via Enter Details."
+    }
+  ],
+  "_change_log": [
+    {
+      "rule_id": "POL-014-R1",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "To send a 2FA reset code, the agent must obtain the customer's email address via Enter Details.",
+      "v2_statement": "To send a 2FA reset code, the agent is required to obtain the customer's email address via Enter Details.",
+      "note": "Whole-document distractor: connector-word reword only."
+    },
+    {
+      "rule_id": "POL-014-R2",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "If the email address is unavailable, the agent may substitute either the PIN number or a correct answer to the security question ('What is your mother's maiden name?') in place of the email address.",
+      "v2_statement": "If the email address is unavailable, the agent is permitted to substitute either the PIN number or a correct answer to the security question ('What is your mother's maiden name?') in place of the email address.",
+      "note": "Whole-document distractor: connector-word reword only."
+    },
+    {
+      "rule_id": "POL-014-R3",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "Every 2FA reset conversation must conclude with the agent sending a security best-practices link via Send Link.",
+      "v2_statement": "Every 2FA reset conversation is required to conclude with the agent sending a security best-practices link via Send Link.",
+      "note": "Whole-document distractor: connector-word reword only."
+    }
+  ],
+  "_change_summary": "cosmetic_only"
+}
