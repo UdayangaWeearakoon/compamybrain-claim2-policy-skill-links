@@ -1,0 +1,152 @@
+{
+  "phase": 5,
+  "note": "Both ablations run regardless of the headline result, per the Phase 5 spec. Both came out other than expected and are reported as measured.",
+  "ablation_1_link_granularity": {
+    "arms": {
+      "document_level": {
+        "recall": 1.0,
+        "precision": 0.5263157894736842,
+        "recall_ci": [
+          1.0,
+          1.0
+        ],
+        "precision_ci": [
+          0.40540540540540543,
+          0.6438356164383562
+        ],
+        "counts": {
+          "n": 131,
+          "n_positive": 40,
+          "n_flagged": 76,
+          "n_true_positive": 40,
+          "n_invalidated": 40,
+          "n_silent_wrong_action": 0
+        }
+      },
+      "section_level": {
+        "recall": 1.0,
+        "precision": 0.5263157894736842,
+        "recall_ci": [
+          1.0,
+          1.0
+        ],
+        "precision_ci": [
+          0.40540540540540543,
+          0.6438356164383562
+        ],
+        "counts": {
+          "n": 131,
+          "n_positive": 40,
+          "n_flagged": 76,
+          "n_true_positive": 40,
+          "n_invalidated": 40,
+          "n_silent_wrong_action": 0
+        }
+      }
+    },
+    "identical_flag_sets": true,
+    "num_skills_differing": 0,
+    "precision_delta_section_minus_document": 0.0,
+    "recall_delta_section_minus_document": 0.0,
+    "diagnosis": {
+      "skills_linking_to_every_changed_rule_in_their_policy": 71,
+      "skills_whose_policy_changed_a_rule_they_do_not_link": 5,
+      "skills_where_the_two_granularities_actually_differ": 0,
+      "explanation": "The two granularities can only diverge for a skill whose policy changed a rule it does not link to AND which links to no other changed rule. In this corpus that set is empty: Step 3's in-document cosmetic reword always lands on the first non-superseded rule, which is a universal (non-tier-gated) rule present in every skill's dependency link, so every document-level change also reaches section level. The tradeoff the ablation is designed to expose therefore has no headroom here. This is a property of the corpus's rule-sharing density, not evidence that granularity does not matter -- a corpus whose changes land on tier-specific or otherwise narrowly-linked rules would separate the two arms immediately."
+    }
+  },
+  "ablation_2_remove_negative_controls": {
+    "num_negative_controls": 16,
+    "negative_controls_flagged_by_condition_b": [],
+    "condition_b": {
+      "with_negative_controls": {
+        "recall": 1.0,
+        "precision": 0.5263157894736842,
+        "recall_ci": [
+          1.0,
+          1.0
+        ],
+        "precision_ci": [
+          0.40540540540540543,
+          0.6438356164383562
+        ],
+        "counts": {
+          "n": 131,
+          "n_positive": 40,
+          "n_flagged": 76,
+          "n_true_positive": 40,
+          "n_invalidated": 40,
+          "n_silent_wrong_action": 0
+        }
+      },
+      "without_negative_controls": {
+        "recall": 1.0,
+        "precision": 0.5263157894736842,
+        "recall_ci": [
+          1.0,
+          1.0
+        ],
+        "precision_ci": [
+          0.41025641025641024,
+          0.6438356164383562
+        ],
+        "counts": {
+          "n": 115,
+          "n_positive": 40,
+          "n_flagged": 76,
+          "n_true_positive": 40,
+          "n_invalidated": 40,
+          "n_silent_wrong_action": 0
+        }
+      },
+      "precision_inflation_percentage_points": 0.0
+    },
+    "counterfactual_link_free_detector": {
+      "description": "flags any skill sharing >=1 action button with a skill under a changed rule -- a behavioural/topical heuristic of the kind used when no explicit dependency links exist",
+      "num_flagged_full_population": 125,
+      "negative_controls_flagged": 16,
+      "with_negative_controls": {
+        "recall": 1.0,
+        "precision": 0.32,
+        "recall_ci": [
+          1.0,
+          1.0
+        ],
+        "precision_ci": [
+          0.23770491803278687,
+          0.40476190476190477
+        ],
+        "counts": {
+          "n": 131,
+          "n_positive": 40,
+          "n_flagged": 125,
+          "n_true_positive": 40,
+          "n_invalidated": 40,
+          "n_silent_wrong_action": 0
+        }
+      },
+      "without_negative_controls": {
+        "recall": 1.0,
+        "precision": 0.3669724770642202,
+        "recall_ci": [
+          1.0,
+          1.0
+        ],
+        "precision_ci": [
+          0.2777777777777778,
+          0.45871559633027525
+        ],
+        "counts": {
+          "n": 115,
+          "n_positive": 40,
+          "n_flagged": 109,
+          "n_true_positive": 40,
+          "n_invalidated": 40,
+          "n_silent_wrong_action": 0
+        }
+      },
+      "precision_inflation_percentage_points": 4.6972477064220195
+    },
+    "interpretation": "Removing the negative controls moves Condition B's precision by exactly 0.0 points, and this is arithmetic rather than luck: negative controls carry no dependency link, Condition B never flags them, so they are true negatives, and precision (TP / flagged) does not read true negatives at all. The expectation that precision would inflate silently assumes a detector that fires on them. The counterfactual arm supplies exactly such a detector -- a link-free action-overlap heuristic -- and there the inflation is real and measurable. That contrast is the actual justification for planting the negative controls: they are a falsification test for over-triggering that Condition B passes and a plausible link-free alternative fails. Had they been omitted, a detector of the second kind would have looked more precise than it is, and nothing in the experiment would have exposed it."
+  }
+}

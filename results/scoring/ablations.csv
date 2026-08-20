@@ -1,0 +1,7 @@
+ablation,arm,recall,precision,n_flagged,n_population
+link_granularity,document_level,1.000,0.526,76,131
+link_granularity,section_level,1.000,0.526,76,131
+remove_negative_controls,condition_b_with_negcontrols,1.000,0.526,76,131
+remove_negative_controls,condition_b_without_negcontrols,1.000,0.526,76,115
+remove_negative_controls,linkfree_counterfactual_with_negcontrols,1.000,0.320,125,131
+remove_negative_controls,linkfree_counterfactual_without_negcontrols,1.000,0.367,109,115
