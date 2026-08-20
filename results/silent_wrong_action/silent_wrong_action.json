@@ -1,0 +1,934 @@
+{
+  "measurement": "silent wrong action rate",
+  "procedure_ref": "preregistration/STEP4_PREREGISTRATION.md section 4",
+  "definition": "an invalidated skill a condition failed to flag, whose recorded gold action sequence executes cleanly against the v2 environment contract but violates a v2 policy rule that superseded one of its linked rules",
+  "judge": "deterministic predicates only -- no LLM-as-judge, so the guide's 50-hand-labeled-case judge validation is not applicable by construction",
+  "note": "Raw counts only. The rate itself (silent / invalidated) and its confidence interval are computed in Step 5.",
+  "num_invalidated_total": 40,
+  "per_condition": {
+    "A": {
+      "num_invalidated": 40,
+      "num_flagged_by_condition": 6,
+      "num_invalidated_missed": 40,
+      "missed_skill_ids": [
+        "SK-001",
+        "SK-002",
+        "SK-003",
+        "SK-004",
+        "SK-005",
+        "SK-006",
+        "SK-007",
+        "SK-008",
+        "SK-009",
+        "SK-012",
+        "SK-014",
+        "SK-015",
+        "SK-016",
+        "SK-017",
+        "SK-018",
+        "SK-019",
+        "SK-020",
+        "SK-021",
+        "SK-022",
+        "SK-023",
+        "SK-024",
+        "SK-025",
+        "SK-026",
+        "SK-027",
+        "SK-028",
+        "SK-029",
+        "SK-030",
+        "SK-031",
+        "SK-032",
+        "SK-033",
+        "SK-034",
+        "SK-035",
+        "SK-036",
+        "SK-037",
+        "SK-038",
+        "SK-039",
+        "SK-040",
+        "SK-041",
+        "SK-108",
+        "SK-110"
+      ],
+      "num_silent_wrong_action": 40,
+      "silent_wrong_action_skill_ids": [
+        "SK-001",
+        "SK-002",
+        "SK-003",
+        "SK-004",
+        "SK-005",
+        "SK-006",
+        "SK-007",
+        "SK-008",
+        "SK-009",
+        "SK-012",
+        "SK-014",
+        "SK-015",
+        "SK-016",
+        "SK-017",
+        "SK-018",
+        "SK-019",
+        "SK-020",
+        "SK-021",
+        "SK-022",
+        "SK-023",
+        "SK-024",
+        "SK-025",
+        "SK-026",
+        "SK-027",
+        "SK-028",
+        "SK-029",
+        "SK-030",
+        "SK-031",
+        "SK-032",
+        "SK-033",
+        "SK-034",
+        "SK-035",
+        "SK-036",
+        "SK-037",
+        "SK-038",
+        "SK-039",
+        "SK-040",
+        "SK-041",
+        "SK-108",
+        "SK-110"
+      ],
+      "num_errored_loudly": 0,
+      "num_executed_and_compliant": 0,
+      "num_no_predicate_applicable": 0
+    },
+    "B_section": {
+      "num_invalidated": 40,
+      "num_flagged_by_condition": 76,
+      "num_invalidated_missed": 0,
+      "missed_skill_ids": [],
+      "num_silent_wrong_action": 0,
+      "silent_wrong_action_skill_ids": [],
+      "num_errored_loudly": 0,
+      "num_executed_and_compliant": 0,
+      "num_no_predicate_applicable": 0
+    }
+  },
+  "execution_log": [
+    {
+      "condition": "A",
+      "skill_id": "SK-001",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-001-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-001-R1",
+          "compliant": false,
+          "explanation": "'validate-purchase' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-002",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-001-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-001-R1",
+          "compliant": false,
+          "explanation": "'validate-purchase' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-003",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-001-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-001-R1",
+          "compliant": false,
+          "explanation": "'validate-purchase' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-004",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-002-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-002-R1",
+          "compliant": false,
+          "explanation": "'validate-purchase' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-005",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-002-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-002-R1",
+          "compliant": false,
+          "explanation": "'validate-purchase' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-006",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-002-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-002-R1",
+          "compliant": false,
+          "explanation": "'validate-purchase' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-007",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-003-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-003-R1",
+          "compliant": false,
+          "explanation": "'validate-purchase' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-008",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-003-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-003-R1",
+          "compliant": false,
+          "explanation": "'validate-purchase' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-009",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-003-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-003-R1",
+          "compliant": false,
+          "explanation": "'validate-purchase' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-012",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-004-R2",
+        "POL-004-R3"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-004-R2",
+          "compliant": null,
+          "explanation": "no predicate defined for POL-004-R2"
+        },
+        {
+          "rule_id": "POL-004-R3",
+          "compliant": false,
+          "explanation": "sequence still calls 'update-order', which v2 forbids: guest members are never eligible for a return in v2, so the return-granting step must not be reached"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-014",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-005-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-005-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-015",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-005-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-005-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-016",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-005-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-005-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-017",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-005-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-005-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-018",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-006-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-006-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-019",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-006-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-006-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-020",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-006-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-006-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-021",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-007-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-007-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-022",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-007-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-007-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-023",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-007-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-007-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-024",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-008-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-008-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-025",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-008-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-008-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-026",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-008-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-008-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-027",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-009-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-009-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-028",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-009-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-009-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-029",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-009-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-009-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-030",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-009-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-009-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-031",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-010-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-010-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-032",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-010-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-010-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-033",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-010-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-010-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-034",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-010-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-010-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-035",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-011-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-011-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-036",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-011-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-011-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-037",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-011-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-011-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-038",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-011-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-011-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-039",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-012-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-012-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-040",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-012-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-012-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-041",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-012-R1"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-012-R1",
+          "compliant": false,
+          "explanation": "'verify-identity' supplies only 3 value(s); v2 requires 4 (the added field is never collected)"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-108",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-035-R2",
+        "POL-035-R3"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-035-R2",
+          "compliant": null,
+          "explanation": "no predicate defined for POL-035-R2"
+        },
+        {
+          "rule_id": "POL-035-R3",
+          "compliant": false,
+          "explanation": "sequence still calls 'ask-the-oracle', which v2 forbids: Bronze/Guest are always denied in v2 and the Oracle is no longer consulted for these tiers"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    },
+    {
+      "condition": "A",
+      "skill_id": "SK-110",
+      "ground_truth_label": "invalidated",
+      "flagged_by_condition": false,
+      "superseded_rules_hit": [
+        "POL-035-R2",
+        "POL-035-R3"
+      ],
+      "execution_errors": [],
+      "executes_cleanly": true,
+      "rule_compliance": [
+        {
+          "rule_id": "POL-035-R2",
+          "compliant": null,
+          "explanation": "no predicate defined for POL-035-R2"
+        },
+        {
+          "rule_id": "POL-035-R3",
+          "compliant": false,
+          "explanation": "sequence still calls 'ask-the-oracle', which v2 forbids: Bronze/Guest are always denied in v2 and the Oracle is no longer consulted for these tiers"
+        }
+      ],
+      "violates_v2_policy": true,
+      "outcome": "silent_wrong_action"
+    }
+  ]
+}
