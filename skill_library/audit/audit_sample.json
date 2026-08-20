@@ -1,0 +1,686 @@
+{
+  "seed": 20260819,
+  "sample_size": 23,
+  "total_linked": 117,
+  "sample": [
+    {
+      "skill_id": "SK-063",
+      "subflow": "status_credit_missing",
+      "branch": null,
+      "precondition": "Customer intent matches ABCD subflow 'status_credit_missing' (flow: Manage Account). Governing policy: Missing Credit Investigation Policy (POL-020 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "record-reason",
+        "ask-the-oracle",
+        "promo-code"
+      ],
+      "postcondition": "A promo code is generated and issued to the customer",
+      "policy_id": "POL-020",
+      "policy_family": "Missing Credit Investigation Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-020-R1",
+          "statement": "The agent must record the origin of the credit as one of: subscription refund, previous purchase, or promotional package, via Record Reason."
+        },
+        {
+          "rule_id": "POL-020-R2",
+          "statement": "The agent must query Ask the Oracle to determine whether the credit is genuinely missing; if the Oracle says No, the agent must attribute this to a display issue and take no credit action."
+        },
+        {
+          "rule_id": "POL-020-R3",
+          "statement": "If the Oracle confirms the credit is missing, the agent must add the amount requested by the customer, or a standard amount of $40 if the customer does not know, and issue it via Promo Code."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-056",
+      "subflow": "status_service_added",
+      "branch": null,
+      "precondition": "Customer intent matches ABCD subflow 'status_service_added' (flow: Manage Account). Governing policy: Add-on Service Dispute Policy (POL-017 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "record-reason",
+        "ask-the-oracle",
+        "offer-refund"
+      ],
+      "postcondition": "A refund is issued to the customer",
+      "policy_id": "POL-017",
+      "policy_family": "Add-on Service Dispute Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-017-R1",
+          "statement": "The agent must record the source of the reported issue as one of: email, spouse, or news, via Record Reason."
+        },
+        {
+          "rule_id": "POL-017-R2",
+          "statement": "The agent must query Ask the Oracle to confirm whether an extra service was actually added in error; if the Oracle says No, the agent must explain the misunderstanding and take no account or refund action."
+        },
+        {
+          "rule_id": "POL-017-R3",
+          "statement": "If the Oracle confirms the error, the extra service must be removed via Update Account, and the agent must offer a refund of $40 as the standard erroneous-service-charge amount."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-069",
+      "subflow": "bad_price_competitor",
+      "branch": null,
+      "precondition": "Customer intent matches ABCD subflow 'bad_price_competitor' (flow: Purchase Dispute). Governing policy: Competitor Price Match Policy (POL-022 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "record-reason",
+        "verify-identity",
+        "promo-code"
+      ],
+      "postcondition": "A promo code is generated and issued to the customer",
+      "policy_id": "POL-022",
+      "policy_family": "Competitor Price Match Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-022-R1",
+          "statement": "The agent must pull up the account using full name or account ID via Pull up Account before addressing a price dispute."
+        },
+        {
+          "rule_id": "POL-022-R2",
+          "statement": "The agent must record the dispute reason as one of: competitor or yesterday, via Record Reason."
+        },
+        {
+          "rule_id": "POL-022-R3",
+          "statement": "The agent must verify identity using full name, account ID, and order ID via Verify Identity before offering any compensation."
+        },
+        {
+          "rule_id": "POL-022-R4",
+          "statement": "If the customer remains unsatisfied after being told prices are dynamic, the agent may offer a discount via Promo Code with no further identity or eligibility check required."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-080",
+      "subflow": "promo_code_invalid",
+      "branch": "guest",
+      "precondition": "Customer intent matches ABCD subflow 'promo_code_invalid' (flow: Purchase Dispute). Customer's membership level is guest. Governing policy: Promo Code Dispute Policy (POL-025 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "ask-the-oracle",
+        "membership"
+      ],
+      "postcondition": "The membership-privileges check is recorded, gating the next step",
+      "policy_id": "POL-025",
+      "policy_family": "Promo Code Dispute Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-025-R1",
+          "statement": "A promo code dispute is classified as 'out of date' if the code was issued more than 7 days ago, and 'invalid' otherwise; both classifications follow the same resolution procedure."
+        },
+        {
+          "rule_id": "POL-025-R2",
+          "statement": "The agent must query Ask the Oracle to determine whether the customer made an error; if the Oracle confirms the customer is correct, the agent proceeds directly to issuing a new promo code."
+        },
+        {
+          "rule_id": "POL-025-R3",
+          "statement": "If the Oracle indicates customer error, new-code eligibility is gated by membership: Gold, Silver, and Bronze members all qualify for a replacement promo code regardless of the error; Guest members do not qualify and must be denied."
+        },
+        {
+          "rule_id": "POL-025-R4",
+          "statement": "Replacement promo codes are issued via Promo Code with no additional information entered into the form."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-019",
+      "subflow": "status_delivery_time",
+      "branch": null,
+      "precondition": "Customer intent matches ABCD subflow 'status_delivery_time' (flow: Order Issue). Governing policy: Order Delivery Status Policy (POL-006 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "verify-identity",
+        "ask-the-oracle",
+        "shipping-status"
+      ],
+      "postcondition": "The shipping status is recorded, gating the next step",
+      "policy_id": "POL-006",
+      "policy_family": "Order Delivery Status Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-006-R1",
+          "statement": "Before reporting delivery status, the agent must verify identity using full name, account ID, and order ID via Verify Identity."
+        },
+        {
+          "rule_id": "POL-006-R2",
+          "statement": "The agent must query Ask the Oracle to determine whether the delivery delay was a company error before making any commitment to the customer."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-041",
+      "subflow": "recover_username",
+      "branch": null,
+      "precondition": "Customer intent matches ABCD subflow 'recover_username' (flow: Account Access). Governing policy: Username Recovery Policy (POL-012 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "pull-up-account",
+        "verify-identity"
+      ],
+      "postcondition": "Identity is verified, gating the next step",
+      "policy_id": "POL-012",
+      "policy_family": "Username Recovery Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-012-R1",
+          "statement": "To recover a username, the agent must collect at least 3 of the following 4 identity items: full name, zip code, phone number, or email address, via Verify Identity."
+        },
+        {
+          "rule_id": "POL-012-R2",
+          "statement": "The recovered username must be constructed as the first letter of the first name plus the full last name plus the digit 1 (e.g., John Smith -> jsmith1)."
+        },
+        {
+          "rule_id": "POL-012-R3",
+          "statement": "If this username-recovery step occurs as part of Validate Purchase or another external flow, the agent must treat the constructed username as valid and continue, even if the system flags it as invalid."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-087",
+      "subflow": "status",
+      "branch": null,
+      "precondition": "Customer intent matches ABCD subflow 'status' (flow: Shipping Issue). Governing policy: Shipping Status Inquiry Policy (POL-028 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "verify-identity",
+        "validate-purchase",
+        "ask-the-oracle",
+        "update-order"
+      ],
+      "postcondition": "The order is updated per the requested change",
+      "policy_id": "POL-028",
+      "policy_family": "Shipping Status Inquiry Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-028-R1",
+          "statement": "Before resolving a shipping status inquiry, the agent must verify identity using full name, account ID, and order ID via Verify Identity, and validate the purchase using username, email address, and order ID via Validate Purchase."
+        },
+        {
+          "rule_id": "POL-028-R2",
+          "statement": "The agent must query Ask the Oracle to resolve any yes/no shipping question the customer raises."
+        },
+        {
+          "rule_id": "POL-028-R3",
+          "statement": "If the Oracle response is unfavorable to the customer, the agent must resolve it via Update Order using one of: change date, change address, change item, or change price."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-053",
+      "subflow": "search_results",
+      "branch": null,
+      "precondition": "Customer intent matches ABCD subflow 'search_results' (flow: Troubleshoot Site). Governing policy: Site Performance Troubleshooting Policy (POL-016 v1).",
+      "action_sequence": [
+        "notify-team",
+        "log-out-in",
+        "try-again",
+        "instructions"
+      ],
+      "postcondition": "The 'instructions' action is taken as the final step.",
+      "policy_id": "POL-016",
+      "policy_family": "Site Performance Troubleshooting Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-016-R1",
+          "statement": "For search or site-speed issues, the agent must first attempt Log Out/In or Try Again before escalating to the Website Team."
+        },
+        {
+          "rule_id": "POL-016-R2",
+          "statement": "Escalation to the Website Team via Notify Internal Team requires entering 'website team' as the value, and must occur only after the basic troubleshooting steps have been offered."
+        },
+        {
+          "rule_id": "POL-016-R3",
+          "statement": "The agent may complete the purchase on the customer's behalf via Make Purchase only after collecting the credit card number, expiration date, and the brand/item phrase."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-101",
+      "subflow": "manage_pay_bill",
+      "branch": null,
+      "precondition": "Customer intent matches ABCD subflow 'manage_pay_bill' (flow: Subscription Inquiry). Governing policy: Subscription Bill Payment Policy (POL-033 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "verify-identity",
+        "enter-details",
+        "update-account"
+      ],
+      "postcondition": "The account is updated per the requested change",
+      "policy_id": "POL-033",
+      "policy_family": "Subscription Bill Payment Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-033-R1",
+          "statement": "Before processing a subscription payment, the agent must verify identity using full name, account ID, and order ID via Verify Identity."
+        },
+        {
+          "rule_id": "POL-033-R2",
+          "statement": "The standard subscription price is $99 per year; if the customer does not know the amount owed, the agent must use the Subscription Status query to determine it, defaulting to $99 if the query returns $0."
+        },
+        {
+          "rule_id": "POL-033-R3",
+          "statement": "A subscription payment is finalized by entering 'renew subscription' via Update Account."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-090",
+      "subflow": "manage",
+      "branch": null,
+      "precondition": "Customer intent matches ABCD subflow 'manage' (flow: Shipping Issue). Governing policy: Shipping Management Policy (POL-029 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "record-reason",
+        "verify-identity",
+        "update-account"
+      ],
+      "postcondition": "The account is updated per the requested change",
+      "policy_id": "POL-029",
+      "policy_family": "Shipping Management Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-029-R1",
+          "statement": "The agent must record the current shipping status as one of: Order Received, In Transit, Out for Delivery, or Delivered, via Shipping Status."
+        },
+        {
+          "rule_id": "POL-029-R2",
+          "statement": "The agent must validate the purchase using username, email address, and order ID via Validate Purchase before making any change."
+        },
+        {
+          "rule_id": "POL-029-R3",
+          "statement": "The requested change must be one of: change address or change order, submitted via Update Order."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-023",
+      "subflow": "status_payment_method",
+      "branch": null,
+      "precondition": "Customer intent matches ABCD subflow 'status_payment_method' (flow: Order Issue). Governing policy: Order Payment Method Policy (POL-007 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "verify-identity",
+        "update-order"
+      ],
+      "postcondition": "The order is updated per the requested change",
+      "policy_id": "POL-007",
+      "policy_family": "Order Payment Method Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-007-R1",
+          "statement": "Before changing a payment method, the agent must verify identity using full name, account ID, and order ID via Verify Identity."
+        },
+        {
+          "rule_id": "POL-007-R2",
+          "statement": "A payment method change may be applied immediately only if the shipping status is Order Received or In Transit; if the status is Out for Delivery or Delivered, the new payment method may only apply to future orders."
+        },
+        {
+          "rule_id": "POL-007-R3",
+          "statement": "The new payment method must be one of: credit card, debit card, or paypal."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-049",
+      "subflow": "credit_card",
+      "branch": null,
+      "precondition": "Customer intent matches ABCD subflow 'credit_card' (flow: Troubleshoot Site). Governing policy: Payment Card and Cart Troubleshooting Policy (POL-015 v1).",
+      "action_sequence": [
+        "try-again",
+        "log-out-in",
+        "enter-details"
+      ],
+      "postcondition": "The requested detail is recorded, pending a further step",
+      "policy_id": "POL-015",
+      "policy_family": "Payment Card and Cart Troubleshooting Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-015-R1",
+          "statement": "Card and cart troubleshooting must be attempted via Try Again or Log Out/In before any account or purchase action is taken."
+        },
+        {
+          "rule_id": "POL-015-R2",
+          "statement": "If the customer suspects an expired card, the agent must enter 'troubleshoot' via Enter Details rather than escalating."
+        },
+        {
+          "rule_id": "POL-015-R3",
+          "statement": "The agent may complete the purchase on the customer's behalf via Make Purchase only after collecting the credit card number, expiration date, and the brand/item phrase."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-010",
+      "subflow": "return_size",
+      "branch": "bronze",
+      "precondition": "Customer intent matches ABCD subflow 'return_size' (flow: Product Defect). Customer's membership level is bronze. Governing policy: Product Return Policy (POL-004 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "validate-purchase",
+        "membership",
+        "enter-details",
+        "update-order"
+      ],
+      "postcondition": "The order is updated per the requested change",
+      "policy_id": "POL-004",
+      "policy_family": "Product Return Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-004-R1",
+          "statement": "Before processing any return, the agent must validate the purchase using username, email address, and order ID via Validate Purchase."
+        },
+        {
+          "rule_id": "POL-004-R2",
+          "statement": "Return eligibility is gated by membership level: Gold members receive unlimited returns; Silver members are eligible within 6 months of purchase, or with a receipt, or if the item is in original packaging; Bronze members are eligible within 90 days, or with a receipt, or in original packaging; Guest members are eligible within 30 days, or with a receipt."
+        },
+        {
+          "rule_id": "POL-004-R4",
+          "statement": "Approved returns require the customer's full shipping address (street, city, state, zip) entered as a single line via Enter Details."
+        },
+        {
+          "rule_id": "POL-004-R5",
+          "statement": "The return processing method must be one of: By Mail, In Store, or Drop off Center."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-004",
+      "subflow": "refund_update",
+      "branch": null,
+      "precondition": "Customer intent matches ABCD subflow 'refund_update' (flow: Product Defect). Governing policy: Refund Update Policy (POL-002 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "validate-purchase",
+        "record-reason",
+        "offer-refund"
+      ],
+      "postcondition": "A refund is issued to the customer",
+      "policy_id": "POL-002",
+      "policy_family": "Refund Update Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-002-R1",
+          "statement": "Before modifying an existing refund, the agent must validate the purchase using the customer's username, email address, and order ID via Validate Purchase."
+        },
+        {
+          "rule_id": "POL-002-R2",
+          "statement": "When a customer adds an item to an existing refund, the new total refund amount equals the previous refund amount plus the price of the new item."
+        },
+        {
+          "rule_id": "POL-002-R3",
+          "statement": "The updated refund total must be entered without a dollar sign and submitted via Offer Refund."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-015",
+      "subflow": "status_mystery_fee",
+      "branch": "gold",
+      "precondition": "Customer intent matches ABCD subflow 'status_mystery_fee' (flow: Order Issue). Customer's membership level is gold. Governing policy: Order Fee Dispute Policy (POL-005 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "verify-identity",
+        "ask-the-oracle",
+        "membership",
+        "update-order"
+      ],
+      "postcondition": "The order is updated per the requested change",
+      "policy_id": "POL-005",
+      "policy_family": "Order Fee Dispute Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-005-R1",
+          "statement": "Before adjudicating a mystery fee, the agent must verify identity using full name, account ID, and order ID via Verify Identity."
+        },
+        {
+          "rule_id": "POL-005-R2",
+          "statement": "The agent must query Ask the Oracle to determine whether the fee was a company error; if the Oracle confirms company error, the fee must be removed regardless of membership level."
+        },
+        {
+          "rule_id": "POL-005-R3",
+          "statement": "If the Oracle does not confirm company error, fee removal eligibility is gated by membership: Gold and Silver members always have the extra fee removed; Guest and Bronze members do not, and the fee stands."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-093",
+      "subflow": "missing",
+      "branch": null,
+      "precondition": "Customer intent matches ABCD subflow 'missing' (flow: Shipping Issue). Governing policy: Missing Item Policy (POL-030 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "validate-purchase",
+        "record-reason"
+      ],
+      "postcondition": "The reason/context is recorded, pending a further step",
+      "policy_id": "POL-030",
+      "policy_family": "Missing Item Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-030-R1",
+          "statement": "The agent must validate the purchase using username, email address, and order ID via Validate Purchase."
+        },
+        {
+          "rule_id": "POL-030-R2",
+          "statement": "The agent must record the number of days the customer has been waiting via Record Reason."
+        },
+        {
+          "rule_id": "POL-030-R3",
+          "statement": "A replacement order (new shipment) via Update Order and Make Purchase may only be initiated if the customer has been waiting 7 days (one week) or longer; waits under 7 days do not qualify for a replacement shipment."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-021",
+      "subflow": "status_payment_method",
+      "branch": null,
+      "precondition": "Customer intent matches ABCD subflow 'status_payment_method' (flow: Order Issue). Governing policy: Order Payment Method Policy (POL-007 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "verify-identity",
+        "shipping-status",
+        "update-order"
+      ],
+      "postcondition": "The order is updated per the requested change",
+      "policy_id": "POL-007",
+      "policy_family": "Order Payment Method Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-007-R1",
+          "statement": "Before changing a payment method, the agent must verify identity using full name, account ID, and order ID via Verify Identity."
+        },
+        {
+          "rule_id": "POL-007-R2",
+          "statement": "A payment method change may be applied immediately only if the shipping status is Order Received or In Transit; if the status is Out for Delivery or Delivered, the new payment method may only apply to future orders."
+        },
+        {
+          "rule_id": "POL-007-R3",
+          "statement": "The new payment method must be one of: credit card, debit card, or paypal."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-071",
+      "subflow": "bad_price_competitor",
+      "branch": null,
+      "precondition": "Customer intent matches ABCD subflow 'bad_price_competitor' (flow: Purchase Dispute). Governing policy: Competitor Price Match Policy (POL-022 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "record-reason",
+        "promo-code"
+      ],
+      "postcondition": "A promo code is generated and issued to the customer",
+      "policy_id": "POL-022",
+      "policy_family": "Competitor Price Match Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-022-R1",
+          "statement": "The agent must pull up the account using full name or account ID via Pull up Account before addressing a price dispute."
+        },
+        {
+          "rule_id": "POL-022-R2",
+          "statement": "The agent must record the dispute reason as one of: competitor or yesterday, via Record Reason."
+        },
+        {
+          "rule_id": "POL-022-R3",
+          "statement": "The agent must verify identity using full name, account ID, and order ID via Verify Identity before offering any compensation."
+        },
+        {
+          "rule_id": "POL-022-R4",
+          "statement": "If the customer remains unsatisfied after being told prices are dynamic, the agent may offer a discount via Promo Code with no further identity or eligibility check required."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-039",
+      "subflow": "recover_username",
+      "branch": null,
+      "precondition": "Customer intent matches ABCD subflow 'recover_username' (flow: Account Access). Governing policy: Username Recovery Policy (POL-012 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "verify-identity"
+      ],
+      "postcondition": "Identity is verified, gating the next step",
+      "policy_id": "POL-012",
+      "policy_family": "Username Recovery Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-012-R1",
+          "statement": "To recover a username, the agent must collect at least 3 of the following 4 identity items: full name, zip code, phone number, or email address, via Verify Identity."
+        },
+        {
+          "rule_id": "POL-012-R2",
+          "statement": "The recovered username must be constructed as the first letter of the first name plus the full last name plus the digit 1 (e.g., John Smith -> jsmith1)."
+        },
+        {
+          "rule_id": "POL-012-R3",
+          "statement": "If this username-recovery step occurs as part of Validate Purchase or another external flow, the agent must treat the constructed username as valid and continue, even if the system flags it as invalid."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-036",
+      "subflow": "manage_cancel",
+      "branch": "gold",
+      "precondition": "Customer intent matches ABCD subflow 'manage_cancel' (flow: Order Issue). Customer's membership level is gold. Governing policy: Order Cancellation Policy (POL-011 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "verify-identity",
+        "shipping-status",
+        "membership",
+        "offer-refund"
+      ],
+      "postcondition": "A refund is issued to the customer",
+      "policy_id": "POL-011",
+      "policy_family": "Order Cancellation Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-011-R1",
+          "statement": "Before cancelling or returning an order, the agent must verify identity using full name, account ID, and order ID via Verify Identity."
+        },
+        {
+          "rule_id": "POL-011-R2",
+          "statement": "If shipping status is Order Received, the agent must immediately offer a refund and remove the item from the order."
+        },
+        {
+          "rule_id": "POL-011-R3",
+          "statement": "If shipping status is In Transit, Out for Delivery, or Delivered, refund eligibility is gated by membership: Bronze, Silver, and Gold members receive an immediate refund and must call back after the item arrives to complete the return; Guest members must wait for the item to arrive before any return process begins, with no immediate refund."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-006",
+      "subflow": "refund_update",
+      "branch": null,
+      "precondition": "Customer intent matches ABCD subflow 'refund_update' (flow: Product Defect). Governing policy: Refund Update Policy (POL-002 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "validate-purchase",
+        "record-reason",
+        "offer-refund",
+        "offer-refund"
+      ],
+      "postcondition": "A refund is issued to the customer",
+      "policy_id": "POL-002",
+      "policy_family": "Refund Update Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-002-R1",
+          "statement": "Before modifying an existing refund, the agent must validate the purchase using the customer's username, email address, and order ID via Validate Purchase."
+        },
+        {
+          "rule_id": "POL-002-R2",
+          "statement": "When a customer adds an item to an existing refund, the new total refund amount equals the previous refund amount plus the price of the new item."
+        },
+        {
+          "rule_id": "POL-002-R3",
+          "statement": "The updated refund total must be entered without a dollar sign and submitted via Offer Refund."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-003",
+      "subflow": "refund_initiate",
+      "branch": null,
+      "precondition": "Customer intent matches ABCD subflow 'refund_initiate' (flow: Product Defect). Governing policy: Refund Initiation Policy (POL-001 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "validate-purchase",
+        "record-reason",
+        "offer-refund"
+      ],
+      "postcondition": "A refund is issued to the customer",
+      "policy_id": "POL-001",
+      "policy_family": "Refund Initiation Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-001-R1",
+          "statement": "Before offering a refund, the agent must validate the purchase using the customer's username, email address, and order ID via Validate Purchase."
+        },
+        {
+          "rule_id": "POL-001-R2",
+          "statement": "Refund method must be one of: gift card, add value, paper check, or credit card. Gift card and paper check refunds require the customer's full mailing address; add value and credit card refunds require the account ID."
+        },
+        {
+          "rule_id": "POL-001-R3",
+          "statement": "If the customer does not know the refund amount, the agent must enter a default refund amount of $50."
+        },
+        {
+          "rule_id": "POL-001-R4",
+          "statement": "The refund amount must be entered without a dollar sign and submitted via Offer Refund before the refund is considered complete."
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-076",
+      "subflow": "out_of_stock_one_item",
+      "branch": null,
+      "precondition": "Customer intent matches ABCD subflow 'out_of_stock_one_item' (flow: Purchase Dispute). Governing policy: Out-of-Stock Single Item Policy (POL-024 v1).",
+      "action_sequence": [
+        "pull-up-account",
+        "record-reason",
+        "notify-team"
+      ],
+      "postcondition": "The issue is escalated internally rather than resolved directly by the agent",
+      "policy_id": "POL-024",
+      "policy_family": "Out-of-Stock Single Item Policy",
+      "linked_rules": [
+        {
+          "rule_id": "POL-024-R1",
+          "statement": "The agent must record the affected item's brand and type via Record Reason."
+        },
+        {
+          "rule_id": "POL-024-R2",
+          "statement": "The agent must notify the Purchasing Department via Notify Internal Team by entering 'purchasing department'."
+        },
+        {
+          "rule_id": "POL-024-R3",
+          "statement": "A back-order via Make Purchase may be offered only if the customer remains unsatisfied after notification, and must use the same credit card already on file."
+        }
+      ]
+    }
+  ]
+}
