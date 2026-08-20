@@ -1,0 +1,17 @@
+{
+  "artifact": "Phase 5 scoring outputs (main results, error slice, ablations, RESULTS.md)",
+  "frozen_at": "2026-08-20T18:13:42.902696+00:00",
+  "num_files": 8,
+  "algorithm": "sha256",
+  "fingerprint": "c09e79caeb22fcca5557a8e9a869c5ad04bbc745b32ff786b1b121ce50acd536",
+  "files": {
+    "results/scoring/ablations.json": "f39c0be817342feeb8782656dc516290f7fd380084684f0fe2b4e73be89c56da",
+    "results/scoring/condition_b_error_slice.json": "245052806aca0b35c39b4e1a000a17551194adcf96fa7231431d900414c3adc7",
+    "results/scoring/main_results.json": "77e04460a9b84c7dbab94dad6bff51956653ea93be494503fe55d481a4d59564",
+    "results/scoring/ablations.csv": "55a391132fb1bfb67f43d04c171637ee4de9a50542ecc130ba1cfad53c57bc0a",
+    "results/scoring/condition_b_error_slice.csv": "063598cc36d69618a70f5af5292bb27003c02ca6a895067eff684751aab56860",
+    "results/scoring/main_results.csv": "308c29620e0aad6d1892ecfc13d8636362ced29ef4835a54c715fdebc65d476b",
+    "results/scoring/main_results.md": "09d6d515d998efd8df19f828e6748373855afcdb4cc5df4e0562ca5f371038da",
+    "results/RESULTS.md": "85d6cc404314383b19f988ac7319bbd9673b44ed0f9556cc19663324299a662a"
+  }
+}
