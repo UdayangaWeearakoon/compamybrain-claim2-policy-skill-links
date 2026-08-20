@@ -1,0 +1,72 @@
+{
+  "policy_id": "POL-004",
+  "family": "Product Return Policy",
+  "version": "v2",
+  "effective_timestamp": "2026-01-15T00:00:00Z",
+  "flow": "product_defect",
+  "source_subflows": [
+    "return_stain",
+    "return_color",
+    "return_size"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": "v1",
+  "rules": [
+    {
+      "rule_id": "POL-004-R5",
+      "statement": "The return processing method must be one of: By Mail, In Store, or Drop off Center."
+    },
+    {
+      "rule_id": "POL-004-R4",
+      "statement": "Approved returns require the customer's full shipping address (street, city, state, zip) entered as a single line via Enter Details."
+    },
+    {
+      "rule_id": "POL-004-R3",
+      "statement": "Guest members are never eligible for a return, receipt or no receipt, regardless of how long ago the purchase was made."
+    },
+    {
+      "rule_id": "POL-004-R2",
+      "statement": "Return eligibility is gated by membership level: Gold members receive unlimited returns; Silver members are eligible within 3 months of purchase, or with a receipt, or if the item is in original packaging; Bronze members are eligible within 60 days, or with a receipt, or in original packaging; Guest members are eligible within 30 days, or with a receipt."
+    },
+    {
+      "rule_id": "POL-004-R1",
+      "statement": "Before processing any return, the agent is required to validate the purchase using username, email address, and order ID via Validate Purchase."
+    }
+  ],
+  "_change_log": [
+    {
+      "rule_id": "POL-004-R1",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "Before processing any return, the agent must validate the purchase using username, email address, and order ID via Validate Purchase.",
+      "v2_statement": "Before processing any return, the agent is required to validate the purchase using username, email address, and order ID via Validate Purchase.",
+      "note": "Distractor: connector-word reword only, no testable content changed."
+    },
+    {
+      "rule_id": "POL-004-R2",
+      "change_type": "real_supersession",
+      "v1_statement": "Return eligibility is gated by membership level: Gold members receive unlimited returns; Silver members are eligible within 6 months of purchase, or with a receipt, or if the item is in original packaging; Bronze members are eligible within 90 days, or with a receipt, or in original packaging; Guest members are eligible within 30 days, or with a receipt.",
+      "v2_statement": "Return eligibility is gated by membership level: Gold members receive unlimited returns; Silver members are eligible within 3 months of purchase, or with a receipt, or if the item is in original packaging; Bronze members are eligible within 60 days, or with a receipt, or in original packaging; Guest members are eligible within 30 days, or with a receipt.",
+      "note": "Tightens the Silver window 6mo->3mo and Bronze window 90->60 days. Whether a given historical case is now wrong depends on the actual purchase-to-request gap in that case, so this is value-dependent, not a blanket flip."
+    },
+    {
+      "rule_id": "POL-004-R3",
+      "change_type": "real_supersession",
+      "v1_statement": "Guest members without a receipt and outside the 30-day window must be denied the return.",
+      "v2_statement": "Guest members are never eligible for a return, receipt or no receipt, regardless of how long ago the purchase was made.",
+      "note": "Tightens guest eligibility from conditional (denied only past the 30-day window without a receipt) to an unconditional denial -- any guest return skill that still checks the window/receipt is now wrong."
+    },
+    {
+      "rule_id": "POL-004-R4",
+      "change_type": "unchanged",
+      "v1_statement": "Approved returns require the customer's full shipping address (street, city, state, zip) entered as a single line via Enter Details.",
+      "v2_statement": "Approved returns require the customer's full shipping address (street, city, state, zip) entered as a single line via Enter Details."
+    },
+    {
+      "rule_id": "POL-004-R5",
+      "change_type": "unchanged",
+      "v1_statement": "The return processing method must be one of: By Mail, In Store, or Drop off Center.",
+      "v2_statement": "The return processing method must be one of: By Mail, In Store, or Drop off Center."
+    }
+  ],
+  "_change_summary": "real_supersession"
+}

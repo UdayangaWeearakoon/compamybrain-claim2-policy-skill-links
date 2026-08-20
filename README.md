@@ -48,7 +48,30 @@ skill_library/      Distilled skills (precondition/action/postcondition) + depen
   CONSTRUCTION.md   Source, construction procedure, composition stats, known limitations
 scripts/            (continued) extract_action_traces.py, distill_skills.py,
                     validate_skill_library.py, compute_audit_kappa.py,
-                    apply_audit_exclusions.py, freeze_and_hash_skills.py
+                    apply_audit_exclusions.py, freeze_and_hash_skills.py,
+                    select_supersessions.py, build_policy_corpus_v2.py,
+                    build_environment_contract_anchor.py, label_ground_truth.py,
+                    validate_phase3.py, freeze_and_hash_v2.py
+policy_corpus/v2/   23 v2 policy documents (18 real-supersession, 5 cosmetic-only distractor)
+ground_truth/       Ground-truth label table (Invalidated/Partial/Valid), supersession plan,
+                    environment-drift sanity anchor, CONSTRUCTION.md
+environment_contracts/  v1/v2 tool-argument schemas for the sanity-anchor drift case
+preregistration/    Step 4 preregistration (procedures, metrics, thresholds), committed
+                    before either detector existed
+results/            Raw flag tables + execution logs for both conditions
+  condition_a/      SKILLGUARD-style contract validation (incl. v1 calibration control)
+  condition_b/      Dependency-link detector (section-level primary, document-level ablation)
+  silent_wrong_action/  Replay logs + silent-wrong-action counts per condition
+  hashes/           Step 4 fingerprint
+  RUN_NOTES.md      What the numbers mean, isolation regime, findings, limitations
+scripts/            (continued) run_condition_a.py, run_condition_b.py,
+                    measure_silent_wrong_action.py, validate_step4.py,
+                    test_leakage_check.py, freeze_and_hash_step4.py
+  scoring/          Phase 5: main results table, Condition B error slice, ablations
+  RESULTS.md        Phase 5 interpretation: verdict, error structure, ablations,
+                    shared-gap placement, threats to validity
+scripts/            (continued) score_conditions.py, slice_condition_b_errors.py,
+                    run_ablations.py, freeze_and_hash_step5.py
 ```
 
 ## Getting the data
@@ -88,10 +111,52 @@ Or download directly from the links in the
       same 2 spurious skills, removed. Skill-library fingerprint:
       `4a1aea880cb1d5abafe40864a5919a4bf91b37ec5c3a92c3f1331ef5cc48e4e4`.
       See `skill_library/CONSTRUCTION.md` for full construction detail.
-- [ ] Phase 3 — Inject supersessions (v2 policies) + ground truth labels
-- [ ] Phase 4 — Run Condition A (SKILLGUARD baseline) vs. Condition B
-      (dependency-link detector)
-- [ ] Phase 5 — Results table, bootstrap CIs, error slices, ablations
+- [x] **Phase 3 — Inject supersessions (v2 policies) + ground truth
+      labels.** 18 of 37 policies (48.6%) got a real-supersession v2 (20
+      rule-level changes: 11 hard/always-flips, 9 value-dependent
+      thresholds); 5 more got a cosmetic-only distractor v2; 14 stayed
+      untouched. Ground truth across 115 linked skills: 40 invalidated /
+      22 partial / 53 valid (class balance target was ~40/20/40 by
+      count; found to be structurally unreachable jointly with the
+      30-50%-of-policies target for this corpus's real skill density --
+      resolved by prioritizing class balance, see
+      `ground_truth/CONSTRUCTION.md`). One environment-drift sanity
+      anchor (`select-faq` tool contract) added, isolated to 6 skills
+      under two untouched policies. Phase 3 fingerprint:
+      `dc164882823bde7c12f3e1bd20bd38f969b8dbeacd7fd25bfc3f157d1b281618`.
+- [x] **Phase 4 — Run Condition A (SKILLGUARD baseline) vs. Condition B
+      (dependency-link detector).** Preregistration committed before either
+      detector existed. Condition A flags 6/131 — exactly the environment-drift
+      sanity-anchor skills — with a v1 control flagging 0, evidencing the
+      check-set is calibrated rather than weakened. Condition B (section-level)
+      flags 76/131, including real precision loss on the planted cosmetic
+      distractors, which is the measurement they were planted to produce.
+      Silent wrong actions: **40/40 for Condition A, 0/40 for Condition B** —
+      every invalidated skill the baseline missed replays cleanly against an
+      unchanged environment while violating current policy. Isolation enforced
+      mechanically (AST leakage check + its own negative test). Step 4
+      fingerprint:
+      `1924fd17d3d90aac9a6c71ef33cb3eceb7fa1f3deaccc43ec71118b61424a69c`.
+      Scoring, CIs, error slices and ablations are Step 5 by design; see
+      `results/RUN_NOTES.md`.
+- [x] **Phase 5 — Results table, bootstrap CIs, error slices, ablations.**
+      Scored both conditions against the frozen labels with bootstrap CIs
+      (1000 resamples over skills, seed 20260820). **Verdict: HOLDS** against
+      the preregistered threshold — invalidation recall 1.000 (B) vs 0.000 (A),
+      silent wrong action rate 0.000 (B) vs 1.000 (A). Condition B precision
+      0.526 primary / 0.816 partial-inclusive. Caveat recorded rather than
+      buried: A's precision of 0.000 reflects that its 6 flags are *correct*
+      environment-drift detections scored as non-positives by the invalidation
+      labels, so the precision half of the test is satisfied trivially, not
+      informatively. Condition B has **zero** false negatives; its error mass is
+      entirely false-positive, dominated (61.1%) by the partial class.
+      Ablations: link granularity shows **no** tradeoff on this corpus (identical
+      flag sets, diagnosed); removing negative controls moves B's precision by
+      **0.0 pts** (they are true negatives), with a link-free counterfactual
+      detector supplied to demonstrate the inflation they actually guard against
+      (+4.7 pts). Phase 5 fingerprint:
+      `c09e79caeb22fcca5557a8e9a869c5ad04bbc745b32ff786b1b121ce50acd536`.
+      See `results/RESULTS.md`.
 
 ## Experimental hygiene
 

@@ -1,0 +1,48 @@
+{
+  "total_policies": 37,
+  "real_supersession_policies": [
+    "POL-001",
+    "POL-002",
+    "POL-003",
+    "POL-004",
+    "POL-005",
+    "POL-006",
+    "POL-007",
+    "POL-008",
+    "POL-009",
+    "POL-010",
+    "POL-011",
+    "POL-012",
+    "POL-017",
+    "POL-020",
+    "POL-025",
+    "POL-030",
+    "POL-034",
+    "POL-035"
+  ],
+  "cosmetic_only_policies": [
+    "POL-013",
+    "POL-014",
+    "POL-015",
+    "POL-016",
+    "POL-018"
+  ],
+  "untouched_policies": [
+    "POL-019",
+    "POL-021",
+    "POL-022",
+    "POL-023",
+    "POL-024",
+    "POL-026",
+    "POL-027",
+    "POL-028",
+    "POL-029",
+    "POL-031",
+    "POL-032",
+    "POL-033",
+    "POL-036",
+    "POL-037"
+  ],
+  "v2_document_count": 23,
+  "v2_share_of_total": 0.622
+}

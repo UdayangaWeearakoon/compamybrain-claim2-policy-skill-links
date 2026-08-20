@@ -1,0 +1,60 @@
+{
+  "policy_id": "POL-009",
+  "family": "Order Shipping Tier Change Policy",
+  "version": "v2",
+  "effective_timestamp": "2026-01-15T00:00:00Z",
+  "flow": "order_issue",
+  "source_subflows": [
+    "manage_upgrade",
+    "manage_downgrade"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": "v1",
+  "rules": [
+    {
+      "rule_id": "POL-009-R4",
+      "statement": "A downgrade may proceed for any membership level if the item has not yet shipped; if the item has already shipped, Gold, Silver, and Bronze members receive a credit for the shipping fee, but Guest members receive nothing."
+    },
+    {
+      "rule_id": "POL-009-R3",
+      "statement": "Overnight shipping upgrade fees are gated by membership: Gold members have the $20 fee waived; Guest, Bronze, and Silver members must be charged $20."
+    },
+    {
+      "rule_id": "POL-009-R2",
+      "statement": "An upgrade to overnight shipping is permitted to proceed only in the event that shipping status is Order Received; if the item has already shipped (In Transit, Out for Delivery, or Delivered), the ship date cannot be altered and the upgrade request is required to be denied."
+    },
+    {
+      "rule_id": "POL-009-R1",
+      "statement": "Before processing a shipping upgrade or downgrade, the agent must verify identity using full name, account ID, order ID, and phone number via Verify Identity."
+    }
+  ],
+  "_change_log": [
+    {
+      "rule_id": "POL-009-R1",
+      "change_type": "real_supersession",
+      "v1_statement": "Before processing a shipping upgrade or downgrade, the agent must verify identity using full name, account ID, and order ID via Verify Identity.",
+      "v2_statement": "Before processing a shipping upgrade or downgrade, the agent must verify identity using full name, account ID, order ID, and phone number via Verify Identity.",
+      "note": "Same 4th-field verification hardening as POL-005-R1."
+    },
+    {
+      "rule_id": "POL-009-R2",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "An upgrade to overnight shipping may proceed only if shipping status is Order Received; if the item has already shipped (In Transit, Out for Delivery, or Delivered), the ship date cannot be altered and the upgrade request must be denied.",
+      "v2_statement": "An upgrade to overnight shipping is permitted to proceed only in the event that shipping status is Order Received; if the item has already shipped (In Transit, Out for Delivery, or Delivered), the ship date cannot be altered and the upgrade request is required to be denied.",
+      "note": "Distractor: connector-word reword only, no testable content changed."
+    },
+    {
+      "rule_id": "POL-009-R3",
+      "change_type": "unchanged",
+      "v1_statement": "Overnight shipping upgrade fees are gated by membership: Gold members have the $20 fee waived; Guest, Bronze, and Silver members must be charged $20.",
+      "v2_statement": "Overnight shipping upgrade fees are gated by membership: Gold members have the $20 fee waived; Guest, Bronze, and Silver members must be charged $20."
+    },
+    {
+      "rule_id": "POL-009-R4",
+      "change_type": "unchanged",
+      "v1_statement": "A downgrade may proceed for any membership level if the item has not yet shipped; if the item has already shipped, Gold, Silver, and Bronze members receive a credit for the shipping fee, but Guest members receive nothing.",
+      "v2_statement": "A downgrade may proceed for any membership level if the item has not yet shipped; if the item has already shipped, Gold, Silver, and Bronze members receive a credit for the shipping fee, but Guest members receive nothing."
+    }
+  ],
+  "_change_summary": "real_supersession"
+}

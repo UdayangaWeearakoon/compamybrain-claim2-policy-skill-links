@@ -1,0 +1,185 @@
+{
+  "source": "Synthetic sanity-anchor edit for Claim 2 Phase 3 (not from ABCD)",
+  "version": "v2",
+  "effective_timestamp": "2026-01-15T00:00:00Z",
+  "supersedes": "v1",
+  "changed_actions": [
+    "select-faq"
+  ],
+  "schema": {
+    "verify-identity": {
+      "category": "kb_query",
+      "args": [
+        "customer_name",
+        "account_id",
+        "order_id",
+        "zip_code"
+      ]
+    },
+    "ask-the-oracle": {
+      "category": "kb_query",
+      "args": []
+    },
+    "validate-purchase": {
+      "category": "kb_query",
+      "args": [
+        "username",
+        "email",
+        "order_id"
+      ]
+    },
+    "make-password": {
+      "category": "kb_query",
+      "args": []
+    },
+    "promo-code": {
+      "category": "kb_query",
+      "args": []
+    },
+    "subscription-status": {
+      "category": "kb_query",
+      "args": []
+    },
+    "offer-refund": {
+      "category": "interaction",
+      "args": [
+        "amount"
+      ]
+    },
+    "make-purchase": {
+      "category": "interaction",
+      "args": [
+        "product"
+      ]
+    },
+    "record-reason": {
+      "category": "interaction",
+      "args": [
+        "reason_slotval",
+        "product",
+        "street_address",
+        "customer_name",
+        "payment_method",
+        "phone",
+        "refund_target"
+      ]
+    },
+    "enter-details": {
+      "category": "interaction",
+      "args": [
+        "details_slotval",
+        "full_address",
+        "account_id",
+        "username",
+        "email",
+        "pin_number",
+        "security_answer"
+      ]
+    },
+    "shipping-status": {
+      "category": "interaction",
+      "args": [
+        "shipping_option"
+      ]
+    },
+    "update-order": {
+      "category": "interaction",
+      "args": [
+        "order_slotval",
+        "change_option",
+        "amount",
+        "payment_method",
+        "full_address"
+      ]
+    },
+    "pull-up-account": {
+      "category": "interaction",
+      "args": [
+        "customer_name",
+        "account_id"
+      ]
+    },
+    "update-account": {
+      "category": "interaction",
+      "args": [
+        "account_slotval",
+        "street_address",
+        "customer_name",
+        "payment_method",
+        "phone"
+      ]
+    },
+    "send-link": {
+      "category": "interaction",
+      "args": []
+    },
+    "notify-team": {
+      "category": "interaction",
+      "args": [
+        "company_team"
+      ]
+    },
+    "membership": {
+      "category": "faq_policy",
+      "args": [
+        "membership_level"
+      ]
+    },
+    "search-faq": {
+      "category": "faq_policy",
+      "args": []
+    },
+    "try-again": {
+      "category": "faq_policy",
+      "args": []
+    },
+    "log-out-in": {
+      "category": "faq_policy",
+      "args": []
+    },
+    "instructions": {
+      "category": "faq_policy",
+      "args": []
+    },
+    "search-jeans": {
+      "category": "faq_policy",
+      "args": []
+    },
+    "search-shirt": {
+      "category": "faq_policy",
+      "args": []
+    },
+    "search-boots": {
+      "category": "faq_policy",
+      "args": []
+    },
+    "search-jacket": {
+      "category": "faq_policy",
+      "args": []
+    },
+    "search-pricing": {
+      "category": "faq_policy",
+      "args": []
+    },
+    "search-timing": {
+      "category": "faq_policy",
+      "args": []
+    },
+    "search-membership": {
+      "category": "faq_policy",
+      "args": []
+    },
+    "search-policy": {
+      "category": "faq_policy",
+      "args": []
+    },
+    "select-faq": {
+      "category": "faq_policy",
+      "args": [
+        "single_item_query",
+        "storewide_query",
+        "topic_category_id"
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "policy_id": "POL-018",
+  "family": "Service Removal Dispute Policy",
+  "version": "v2",
+  "effective_timestamp": "2026-01-15T00:00:00Z",
+  "flow": "manage_account",
+  "source_subflows": [
+    "status_service_removed"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": "v1",
+  "rules": [
+    {
+      "rule_id": "POL-018-R3",
+      "statement": "If the Oracle confirms the error, the removed service is required to be reinstated via Update Account by entering 'add service'."
+    },
+    {
+      "rule_id": "POL-018-R2",
+      "statement": "The agent is required to query Ask the Oracle to confirm whether the service was actually removed in error; in the event that the Oracle says No, the agent must explain the misunderstanding and take no account action."
+    },
+    {
+      "rule_id": "POL-018-R1",
+      "statement": "The agent is required to record the source of the reported issue as one of: email, spouse, or news, via Record Reason."
+    }
+  ],
+  "_change_log": [
+    {
+      "rule_id": "POL-018-R1",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "The agent must record the source of the reported issue as one of: email, spouse, or news, via Record Reason.",
+      "v2_statement": "The agent is required to record the source of the reported issue as one of: email, spouse, or news, via Record Reason.",
+      "note": "Whole-document distractor: connector-word reword only."
+    },
+    {
+      "rule_id": "POL-018-R2",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "The agent must query Ask the Oracle to confirm whether the service was actually removed in error; if the Oracle says No, the agent must explain the misunderstanding and take no account action.",
+      "v2_statement": "The agent is required to query Ask the Oracle to confirm whether the service was actually removed in error; in the event that the Oracle says No, the agent must explain the misunderstanding and take no account action.",
+      "note": "Whole-document distractor: connector-word reword only."
+    },
+    {
+      "rule_id": "POL-018-R3",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "If the Oracle confirms the error, the removed service must be reinstated via Update Account by entering 'add service'.",
+      "v2_statement": "If the Oracle confirms the error, the removed service is required to be reinstated via Update Account by entering 'add service'.",
+      "note": "Whole-document distractor: connector-word reword only."
+    }
+  ],
+  "_change_summary": "cosmetic_only"
+}

@@ -1,0 +1,132 @@
+skill_id,policy_id,policy_change_type,linked_rule_ids,superseded_rule_ids_hit,supersession_types_hit,label,reason
+SK-001,POL-001,real_supersession,POL-001-R1;POL-001-R2;POL-001-R3;POL-001-R4,POL-001-R1,hard,invalidated,Linked rule(s) ['POL-001-R1'] superseded by a hard (always-flips) change in POL-001 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-002,POL-001,real_supersession,POL-001-R1;POL-001-R2;POL-001-R3;POL-001-R4,POL-001-R1,hard,invalidated,Linked rule(s) ['POL-001-R1'] superseded by a hard (always-flips) change in POL-001 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-003,POL-001,real_supersession,POL-001-R1;POL-001-R2;POL-001-R3;POL-001-R4,POL-001-R1,hard,invalidated,Linked rule(s) ['POL-001-R1'] superseded by a hard (always-flips) change in POL-001 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-004,POL-002,real_supersession,POL-002-R1;POL-002-R2;POL-002-R3,POL-002-R1,hard,invalidated,Linked rule(s) ['POL-002-R1'] superseded by a hard (always-flips) change in POL-002 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-005,POL-002,real_supersession,POL-002-R1;POL-002-R2;POL-002-R3,POL-002-R1,hard,invalidated,Linked rule(s) ['POL-002-R1'] superseded by a hard (always-flips) change in POL-002 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-006,POL-002,real_supersession,POL-002-R1;POL-002-R2;POL-002-R3,POL-002-R1,hard,invalidated,Linked rule(s) ['POL-002-R1'] superseded by a hard (always-flips) change in POL-002 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-007,POL-003,real_supersession,POL-003-R1;POL-003-R2;POL-003-R3;POL-003-R4,POL-003-R1,hard,invalidated,Linked rule(s) ['POL-003-R1'] superseded by a hard (always-flips) change in POL-003 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-008,POL-003,real_supersession,POL-003-R1;POL-003-R2;POL-003-R3;POL-003-R4,POL-003-R1,hard,invalidated,Linked rule(s) ['POL-003-R1'] superseded by a hard (always-flips) change in POL-003 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-009,POL-003,real_supersession,POL-003-R1;POL-003-R2;POL-003-R3;POL-003-R4,POL-003-R1,hard,invalidated,Linked rule(s) ['POL-003-R1'] superseded by a hard (always-flips) change in POL-003 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-010,POL-004,real_supersession,POL-004-R1;POL-004-R2;POL-004-R4;POL-004-R5,POL-004-R2,value_dependent,partial,"Linked rule(s) ['POL-004-R2'] superseded by value-dependent change(s) in POL-004 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-011,POL-004,real_supersession,POL-004-R1;POL-004-R2;POL-004-R4;POL-004-R5,POL-004-R2,value_dependent,partial,"Linked rule(s) ['POL-004-R2'] superseded by value-dependent change(s) in POL-004 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-012,POL-004,real_supersession,POL-004-R1;POL-004-R2;POL-004-R3;POL-004-R4;POL-004-R5,POL-004-R2;POL-004-R3,hard;value_dependent,invalidated,Linked rule(s) ['POL-004-R3'] superseded by a hard (always-flips) change in POL-004 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-013,POL-004,real_supersession,POL-004-R1;POL-004-R2;POL-004-R4;POL-004-R5,POL-004-R2,value_dependent,partial,"Linked rule(s) ['POL-004-R2'] superseded by value-dependent change(s) in POL-004 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-014,POL-005,real_supersession,POL-005-R1;POL-005-R2;POL-005-R3,POL-005-R1,hard,invalidated,Linked rule(s) ['POL-005-R1'] superseded by a hard (always-flips) change in POL-005 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-015,POL-005,real_supersession,POL-005-R1;POL-005-R2;POL-005-R3,POL-005-R1,hard,invalidated,Linked rule(s) ['POL-005-R1'] superseded by a hard (always-flips) change in POL-005 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-016,POL-005,real_supersession,POL-005-R1;POL-005-R2;POL-005-R3,POL-005-R1,hard,invalidated,Linked rule(s) ['POL-005-R1'] superseded by a hard (always-flips) change in POL-005 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-017,POL-005,real_supersession,POL-005-R1;POL-005-R2;POL-005-R3,POL-005-R1,hard,invalidated,Linked rule(s) ['POL-005-R1'] superseded by a hard (always-flips) change in POL-005 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-018,POL-006,real_supersession,POL-006-R1;POL-006-R2,POL-006-R1,hard,invalidated,Linked rule(s) ['POL-006-R1'] superseded by a hard (always-flips) change in POL-006 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-019,POL-006,real_supersession,POL-006-R1;POL-006-R2,POL-006-R1,hard,invalidated,Linked rule(s) ['POL-006-R1'] superseded by a hard (always-flips) change in POL-006 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-020,POL-006,real_supersession,POL-006-R1;POL-006-R2,POL-006-R1,hard,invalidated,Linked rule(s) ['POL-006-R1'] superseded by a hard (always-flips) change in POL-006 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-021,POL-007,real_supersession,POL-007-R1;POL-007-R2;POL-007-R3,POL-007-R1,hard,invalidated,Linked rule(s) ['POL-007-R1'] superseded by a hard (always-flips) change in POL-007 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-022,POL-007,real_supersession,POL-007-R1;POL-007-R2;POL-007-R3,POL-007-R1,hard,invalidated,Linked rule(s) ['POL-007-R1'] superseded by a hard (always-flips) change in POL-007 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-023,POL-007,real_supersession,POL-007-R1;POL-007-R2;POL-007-R3,POL-007-R1,hard,invalidated,Linked rule(s) ['POL-007-R1'] superseded by a hard (always-flips) change in POL-007 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-024,POL-008,real_supersession,POL-008-R1;POL-008-R2;POL-008-R3,POL-008-R1,hard,invalidated,Linked rule(s) ['POL-008-R1'] superseded by a hard (always-flips) change in POL-008 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-025,POL-008,real_supersession,POL-008-R1;POL-008-R2;POL-008-R3,POL-008-R1,hard,invalidated,Linked rule(s) ['POL-008-R1'] superseded by a hard (always-flips) change in POL-008 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-026,POL-008,real_supersession,POL-008-R1;POL-008-R2;POL-008-R3,POL-008-R1,hard,invalidated,Linked rule(s) ['POL-008-R1'] superseded by a hard (always-flips) change in POL-008 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-027,POL-009,real_supersession,POL-009-R1;POL-009-R2;POL-009-R3;POL-009-R4,POL-009-R1,hard,invalidated,Linked rule(s) ['POL-009-R1'] superseded by a hard (always-flips) change in POL-009 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-028,POL-009,real_supersession,POL-009-R1;POL-009-R2;POL-009-R3;POL-009-R4,POL-009-R1,hard,invalidated,Linked rule(s) ['POL-009-R1'] superseded by a hard (always-flips) change in POL-009 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-029,POL-009,real_supersession,POL-009-R1;POL-009-R2;POL-009-R3;POL-009-R4,POL-009-R1,hard,invalidated,Linked rule(s) ['POL-009-R1'] superseded by a hard (always-flips) change in POL-009 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-030,POL-009,real_supersession,POL-009-R1;POL-009-R2;POL-009-R3;POL-009-R4,POL-009-R1,hard,invalidated,Linked rule(s) ['POL-009-R1'] superseded by a hard (always-flips) change in POL-009 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-031,POL-010,real_supersession,POL-010-R1;POL-010-R2,POL-010-R1,hard,invalidated,Linked rule(s) ['POL-010-R1'] superseded by a hard (always-flips) change in POL-010 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-032,POL-010,real_supersession,POL-010-R1;POL-010-R2;POL-010-R3,POL-010-R1,hard,invalidated,Linked rule(s) ['POL-010-R1'] superseded by a hard (always-flips) change in POL-010 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-033,POL-010,real_supersession,POL-010-R1;POL-010-R2,POL-010-R1,hard,invalidated,Linked rule(s) ['POL-010-R1'] superseded by a hard (always-flips) change in POL-010 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-034,POL-010,real_supersession,POL-010-R1;POL-010-R2;POL-010-R3,POL-010-R1,hard,invalidated,Linked rule(s) ['POL-010-R1'] superseded by a hard (always-flips) change in POL-010 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-035,POL-011,real_supersession,POL-011-R1;POL-011-R2;POL-011-R3,POL-011-R1,hard,invalidated,Linked rule(s) ['POL-011-R1'] superseded by a hard (always-flips) change in POL-011 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-036,POL-011,real_supersession,POL-011-R1;POL-011-R2;POL-011-R3,POL-011-R1,hard,invalidated,Linked rule(s) ['POL-011-R1'] superseded by a hard (always-flips) change in POL-011 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-037,POL-011,real_supersession,POL-011-R1;POL-011-R2;POL-011-R3,POL-011-R1,hard,invalidated,Linked rule(s) ['POL-011-R1'] superseded by a hard (always-flips) change in POL-011 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-038,POL-011,real_supersession,POL-011-R1;POL-011-R2;POL-011-R3,POL-011-R1,hard,invalidated,Linked rule(s) ['POL-011-R1'] superseded by a hard (always-flips) change in POL-011 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-039,POL-012,real_supersession,POL-012-R1;POL-012-R2;POL-012-R3,POL-012-R1,hard,invalidated,Linked rule(s) ['POL-012-R1'] superseded by a hard (always-flips) change in POL-012 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-040,POL-012,real_supersession,POL-012-R1;POL-012-R2;POL-012-R3,POL-012-R1,hard,invalidated,Linked rule(s) ['POL-012-R1'] superseded by a hard (always-flips) change in POL-012 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-041,POL-012,real_supersession,POL-012-R1;POL-012-R2;POL-012-R3,POL-012-R1,hard,invalidated,Linked rule(s) ['POL-012-R1'] superseded by a hard (always-flips) change in POL-012 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-042,POL-013,cosmetic_only,POL-013-R1;POL-013-R2,,,valid,"Policy POL-013 received only a cosmetic-only v2 (reword/reorder, no testable content changed) -- correctly not invalidated."
+SK-043,POL-013,cosmetic_only,POL-013-R1;POL-013-R2,,,valid,"Policy POL-013 received only a cosmetic-only v2 (reword/reorder, no testable content changed) -- correctly not invalidated."
+SK-044,POL-013,cosmetic_only,POL-013-R1;POL-013-R2,,,valid,"Policy POL-013 received only a cosmetic-only v2 (reword/reorder, no testable content changed) -- correctly not invalidated."
+SK-045,POL-014,cosmetic_only,POL-014-R1;POL-014-R2;POL-014-R3,,,valid,"Policy POL-014 received only a cosmetic-only v2 (reword/reorder, no testable content changed) -- correctly not invalidated."
+SK-046,POL-014,cosmetic_only,POL-014-R1;POL-014-R2;POL-014-R3,,,valid,"Policy POL-014 received only a cosmetic-only v2 (reword/reorder, no testable content changed) -- correctly not invalidated."
+SK-047,POL-014,cosmetic_only,POL-014-R1;POL-014-R2;POL-014-R3,,,valid,"Policy POL-014 received only a cosmetic-only v2 (reword/reorder, no testable content changed) -- correctly not invalidated."
+SK-048,POL-015,cosmetic_only,POL-015-R1;POL-015-R2;POL-015-R3,,,valid,"Policy POL-015 received only a cosmetic-only v2 (reword/reorder, no testable content changed) -- correctly not invalidated."
+SK-049,POL-015,cosmetic_only,POL-015-R1;POL-015-R2;POL-015-R3,,,valid,"Policy POL-015 received only a cosmetic-only v2 (reword/reorder, no testable content changed) -- correctly not invalidated."
+SK-050,POL-015,cosmetic_only,POL-015-R1;POL-015-R2;POL-015-R3,,,valid,"Policy POL-015 received only a cosmetic-only v2 (reword/reorder, no testable content changed) -- correctly not invalidated."
+SK-051,POL-016,cosmetic_only,POL-016-R1;POL-016-R2;POL-016-R3,,,valid,"Policy POL-016 received only a cosmetic-only v2 (reword/reorder, no testable content changed) -- correctly not invalidated."
+SK-052,POL-016,cosmetic_only,POL-016-R1;POL-016-R2;POL-016-R3,,,valid,"Policy POL-016 received only a cosmetic-only v2 (reword/reorder, no testable content changed) -- correctly not invalidated."
+SK-054,POL-017,real_supersession,POL-017-R1;POL-017-R2;POL-017-R3,POL-017-R3,value_dependent,partial,"Linked rule(s) ['POL-017-R3'] superseded by value-dependent change(s) in POL-017 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-055,POL-017,real_supersession,POL-017-R1;POL-017-R2;POL-017-R3,POL-017-R3,value_dependent,partial,"Linked rule(s) ['POL-017-R3'] superseded by value-dependent change(s) in POL-017 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-056,POL-017,real_supersession,POL-017-R1;POL-017-R2;POL-017-R3,POL-017-R3,value_dependent,partial,"Linked rule(s) ['POL-017-R3'] superseded by value-dependent change(s) in POL-017 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-057,POL-018,cosmetic_only,POL-018-R1;POL-018-R2;POL-018-R3,,,valid,"Policy POL-018 received only a cosmetic-only v2 (reword/reorder, no testable content changed) -- correctly not invalidated."
+SK-058,POL-018,cosmetic_only,POL-018-R1;POL-018-R2;POL-018-R3,,,valid,"Policy POL-018 received only a cosmetic-only v2 (reword/reorder, no testable content changed) -- correctly not invalidated."
+SK-059,POL-018,cosmetic_only,POL-018-R1;POL-018-R2;POL-018-R3,,,valid,"Policy POL-018 received only a cosmetic-only v2 (reword/reorder, no testable content changed) -- correctly not invalidated."
+SK-060,POL-019,none (v1 only),POL-019-R1;POL-019-R2;POL-019-R3,,,valid,Policy POL-019 has no v2 -- unchanged.
+SK-061,POL-019,none (v1 only),POL-019-R1;POL-019-R2;POL-019-R3,,,valid,Policy POL-019 has no v2 -- unchanged.
+SK-062,POL-019,none (v1 only),POL-019-R1;POL-019-R2;POL-019-R3,,,valid,Policy POL-019 has no v2 -- unchanged.
+SK-063,POL-020,real_supersession,POL-020-R1;POL-020-R2;POL-020-R3,POL-020-R3,value_dependent,partial,"Linked rule(s) ['POL-020-R3'] superseded by value-dependent change(s) in POL-020 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-064,POL-020,real_supersession,POL-020-R1;POL-020-R2;POL-020-R3,POL-020-R3,value_dependent,partial,"Linked rule(s) ['POL-020-R3'] superseded by value-dependent change(s) in POL-020 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-065,POL-020,real_supersession,POL-020-R1;POL-020-R2;POL-020-R3,POL-020-R3,value_dependent,partial,"Linked rule(s) ['POL-020-R3'] superseded by value-dependent change(s) in POL-020 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-066,POL-021,none (v1 only),POL-021-R1;POL-021-R2;POL-021-R3;POL-021-R4,,,valid,Policy POL-021 has no v2 -- unchanged.
+SK-067,POL-021,none (v1 only),POL-021-R1;POL-021-R2;POL-021-R3;POL-021-R4,,,valid,Policy POL-021 has no v2 -- unchanged.
+SK-068,POL-021,none (v1 only),POL-021-R1;POL-021-R2;POL-021-R3;POL-021-R4,,,valid,Policy POL-021 has no v2 -- unchanged.
+SK-069,POL-022,none (v1 only),POL-022-R1;POL-022-R2;POL-022-R3;POL-022-R4,,,valid,Policy POL-022 has no v2 -- unchanged.
+SK-070,POL-022,none (v1 only),POL-022-R1;POL-022-R2;POL-022-R3;POL-022-R4,,,valid,Policy POL-022 has no v2 -- unchanged.
+SK-071,POL-022,none (v1 only),POL-022-R1;POL-022-R2;POL-022-R3;POL-022-R4,,,valid,Policy POL-022 has no v2 -- unchanged.
+SK-072,POL-023,none (v1 only),POL-023-R1;POL-023-R2,,,valid,Policy POL-023 has no v2 -- unchanged.
+SK-073,POL-023,none (v1 only),POL-023-R1;POL-023-R2,,,valid,Policy POL-023 has no v2 -- unchanged.
+SK-074,POL-023,none (v1 only),POL-023-R1;POL-023-R2,,,valid,Policy POL-023 has no v2 -- unchanged.
+SK-075,POL-024,none (v1 only),POL-024-R1;POL-024-R2;POL-024-R3,,,valid,Policy POL-024 has no v2 -- unchanged.
+SK-076,POL-024,none (v1 only),POL-024-R1;POL-024-R2;POL-024-R3,,,valid,Policy POL-024 has no v2 -- unchanged.
+SK-077,POL-024,none (v1 only),POL-024-R1;POL-024-R2;POL-024-R3,,,valid,Policy POL-024 has no v2 -- unchanged.
+SK-078,POL-025,real_supersession,POL-025-R1;POL-025-R2;POL-025-R3;POL-025-R4,POL-025-R1,value_dependent,partial,"Linked rule(s) ['POL-025-R1'] superseded by value-dependent change(s) in POL-025 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-079,POL-025,real_supersession,POL-025-R1;POL-025-R2;POL-025-R3;POL-025-R4,POL-025-R1,value_dependent,partial,"Linked rule(s) ['POL-025-R1'] superseded by value-dependent change(s) in POL-025 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-080,POL-025,real_supersession,POL-025-R1;POL-025-R2;POL-025-R3;POL-025-R4,POL-025-R1,value_dependent,partial,"Linked rule(s) ['POL-025-R1'] superseded by value-dependent change(s) in POL-025 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-081,POL-025,real_supersession,POL-025-R1;POL-025-R2;POL-025-R3;POL-025-R4,POL-025-R1,value_dependent,partial,"Linked rule(s) ['POL-025-R1'] superseded by value-dependent change(s) in POL-025 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-082,POL-026,none (v1 only),POL-026-R1;POL-026-R2;POL-026-R3;POL-026-R4,,,valid,Policy POL-026 has no v2 -- unchanged.
+SK-083,POL-026,none (v1 only),POL-026-R1;POL-026-R2;POL-026-R4,,,valid,Policy POL-026 has no v2 -- unchanged.
+SK-084,POL-027,none (v1 only),POL-027-R1;POL-027-R2;POL-027-R3;POL-027-R4,,,valid,Policy POL-027 has no v2 -- unchanged.
+SK-085,POL-027,none (v1 only),POL-027-R1;POL-027-R2;POL-027-R4,,,valid,Policy POL-027 has no v2 -- unchanged.
+SK-086,POL-028,none (v1 only),POL-028-R1;POL-028-R2;POL-028-R3,,,valid,Policy POL-028 has no v2 -- unchanged.
+SK-087,POL-028,none (v1 only),POL-028-R1;POL-028-R2;POL-028-R3,,,valid,Policy POL-028 has no v2 -- unchanged.
+SK-088,POL-028,none (v1 only),POL-028-R1;POL-028-R2;POL-028-R3,,,valid,Policy POL-028 has no v2 -- unchanged.
+SK-089,POL-029,none (v1 only),POL-029-R1;POL-029-R2;POL-029-R3,,,valid,Policy POL-029 has no v2 -- unchanged.
+SK-091,POL-029,none (v1 only),POL-029-R1;POL-029-R2;POL-029-R3,,,valid,Policy POL-029 has no v2 -- unchanged.
+SK-092,POL-030,real_supersession,POL-030-R1;POL-030-R2;POL-030-R3,POL-030-R3,value_dependent,partial,"Linked rule(s) ['POL-030-R3'] superseded by value-dependent change(s) in POL-030 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-093,POL-030,real_supersession,POL-030-R1;POL-030-R2;POL-030-R3,POL-030-R3,value_dependent,partial,"Linked rule(s) ['POL-030-R3'] superseded by value-dependent change(s) in POL-030 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-094,POL-030,real_supersession,POL-030-R1;POL-030-R2;POL-030-R3,POL-030-R3,value_dependent,partial,"Linked rule(s) ['POL-030-R3'] superseded by value-dependent change(s) in POL-030 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-095,POL-031,none (v1 only),POL-031-R1;POL-031-R2;POL-031-R3;POL-031-R4,,,valid,Policy POL-031 has no v2 -- unchanged.
+SK-096,POL-031,none (v1 only),POL-031-R1;POL-031-R2;POL-031-R3;POL-031-R4,,,valid,Policy POL-031 has no v2 -- unchanged.
+SK-097,POL-031,none (v1 only),POL-031-R1;POL-031-R2;POL-031-R3;POL-031-R4,,,valid,Policy POL-031 has no v2 -- unchanged.
+SK-098,POL-032,none (v1 only),POL-032-R1;POL-032-R2;POL-032-R3,,,valid,Policy POL-032 has no v2 -- unchanged.
+SK-099,POL-032,none (v1 only),POL-032-R1;POL-032-R2;POL-032-R3,,,valid,Policy POL-032 has no v2 -- unchanged.
+SK-100,POL-032,none (v1 only),POL-032-R1;POL-032-R2;POL-032-R3,,,valid,Policy POL-032 has no v2 -- unchanged.
+SK-101,POL-033,none (v1 only),POL-033-R1;POL-033-R2;POL-033-R3,,,valid,Policy POL-033 has no v2 -- unchanged.
+SK-102,POL-033,none (v1 only),POL-033-R1;POL-033-R2;POL-033-R3,,,valid,Policy POL-033 has no v2 -- unchanged.
+SK-103,POL-033,none (v1 only),POL-033-R1;POL-033-R2;POL-033-R3,,,valid,Policy POL-033 has no v2 -- unchanged.
+SK-104,POL-034,real_supersession,POL-034-R1;POL-034-R2;POL-034-R3;POL-034-R4,POL-034-R2,value_dependent,partial,"Linked rule(s) ['POL-034-R2'] superseded by value-dependent change(s) in POL-034 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-105,POL-034,real_supersession,POL-034-R1;POL-034-R2;POL-034-R3;POL-034-R4,POL-034-R2,value_dependent,partial,"Linked rule(s) ['POL-034-R2'] superseded by value-dependent change(s) in POL-034 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-106,POL-034,real_supersession,POL-034-R1;POL-034-R2;POL-034-R3;POL-034-R4,POL-034-R2,value_dependent,partial,"Linked rule(s) ['POL-034-R2'] superseded by value-dependent change(s) in POL-034 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-107,POL-034,real_supersession,POL-034-R1;POL-034-R2;POL-034-R3;POL-034-R4,POL-034-R2,value_dependent,partial,"Linked rule(s) ['POL-034-R2'] superseded by value-dependent change(s) in POL-034 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-108,POL-035,real_supersession,POL-035-R1;POL-035-R2;POL-035-R3;POL-035-R4,POL-035-R2;POL-035-R3,hard;value_dependent,invalidated,Linked rule(s) ['POL-035-R3'] superseded by a hard (always-flips) change in POL-035 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-109,POL-035,real_supersession,POL-035-R1;POL-035-R2;POL-035-R4,POL-035-R2,value_dependent,partial,"Linked rule(s) ['POL-035-R2'] superseded by value-dependent change(s) in POL-035 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-110,POL-035,real_supersession,POL-035-R1;POL-035-R2;POL-035-R3;POL-035-R4,POL-035-R2;POL-035-R3,hard;value_dependent,invalidated,Linked rule(s) ['POL-035-R3'] superseded by a hard (always-flips) change in POL-035 v2 -- this skill's action sequence no longer satisfies the current policy.
+SK-111,POL-035,real_supersession,POL-035-R1;POL-035-R2;POL-035-R4,POL-035-R2,value_dependent,partial,"Linked rule(s) ['POL-035-R2'] superseded by value-dependent change(s) in POL-035 v2 -- wrong only for inputs on the far side of the new threshold, not universally."
+SK-112,POL-036,none (v1 only),POL-036-R1;POL-036-R2;POL-036-R3;POL-036-R4,,,valid,Policy POL-036 has no v2 -- unchanged.
+SK-113,POL-036,none (v1 only),POL-036-R1;POL-036-R2;POL-036-R3;POL-036-R4,,,valid,Policy POL-036 has no v2 -- unchanged.
+SK-114,POL-036,none (v1 only),POL-036-R1;POL-036-R2;POL-036-R3;POL-036-R4,,,valid,Policy POL-036 has no v2 -- unchanged.
+SK-115,POL-037,none (v1 only),POL-037-R1;POL-037-R2;POL-037-R3;POL-037-R4,,,valid,Policy POL-037 has no v2 -- unchanged.
+SK-116,POL-037,none (v1 only),POL-037-R1;POL-037-R2;POL-037-R3;POL-037-R4,,,valid,Policy POL-037 has no v2 -- unchanged.
+SK-117,POL-037,none (v1 only),POL-037-R1;POL-037-R2;POL-037-R3;POL-037-R4,,,valid,Policy POL-037 has no v2 -- unchanged.
+SK-118,,n/a (no policy link),,,,valid,Negative-control skill: no policy dependency link exists by construction.
+SK-119,,n/a (no policy link),,,,valid,Negative-control skill: no policy dependency link exists by construction.
+SK-120,,n/a (no policy link),,,,valid,Negative-control skill: no policy dependency link exists by construction.
+SK-121,,n/a (no policy link),,,,valid,Negative-control skill: no policy dependency link exists by construction.
+SK-122,,n/a (no policy link),,,,valid,Negative-control skill: no policy dependency link exists by construction.
+SK-123,,n/a (no policy link),,,,valid,Negative-control skill: no policy dependency link exists by construction.
+SK-124,,n/a (no policy link),,,,valid,Negative-control skill: no policy dependency link exists by construction.
+SK-125,,n/a (no policy link),,,,valid,Negative-control skill: no policy dependency link exists by construction.
+SK-126,,n/a (no policy link),,,,valid,Negative-control skill: no policy dependency link exists by construction.
+SK-127,,n/a (no policy link),,,,valid,Negative-control skill: no policy dependency link exists by construction.
+SK-128,,n/a (no policy link),,,,valid,Negative-control skill: no policy dependency link exists by construction.
+SK-129,,n/a (no policy link),,,,valid,Negative-control skill: no policy dependency link exists by construction.
+SK-130,,n/a (no policy link),,,,valid,Negative-control skill: no policy dependency link exists by construction.
+SK-131,,n/a (no policy link),,,,valid,Negative-control skill: no policy dependency link exists by construction.
+SK-132,,n/a (no policy link),,,,valid,Negative-control skill: no policy dependency link exists by construction.
+SK-133,,n/a (no policy link),,,,valid,Negative-control skill: no policy dependency link exists by construction.

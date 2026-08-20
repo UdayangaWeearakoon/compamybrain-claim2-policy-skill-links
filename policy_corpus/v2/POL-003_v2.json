@@ -1,0 +1,59 @@
+{
+  "policy_id": "POL-003",
+  "family": "Refund Status Policy",
+  "version": "v2",
+  "effective_timestamp": "2026-01-15T00:00:00Z",
+  "flow": "product_defect",
+  "source_subflows": [
+    "refund_status"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": "v1",
+  "rules": [
+    {
+      "rule_id": "POL-003-R4",
+      "statement": "If a customer is unsatisfied with the reported payment method, the agent must resolve it by entering 'change method' into Update Order, not by escalation."
+    },
+    {
+      "rule_id": "POL-003-R3",
+      "statement": "If a customer is unsatisfied with the reported refund status, the agent must escalate by entering 'manager' into Notify Internal Team."
+    },
+    {
+      "rule_id": "POL-003-R2",
+      "statement": "Refund status reported to the customer is required to be one of exactly three values: not started, in progress, or complete."
+    },
+    {
+      "rule_id": "POL-003-R1",
+      "statement": "Before reporting refund status, the agent must gather username, email address, order ID, and phone number, in that order, and validate via Validate Purchase."
+    }
+  ],
+  "_change_log": [
+    {
+      "rule_id": "POL-003-R1",
+      "change_type": "real_supersession",
+      "v1_statement": "Before reporting refund status, the agent must gather username, email address, and order ID, in that order, and validate via Validate Purchase.",
+      "v2_statement": "Before reporting refund status, the agent must gather username, email address, order ID, and phone number, in that order, and validate via Validate Purchase.",
+      "note": "Same Validate Purchase hardening (plus the 4th field enters the required order)."
+    },
+    {
+      "rule_id": "POL-003-R2",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "Refund status reported to the customer must be one of exactly three values: not started, in progress, or complete.",
+      "v2_statement": "Refund status reported to the customer is required to be one of exactly three values: not started, in progress, or complete.",
+      "note": "Distractor: connector-word reword only, no testable content changed."
+    },
+    {
+      "rule_id": "POL-003-R3",
+      "change_type": "unchanged",
+      "v1_statement": "If a customer is unsatisfied with the reported refund status, the agent must escalate by entering 'manager' into Notify Internal Team.",
+      "v2_statement": "If a customer is unsatisfied with the reported refund status, the agent must escalate by entering 'manager' into Notify Internal Team."
+    },
+    {
+      "rule_id": "POL-003-R4",
+      "change_type": "unchanged",
+      "v1_statement": "If a customer is unsatisfied with the reported payment method, the agent must resolve it by entering 'change method' into Update Order, not by escalation.",
+      "v2_statement": "If a customer is unsatisfied with the reported payment method, the agent must resolve it by entering 'change method' into Update Order, not by escalation."
+    }
+  ],
+  "_change_summary": "real_supersession"
+}

@@ -1,0 +1,49 @@
+{
+  "policy_id": "POL-007",
+  "family": "Order Payment Method Policy",
+  "version": "v2",
+  "effective_timestamp": "2026-01-15T00:00:00Z",
+  "flow": "order_issue",
+  "source_subflows": [
+    "status_payment_method"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": "v1",
+  "rules": [
+    {
+      "rule_id": "POL-007-R3",
+      "statement": "The new payment method must be one of: credit card, debit card, or paypal."
+    },
+    {
+      "rule_id": "POL-007-R2",
+      "statement": "A payment method change is permitted to be applied immediately only in the event that the shipping status is Order Received or In Transit; if the status is Out for Delivery or Delivered, the new payment method may only apply to future orders."
+    },
+    {
+      "rule_id": "POL-007-R1",
+      "statement": "Before changing a payment method, the agent must verify identity using full name, account ID, order ID, and phone number via Verify Identity."
+    }
+  ],
+  "_change_log": [
+    {
+      "rule_id": "POL-007-R1",
+      "change_type": "real_supersession",
+      "v1_statement": "Before changing a payment method, the agent must verify identity using full name, account ID, and order ID via Verify Identity.",
+      "v2_statement": "Before changing a payment method, the agent must verify identity using full name, account ID, order ID, and phone number via Verify Identity.",
+      "note": "Same verification hardening."
+    },
+    {
+      "rule_id": "POL-007-R2",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "A payment method change may be applied immediately only if the shipping status is Order Received or In Transit; if the status is Out for Delivery or Delivered, the new payment method may only apply to future orders.",
+      "v2_statement": "A payment method change is permitted to be applied immediately only in the event that the shipping status is Order Received or In Transit; if the status is Out for Delivery or Delivered, the new payment method may only apply to future orders.",
+      "note": "Distractor: connector-word reword only, no testable content changed."
+    },
+    {
+      "rule_id": "POL-007-R3",
+      "change_type": "unchanged",
+      "v1_statement": "The new payment method must be one of: credit card, debit card, or paypal.",
+      "v2_statement": "The new payment method must be one of: credit card, debit card, or paypal."
+    }
+  ],
+  "_change_summary": "real_supersession"
+}

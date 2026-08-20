@@ -1,0 +1,184 @@
+{
+  "phase": 5,
+  "scoring_population": 131,
+  "label_counts": {
+    "invalidated": 40,
+    "partial": 22,
+    "valid": 69
+  },
+  "bootstrap": {
+    "n_resamples": 1000,
+    "seed": 20260820,
+    "method": "percentile (2.5/97.5)",
+    "resampling_unit": "skill"
+  },
+  "metric_definitions": {
+    "invalidation_recall": "|flagged & invalidated| / |invalidated|",
+    "invalidation_precision": "|flagged & invalidated| / |flagged|",
+    "silent_wrong_action_rate": "|silent wrong actions| / |invalidated|",
+    "primary_variant": "partial scored as a separate class, NOT folded into invalidated (fixed in preregistration section 5)",
+    "secondary_variant": "partial_inclusive -- reported alongside, never instead"
+  },
+  "conditions": [
+    {
+      "condition": "A (SKILLGUARD contract validation)",
+      "primary": {
+        "point": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "silent_wrong_action_rate": 1.0
+        },
+        "ci": {
+          "recall": {
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "n_effective": 1000,
+            "n_undefined_resamples": 0
+          },
+          "precision": {
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "n_effective": 997,
+            "n_undefined_resamples": 3
+          },
+          "silent_wrong_action_rate": {
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_effective": 1000,
+            "n_undefined_resamples": 0
+          }
+        },
+        "counts": {
+          "n": 131,
+          "n_positive": 40,
+          "n_flagged": 6,
+          "n_true_positive": 0,
+          "n_invalidated": 40,
+          "n_silent_wrong_action": 40
+        }
+      },
+      "partial_inclusive": {
+        "point": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "silent_wrong_action_rate": 1.0
+        },
+        "ci": {
+          "recall": {
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "n_effective": 1000,
+            "n_undefined_resamples": 0
+          },
+          "precision": {
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "n_effective": 997,
+            "n_undefined_resamples": 3
+          },
+          "silent_wrong_action_rate": {
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_effective": 1000,
+            "n_undefined_resamples": 0
+          }
+        },
+        "counts": {
+          "n": 131,
+          "n_positive": 62,
+          "n_flagged": 6,
+          "n_true_positive": 0,
+          "n_invalidated": 40,
+          "n_silent_wrong_action": 40
+        }
+      }
+    },
+    {
+      "condition": "B (dependency links, section-level)",
+      "primary": {
+        "point": {
+          "recall": 1.0,
+          "precision": 0.5263157894736842,
+          "silent_wrong_action_rate": 0.0
+        },
+        "ci": {
+          "recall": {
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_effective": 1000,
+            "n_undefined_resamples": 0
+          },
+          "precision": {
+            "ci_low": 0.40540540540540543,
+            "ci_high": 0.6438356164383562,
+            "n_effective": 1000,
+            "n_undefined_resamples": 0
+          },
+          "silent_wrong_action_rate": {
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "n_effective": 1000,
+            "n_undefined_resamples": 0
+          }
+        },
+        "counts": {
+          "n": 131,
+          "n_positive": 40,
+          "n_flagged": 76,
+          "n_true_positive": 40,
+          "n_invalidated": 40,
+          "n_silent_wrong_action": 0
+        }
+      },
+      "partial_inclusive": {
+        "point": {
+          "recall": 1.0,
+          "precision": 0.8157894736842105,
+          "silent_wrong_action_rate": 0.0
+        },
+        "ci": {
+          "recall": {
+            "ci_low": 1.0,
+            "ci_high": 1.0,
+            "n_effective": 1000,
+            "n_undefined_resamples": 0
+          },
+          "precision": {
+            "ci_low": 0.725,
+            "ci_high": 0.8961038961038961,
+            "n_effective": 1000,
+            "n_undefined_resamples": 0
+          },
+          "silent_wrong_action_rate": {
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "n_effective": 1000,
+            "n_undefined_resamples": 0
+          }
+        },
+        "counts": {
+          "n": 131,
+          "n_positive": 62,
+          "n_flagged": 76,
+          "n_true_positive": 62,
+          "n_invalidated": 40,
+          "n_silent_wrong_action": 0
+        }
+      }
+    }
+  ],
+  "decision": {
+    "rule_source": "preregistration/STEP4_PREREGISTRATION.md section 6, fixed before either condition ran; itself derived from the team claims file ('fails if dependency links add no recall over contract validation; holds if they catch supersession cases contracts miss, at comparable precision')",
+    "recall_A": 0.0,
+    "recall_B": 1.0,
+    "recall_improved": true,
+    "precision_A": 0.0,
+    "precision_B": 0.5263157894736842,
+    "precision_drop_percentage_points": -52.63157894736842,
+    "precision_bound_percentage_points": 5.0,
+    "precision_within_bound": true,
+    "verdict": "HOLDS",
+    "explanation": "Condition B improves invalidation recall over Condition A, and its precision does not drop more than the preregistered 5-point bound.",
+    "degenerate_precision_note": "Condition A's precision is 0.000 because it made zero true-positive invalidation detections while flagging 6 skills. Those 6 flags are its CORRECT environment-drift detections (the sanity anchor), which the invalidation label set scores as non-positives because no policy governing them changed. Condition A is not malfunctioning; it is being measured on an axis it does not observe. This is the orthogonality the claim rests on, and it is why the precision-drop test is satisfied trivially here rather than informatively -- reported as such instead of being presented as Condition B winning a precision contest."
+  }
+}

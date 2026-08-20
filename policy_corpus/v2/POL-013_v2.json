@@ -1,0 +1,39 @@
+{
+  "policy_id": "POL-013",
+  "family": "Password Recovery Policy",
+  "version": "v2",
+  "effective_timestamp": "2026-01-15T00:00:00Z",
+  "flow": "account_access",
+  "source_subflows": [
+    "recover_password"
+  ],
+  "source": "ABCD agent guidelines (Chen et al. 2021, arXiv 2104.00783), data/guidelines.json",
+  "supersedes": "v1",
+  "rules": [
+    {
+      "rule_id": "POL-013-R2",
+      "statement": "To authorize a new password via Make Password, the agent is required to obtain either the PIN number or the correct answer to the security question; no password is permitted to be issued without one of these two credentials."
+    },
+    {
+      "rule_id": "POL-013-R1",
+      "statement": "Before resetting a password, the agent is required to obtain the customer's username (via the Username Recovery Policy in the event that unknown) and enter it via Enter Details."
+    }
+  ],
+  "_change_log": [
+    {
+      "rule_id": "POL-013-R1",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "Before resetting a password, the agent must obtain the customer's username (via the Username Recovery Policy if unknown) and enter it via Enter Details.",
+      "v2_statement": "Before resetting a password, the agent is required to obtain the customer's username (via the Username Recovery Policy in the event that unknown) and enter it via Enter Details.",
+      "note": "Whole-document distractor: connector-word reword only."
+    },
+    {
+      "rule_id": "POL-013-R2",
+      "change_type": "cosmetic_reword",
+      "v1_statement": "To authorize a new password via Make Password, the agent must obtain either the PIN number or the correct answer to the security question; no password may be issued without one of these two credentials.",
+      "v2_statement": "To authorize a new password via Make Password, the agent is required to obtain either the PIN number or the correct answer to the security question; no password is permitted to be issued without one of these two credentials.",
+      "note": "Whole-document distractor: connector-word reword only."
+    }
+  ],
+  "_change_summary": "cosmetic_only"
+}
