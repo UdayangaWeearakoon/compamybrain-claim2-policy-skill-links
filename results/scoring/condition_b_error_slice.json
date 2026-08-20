@@ -1,0 +1,1222 @@
+{
+  "condition": "B (dependency links, section-level)",
+  "scoring_convention": "PRIMARY -- partial is a separate, non-positive class, so a flagged partial skill counts as a false positive",
+  "totals": {
+    "population": 131,
+    "flagged": 76,
+    "false_negatives": 0,
+    "false_positives": 36,
+    "total_errors": 36
+  },
+  "headline": {
+    "false_negative_count": 0,
+    "false_negatives_are_zero": true,
+    "error_mass_is_entirely_false_positive": true,
+    "partial_class_share_of_error_mass": 0.6111111111111112,
+    "partial_dominates_error_mass": true,
+    "partial_class_flagged": "22/22"
+  },
+  "false_positives_by_true_label": {
+    "partial": 22,
+    "valid": 14
+  },
+  "false_positives_by_policy_change_type": {
+    "real_supersession": 22,
+    "cosmetic_only": 14
+  },
+  "partial_blur_evidence": [
+    {
+      "skill_id": "SK-010",
+      "num_linked_rules": 4,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-004-R4",
+        "POL-004-R5"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-011",
+      "num_linked_rules": 4,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-004-R4",
+        "POL-004-R5"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-013",
+      "num_linked_rules": 4,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-004-R4",
+        "POL-004-R5"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-054",
+      "num_linked_rules": 3,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-017-R2"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-055",
+      "num_linked_rules": 3,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-017-R2"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-056",
+      "num_linked_rules": 3,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-017-R2"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-063",
+      "num_linked_rules": 3,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-020-R2"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-064",
+      "num_linked_rules": 3,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-020-R2"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-065",
+      "num_linked_rules": 3,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-020-R2"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-078",
+      "num_linked_rules": 4,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-025-R3",
+        "POL-025-R4"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-079",
+      "num_linked_rules": 4,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-025-R3",
+        "POL-025-R4"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-080",
+      "num_linked_rules": 4,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-025-R3",
+        "POL-025-R4"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-081",
+      "num_linked_rules": 4,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-025-R3",
+        "POL-025-R4"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-092",
+      "num_linked_rules": 3,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-030-R2"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-093",
+      "num_linked_rules": 3,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-030-R2"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-094",
+      "num_linked_rules": 3,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-030-R2"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-104",
+      "num_linked_rules": 4,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-034-R3",
+        "POL-034-R4"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-105",
+      "num_linked_rules": 4,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-034-R3",
+        "POL-034-R4"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-106",
+      "num_linked_rules": 4,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-034-R3",
+        "POL-034-R4"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-107",
+      "num_linked_rules": 4,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-034-R3",
+        "POL-034-R4"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-109",
+      "num_linked_rules": 3,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-035-R4"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    },
+    {
+      "skill_id": "SK-111",
+      "num_linked_rules": 3,
+      "num_linked_rules_changed": 2,
+      "linked_rules_unchanged": [
+        "POL-035-R4"
+      ],
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "partial_because": "only some linked rules changed, and the change that landed is value-dependent (wrong only for inputs past the new threshold), so the skill is not universally invalid -- but a section-level link cannot express 'this rule changed, but only for some inputs'"
+    }
+  ],
+  "false_positive_detail": [
+    {
+      "skill_id": "SK-010",
+      "true_label": "partial",
+      "policy_id": "POL-004",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-004-R2"
+      ],
+      "linked_rule_ids": [
+        "POL-004-R1",
+        "POL-004-R2",
+        "POL-004-R4",
+        "POL-004-R5"
+      ],
+      "changed_rules_in_policy": [
+        "POL-004-R1",
+        "POL-004-R2",
+        "POL-004-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-004-R1",
+        "POL-004-R2"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-004-R1', 'POL-004-R2'] changed between POL-004 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-011",
+      "true_label": "partial",
+      "policy_id": "POL-004",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-004-R2"
+      ],
+      "linked_rule_ids": [
+        "POL-004-R1",
+        "POL-004-R2",
+        "POL-004-R4",
+        "POL-004-R5"
+      ],
+      "changed_rules_in_policy": [
+        "POL-004-R1",
+        "POL-004-R2",
+        "POL-004-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-004-R1",
+        "POL-004-R2"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-004-R1', 'POL-004-R2'] changed between POL-004 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-013",
+      "true_label": "partial",
+      "policy_id": "POL-004",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-004-R2"
+      ],
+      "linked_rule_ids": [
+        "POL-004-R1",
+        "POL-004-R2",
+        "POL-004-R4",
+        "POL-004-R5"
+      ],
+      "changed_rules_in_policy": [
+        "POL-004-R1",
+        "POL-004-R2",
+        "POL-004-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-004-R1",
+        "POL-004-R2"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-004-R1', 'POL-004-R2'] changed between POL-004 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-042",
+      "true_label": "valid",
+      "policy_id": "POL-013",
+      "policy_change_type": "cosmetic_only",
+      "supersession_types_hit": [],
+      "superseded_rule_ids_hit": [],
+      "linked_rule_ids": [
+        "POL-013-R1",
+        "POL-013-R2"
+      ],
+      "changed_rules_in_policy": [
+        "POL-013-R1",
+        "POL-013-R2"
+      ],
+      "changed_rules_hit": [
+        "POL-013-R1",
+        "POL-013-R2"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-013-R1', 'POL-013-R2'] changed between POL-013 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-043",
+      "true_label": "valid",
+      "policy_id": "POL-013",
+      "policy_change_type": "cosmetic_only",
+      "supersession_types_hit": [],
+      "superseded_rule_ids_hit": [],
+      "linked_rule_ids": [
+        "POL-013-R1",
+        "POL-013-R2"
+      ],
+      "changed_rules_in_policy": [
+        "POL-013-R1",
+        "POL-013-R2"
+      ],
+      "changed_rules_hit": [
+        "POL-013-R1",
+        "POL-013-R2"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-013-R1', 'POL-013-R2'] changed between POL-013 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-044",
+      "true_label": "valid",
+      "policy_id": "POL-013",
+      "policy_change_type": "cosmetic_only",
+      "supersession_types_hit": [],
+      "superseded_rule_ids_hit": [],
+      "linked_rule_ids": [
+        "POL-013-R1",
+        "POL-013-R2"
+      ],
+      "changed_rules_in_policy": [
+        "POL-013-R1",
+        "POL-013-R2"
+      ],
+      "changed_rules_hit": [
+        "POL-013-R1",
+        "POL-013-R2"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-013-R1', 'POL-013-R2'] changed between POL-013 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-045",
+      "true_label": "valid",
+      "policy_id": "POL-014",
+      "policy_change_type": "cosmetic_only",
+      "supersession_types_hit": [],
+      "superseded_rule_ids_hit": [],
+      "linked_rule_ids": [
+        "POL-014-R1",
+        "POL-014-R2",
+        "POL-014-R3"
+      ],
+      "changed_rules_in_policy": [
+        "POL-014-R1",
+        "POL-014-R2",
+        "POL-014-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-014-R1",
+        "POL-014-R2",
+        "POL-014-R3"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-014-R1', 'POL-014-R2', 'POL-014-R3'] changed between POL-014 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-046",
+      "true_label": "valid",
+      "policy_id": "POL-014",
+      "policy_change_type": "cosmetic_only",
+      "supersession_types_hit": [],
+      "superseded_rule_ids_hit": [],
+      "linked_rule_ids": [
+        "POL-014-R1",
+        "POL-014-R2",
+        "POL-014-R3"
+      ],
+      "changed_rules_in_policy": [
+        "POL-014-R1",
+        "POL-014-R2",
+        "POL-014-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-014-R1",
+        "POL-014-R2",
+        "POL-014-R3"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-014-R1', 'POL-014-R2', 'POL-014-R3'] changed between POL-014 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-047",
+      "true_label": "valid",
+      "policy_id": "POL-014",
+      "policy_change_type": "cosmetic_only",
+      "supersession_types_hit": [],
+      "superseded_rule_ids_hit": [],
+      "linked_rule_ids": [
+        "POL-014-R1",
+        "POL-014-R2",
+        "POL-014-R3"
+      ],
+      "changed_rules_in_policy": [
+        "POL-014-R1",
+        "POL-014-R2",
+        "POL-014-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-014-R1",
+        "POL-014-R2",
+        "POL-014-R3"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-014-R1', 'POL-014-R2', 'POL-014-R3'] changed between POL-014 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-048",
+      "true_label": "valid",
+      "policy_id": "POL-015",
+      "policy_change_type": "cosmetic_only",
+      "supersession_types_hit": [],
+      "superseded_rule_ids_hit": [],
+      "linked_rule_ids": [
+        "POL-015-R1",
+        "POL-015-R2",
+        "POL-015-R3"
+      ],
+      "changed_rules_in_policy": [
+        "POL-015-R1",
+        "POL-015-R2",
+        "POL-015-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-015-R1",
+        "POL-015-R2",
+        "POL-015-R3"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-015-R1', 'POL-015-R2', 'POL-015-R3'] changed between POL-015 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-049",
+      "true_label": "valid",
+      "policy_id": "POL-015",
+      "policy_change_type": "cosmetic_only",
+      "supersession_types_hit": [],
+      "superseded_rule_ids_hit": [],
+      "linked_rule_ids": [
+        "POL-015-R1",
+        "POL-015-R2",
+        "POL-015-R3"
+      ],
+      "changed_rules_in_policy": [
+        "POL-015-R1",
+        "POL-015-R2",
+        "POL-015-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-015-R1",
+        "POL-015-R2",
+        "POL-015-R3"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-015-R1', 'POL-015-R2', 'POL-015-R3'] changed between POL-015 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-050",
+      "true_label": "valid",
+      "policy_id": "POL-015",
+      "policy_change_type": "cosmetic_only",
+      "supersession_types_hit": [],
+      "superseded_rule_ids_hit": [],
+      "linked_rule_ids": [
+        "POL-015-R1",
+        "POL-015-R2",
+        "POL-015-R3"
+      ],
+      "changed_rules_in_policy": [
+        "POL-015-R1",
+        "POL-015-R2",
+        "POL-015-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-015-R1",
+        "POL-015-R2",
+        "POL-015-R3"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-015-R1', 'POL-015-R2', 'POL-015-R3'] changed between POL-015 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-051",
+      "true_label": "valid",
+      "policy_id": "POL-016",
+      "policy_change_type": "cosmetic_only",
+      "supersession_types_hit": [],
+      "superseded_rule_ids_hit": [],
+      "linked_rule_ids": [
+        "POL-016-R1",
+        "POL-016-R2",
+        "POL-016-R3"
+      ],
+      "changed_rules_in_policy": [
+        "POL-016-R1",
+        "POL-016-R2",
+        "POL-016-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-016-R1",
+        "POL-016-R2",
+        "POL-016-R3"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-016-R1', 'POL-016-R2', 'POL-016-R3'] changed between POL-016 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-052",
+      "true_label": "valid",
+      "policy_id": "POL-016",
+      "policy_change_type": "cosmetic_only",
+      "supersession_types_hit": [],
+      "superseded_rule_ids_hit": [],
+      "linked_rule_ids": [
+        "POL-016-R1",
+        "POL-016-R2",
+        "POL-016-R3"
+      ],
+      "changed_rules_in_policy": [
+        "POL-016-R1",
+        "POL-016-R2",
+        "POL-016-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-016-R1",
+        "POL-016-R2",
+        "POL-016-R3"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-016-R1', 'POL-016-R2', 'POL-016-R3'] changed between POL-016 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-054",
+      "true_label": "partial",
+      "policy_id": "POL-017",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-017-R3"
+      ],
+      "linked_rule_ids": [
+        "POL-017-R1",
+        "POL-017-R2",
+        "POL-017-R3"
+      ],
+      "changed_rules_in_policy": [
+        "POL-017-R1",
+        "POL-017-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-017-R1",
+        "POL-017-R3"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-017-R1', 'POL-017-R3'] changed between POL-017 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-055",
+      "true_label": "partial",
+      "policy_id": "POL-017",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-017-R3"
+      ],
+      "linked_rule_ids": [
+        "POL-017-R1",
+        "POL-017-R2",
+        "POL-017-R3"
+      ],
+      "changed_rules_in_policy": [
+        "POL-017-R1",
+        "POL-017-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-017-R1",
+        "POL-017-R3"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-017-R1', 'POL-017-R3'] changed between POL-017 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-056",
+      "true_label": "partial",
+      "policy_id": "POL-017",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-017-R3"
+      ],
+      "linked_rule_ids": [
+        "POL-017-R1",
+        "POL-017-R2",
+        "POL-017-R3"
+      ],
+      "changed_rules_in_policy": [
+        "POL-017-R1",
+        "POL-017-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-017-R1",
+        "POL-017-R3"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-017-R1', 'POL-017-R3'] changed between POL-017 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-057",
+      "true_label": "valid",
+      "policy_id": "POL-018",
+      "policy_change_type": "cosmetic_only",
+      "supersession_types_hit": [],
+      "superseded_rule_ids_hit": [],
+      "linked_rule_ids": [
+        "POL-018-R1",
+        "POL-018-R2",
+        "POL-018-R3"
+      ],
+      "changed_rules_in_policy": [
+        "POL-018-R1",
+        "POL-018-R2",
+        "POL-018-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-018-R1",
+        "POL-018-R2",
+        "POL-018-R3"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-018-R1', 'POL-018-R2', 'POL-018-R3'] changed between POL-018 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-058",
+      "true_label": "valid",
+      "policy_id": "POL-018",
+      "policy_change_type": "cosmetic_only",
+      "supersession_types_hit": [],
+      "superseded_rule_ids_hit": [],
+      "linked_rule_ids": [
+        "POL-018-R1",
+        "POL-018-R2",
+        "POL-018-R3"
+      ],
+      "changed_rules_in_policy": [
+        "POL-018-R1",
+        "POL-018-R2",
+        "POL-018-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-018-R1",
+        "POL-018-R2",
+        "POL-018-R3"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-018-R1', 'POL-018-R2', 'POL-018-R3'] changed between POL-018 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-059",
+      "true_label": "valid",
+      "policy_id": "POL-018",
+      "policy_change_type": "cosmetic_only",
+      "supersession_types_hit": [],
+      "superseded_rule_ids_hit": [],
+      "linked_rule_ids": [
+        "POL-018-R1",
+        "POL-018-R2",
+        "POL-018-R3"
+      ],
+      "changed_rules_in_policy": [
+        "POL-018-R1",
+        "POL-018-R2",
+        "POL-018-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-018-R1",
+        "POL-018-R2",
+        "POL-018-R3"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-018-R1', 'POL-018-R2', 'POL-018-R3'] changed between POL-018 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-063",
+      "true_label": "partial",
+      "policy_id": "POL-020",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-020-R3"
+      ],
+      "linked_rule_ids": [
+        "POL-020-R1",
+        "POL-020-R2",
+        "POL-020-R3"
+      ],
+      "changed_rules_in_policy": [
+        "POL-020-R1",
+        "POL-020-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-020-R1",
+        "POL-020-R3"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-020-R1', 'POL-020-R3'] changed between POL-020 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-064",
+      "true_label": "partial",
+      "policy_id": "POL-020",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-020-R3"
+      ],
+      "linked_rule_ids": [
+        "POL-020-R1",
+        "POL-020-R2",
+        "POL-020-R3"
+      ],
+      "changed_rules_in_policy": [
+        "POL-020-R1",
+        "POL-020-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-020-R1",
+        "POL-020-R3"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-020-R1', 'POL-020-R3'] changed between POL-020 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-065",
+      "true_label": "partial",
+      "policy_id": "POL-020",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-020-R3"
+      ],
+      "linked_rule_ids": [
+        "POL-020-R1",
+        "POL-020-R2",
+        "POL-020-R3"
+      ],
+      "changed_rules_in_policy": [
+        "POL-020-R1",
+        "POL-020-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-020-R1",
+        "POL-020-R3"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-020-R1', 'POL-020-R3'] changed between POL-020 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-078",
+      "true_label": "partial",
+      "policy_id": "POL-025",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-025-R1"
+      ],
+      "linked_rule_ids": [
+        "POL-025-R1",
+        "POL-025-R2",
+        "POL-025-R3",
+        "POL-025-R4"
+      ],
+      "changed_rules_in_policy": [
+        "POL-025-R1",
+        "POL-025-R2"
+      ],
+      "changed_rules_hit": [
+        "POL-025-R1",
+        "POL-025-R2"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-025-R1', 'POL-025-R2'] changed between POL-025 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-079",
+      "true_label": "partial",
+      "policy_id": "POL-025",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-025-R1"
+      ],
+      "linked_rule_ids": [
+        "POL-025-R1",
+        "POL-025-R2",
+        "POL-025-R3",
+        "POL-025-R4"
+      ],
+      "changed_rules_in_policy": [
+        "POL-025-R1",
+        "POL-025-R2"
+      ],
+      "changed_rules_hit": [
+        "POL-025-R1",
+        "POL-025-R2"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-025-R1', 'POL-025-R2'] changed between POL-025 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-080",
+      "true_label": "partial",
+      "policy_id": "POL-025",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-025-R1"
+      ],
+      "linked_rule_ids": [
+        "POL-025-R1",
+        "POL-025-R2",
+        "POL-025-R3",
+        "POL-025-R4"
+      ],
+      "changed_rules_in_policy": [
+        "POL-025-R1",
+        "POL-025-R2"
+      ],
+      "changed_rules_hit": [
+        "POL-025-R1",
+        "POL-025-R2"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-025-R1', 'POL-025-R2'] changed between POL-025 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-081",
+      "true_label": "partial",
+      "policy_id": "POL-025",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-025-R1"
+      ],
+      "linked_rule_ids": [
+        "POL-025-R1",
+        "POL-025-R2",
+        "POL-025-R3",
+        "POL-025-R4"
+      ],
+      "changed_rules_in_policy": [
+        "POL-025-R1",
+        "POL-025-R2"
+      ],
+      "changed_rules_hit": [
+        "POL-025-R1",
+        "POL-025-R2"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-025-R1', 'POL-025-R2'] changed between POL-025 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-092",
+      "true_label": "partial",
+      "policy_id": "POL-030",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-030-R3"
+      ],
+      "linked_rule_ids": [
+        "POL-030-R1",
+        "POL-030-R2",
+        "POL-030-R3"
+      ],
+      "changed_rules_in_policy": [
+        "POL-030-R1",
+        "POL-030-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-030-R1",
+        "POL-030-R3"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-030-R1', 'POL-030-R3'] changed between POL-030 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-093",
+      "true_label": "partial",
+      "policy_id": "POL-030",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-030-R3"
+      ],
+      "linked_rule_ids": [
+        "POL-030-R1",
+        "POL-030-R2",
+        "POL-030-R3"
+      ],
+      "changed_rules_in_policy": [
+        "POL-030-R1",
+        "POL-030-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-030-R1",
+        "POL-030-R3"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-030-R1', 'POL-030-R3'] changed between POL-030 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-094",
+      "true_label": "partial",
+      "policy_id": "POL-030",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-030-R3"
+      ],
+      "linked_rule_ids": [
+        "POL-030-R1",
+        "POL-030-R2",
+        "POL-030-R3"
+      ],
+      "changed_rules_in_policy": [
+        "POL-030-R1",
+        "POL-030-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-030-R1",
+        "POL-030-R3"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-030-R1', 'POL-030-R3'] changed between POL-030 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-104",
+      "true_label": "partial",
+      "policy_id": "POL-034",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-034-R2"
+      ],
+      "linked_rule_ids": [
+        "POL-034-R1",
+        "POL-034-R2",
+        "POL-034-R3",
+        "POL-034-R4"
+      ],
+      "changed_rules_in_policy": [
+        "POL-034-R1",
+        "POL-034-R2"
+      ],
+      "changed_rules_hit": [
+        "POL-034-R1",
+        "POL-034-R2"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-034-R1', 'POL-034-R2'] changed between POL-034 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-105",
+      "true_label": "partial",
+      "policy_id": "POL-034",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-034-R2"
+      ],
+      "linked_rule_ids": [
+        "POL-034-R1",
+        "POL-034-R2",
+        "POL-034-R3",
+        "POL-034-R4"
+      ],
+      "changed_rules_in_policy": [
+        "POL-034-R1",
+        "POL-034-R2"
+      ],
+      "changed_rules_hit": [
+        "POL-034-R1",
+        "POL-034-R2"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-034-R1', 'POL-034-R2'] changed between POL-034 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-106",
+      "true_label": "partial",
+      "policy_id": "POL-034",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-034-R2"
+      ],
+      "linked_rule_ids": [
+        "POL-034-R1",
+        "POL-034-R2",
+        "POL-034-R3",
+        "POL-034-R4"
+      ],
+      "changed_rules_in_policy": [
+        "POL-034-R1",
+        "POL-034-R2"
+      ],
+      "changed_rules_hit": [
+        "POL-034-R1",
+        "POL-034-R2"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-034-R1', 'POL-034-R2'] changed between POL-034 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-107",
+      "true_label": "partial",
+      "policy_id": "POL-034",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-034-R2"
+      ],
+      "linked_rule_ids": [
+        "POL-034-R1",
+        "POL-034-R2",
+        "POL-034-R3",
+        "POL-034-R4"
+      ],
+      "changed_rules_in_policy": [
+        "POL-034-R1",
+        "POL-034-R2"
+      ],
+      "changed_rules_hit": [
+        "POL-034-R1",
+        "POL-034-R2"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-034-R1', 'POL-034-R2'] changed between POL-034 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-109",
+      "true_label": "partial",
+      "policy_id": "POL-035",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-035-R2"
+      ],
+      "linked_rule_ids": [
+        "POL-035-R1",
+        "POL-035-R2",
+        "POL-035-R4"
+      ],
+      "changed_rules_in_policy": [
+        "POL-035-R1",
+        "POL-035-R2",
+        "POL-035-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-035-R1",
+        "POL-035-R2"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-035-R1', 'POL-035-R2'] changed between POL-035 v1 and v2 -- skill was distilled under superseded text."
+    },
+    {
+      "skill_id": "SK-111",
+      "true_label": "partial",
+      "policy_id": "POL-035",
+      "policy_change_type": "real_supersession",
+      "supersession_types_hit": [
+        "value_dependent"
+      ],
+      "superseded_rule_ids_hit": [
+        "POL-035-R2"
+      ],
+      "linked_rule_ids": [
+        "POL-035-R1",
+        "POL-035-R2",
+        "POL-035-R4"
+      ],
+      "changed_rules_in_policy": [
+        "POL-035-R1",
+        "POL-035-R2",
+        "POL-035-R3"
+      ],
+      "changed_rules_hit": [
+        "POL-035-R1",
+        "POL-035-R2"
+      ],
+      "detector_rationale": "Linked rule(s) ['POL-035-R1', 'POL-035-R2'] changed between POL-035 v1 and v2 -- skill was distilled under superseded text."
+    }
+  ],
+  "false_negative_detail": []
+}
