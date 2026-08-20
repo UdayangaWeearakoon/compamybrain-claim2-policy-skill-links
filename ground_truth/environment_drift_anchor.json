@@ -1,0 +1,44 @@
+{
+  "case_name": "environment_drift_sanity_anchor",
+  "anchor_action": "select-faq",
+  "v1_args": [
+    "single_item_query",
+    "storewide_query"
+  ],
+  "v2_args": [
+    "single_item_query",
+    "storewide_query",
+    "topic_category_id"
+  ],
+  "change_description": "'select-faq' gains a new required argument, 'topic_category_id', in v2 -- a pure environment/tool-contract change with no corresponding policy text change anywhere.",
+  "isolation_note": "Both policies these skills are linked to (POL-036, POL-037) are untouched in policy_corpus/v2 (no v1->v2 document at all) -- this case cannot be confounded with a policy-driven label.",
+  "impacted_skills": [
+    {
+      "skill_id": "SK-112",
+      "policy_id": "POL-036"
+    },
+    {
+      "skill_id": "SK-113",
+      "policy_id": "POL-036"
+    },
+    {
+      "skill_id": "SK-114",
+      "policy_id": "POL-036"
+    },
+    {
+      "skill_id": "SK-115",
+      "policy_id": "POL-037"
+    },
+    {
+      "skill_id": "SK-116",
+      "policy_id": "POL-037"
+    },
+    {
+      "skill_id": "SK-117",
+      "policy_id": "POL-037"
+    }
+  ],
+  "expected_condition_a_behavior": "Flags all impacted skills (contract violation: recorded calls omit the new required argument).",
+  "expected_condition_b_behavior": "Does not flag them (no policy version changed for POL-036/POL-037); ground_truth label for all impacted skills is 'valid'.",
+  "not_run_here": "Actually running Condition A/B against this case is Step 4 scope; this artifact only builds and freezes the case for that step to consume."
+}
