@@ -48,7 +48,14 @@ skill_library/      Distilled skills (precondition/action/postcondition) + depen
   CONSTRUCTION.md   Source, construction procedure, composition stats, known limitations
 scripts/            (continued) extract_action_traces.py, distill_skills.py,
                     validate_skill_library.py, compute_audit_kappa.py,
-                    apply_audit_exclusions.py, freeze_and_hash_skills.py
+                    apply_audit_exclusions.py, freeze_and_hash_skills.py,
+                    select_supersessions.py, build_policy_corpus_v2.py,
+                    build_environment_contract_anchor.py, label_ground_truth.py,
+                    validate_phase3.py, freeze_and_hash_v2.py
+policy_corpus/v2/   23 v2 policy documents (18 real-supersession, 5 cosmetic-only distractor)
+ground_truth/       Ground-truth label table (Invalidated/Partial/Valid), supersession plan,
+                    environment-drift sanity anchor, CONSTRUCTION.md
+environment_contracts/  v1/v2 tool-argument schemas for the sanity-anchor drift case
 ```
 
 ## Getting the data
@@ -88,7 +95,19 @@ Or download directly from the links in the
       same 2 spurious skills, removed. Skill-library fingerprint:
       `4a1aea880cb1d5abafe40864a5919a4bf91b37ec5c3a92c3f1331ef5cc48e4e4`.
       See `skill_library/CONSTRUCTION.md` for full construction detail.
-- [ ] Phase 3 — Inject supersessions (v2 policies) + ground truth labels
+- [x] **Phase 3 — Inject supersessions (v2 policies) + ground truth
+      labels.** 18 of 37 policies (48.6%) got a real-supersession v2 (20
+      rule-level changes: 11 hard/always-flips, 9 value-dependent
+      thresholds); 5 more got a cosmetic-only distractor v2; 14 stayed
+      untouched. Ground truth across 115 linked skills: 40 invalidated /
+      22 partial / 53 valid (class balance target was ~40/20/40 by
+      count; found to be structurally unreachable jointly with the
+      30-50%-of-policies target for this corpus's real skill density --
+      resolved by prioritizing class balance, see
+      `ground_truth/CONSTRUCTION.md`). One environment-drift sanity
+      anchor (`select-faq` tool contract) added, isolated to 6 skills
+      under two untouched policies. Phase 3 fingerprint:
+      `dc164882823bde7c12f3e1bd20bd38f969b8dbeacd7fd25bfc3f157d1b281618`.
 - [ ] Phase 4 — Run Condition A (SKILLGUARD baseline) vs. Condition B
       (dependency-link detector)
 - [ ] Phase 5 — Results table, bootstrap CIs, error slices, ablations
