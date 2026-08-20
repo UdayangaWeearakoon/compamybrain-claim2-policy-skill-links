@@ -56,6 +56,17 @@ policy_corpus/v2/   23 v2 policy documents (18 real-supersession, 5 cosmetic-onl
 ground_truth/       Ground-truth label table (Invalidated/Partial/Valid), supersession plan,
                     environment-drift sanity anchor, CONSTRUCTION.md
 environment_contracts/  v1/v2 tool-argument schemas for the sanity-anchor drift case
+preregistration/    Step 4 preregistration (procedures, metrics, thresholds), committed
+                    before either detector existed
+results/            Raw flag tables + execution logs for both conditions
+  condition_a/      SKILLGUARD-style contract validation (incl. v1 calibration control)
+  condition_b/      Dependency-link detector (section-level primary, document-level ablation)
+  silent_wrong_action/  Replay logs + silent-wrong-action counts per condition
+  hashes/           Step 4 fingerprint
+  RUN_NOTES.md      What the numbers mean, isolation regime, findings, limitations
+scripts/            (continued) run_condition_a.py, run_condition_b.py,
+                    measure_silent_wrong_action.py, validate_step4.py,
+                    test_leakage_check.py, freeze_and_hash_step4.py
 ```
 
 ## Getting the data
@@ -108,8 +119,21 @@ Or download directly from the links in the
       anchor (`select-faq` tool contract) added, isolated to 6 skills
       under two untouched policies. Phase 3 fingerprint:
       `dc164882823bde7c12f3e1bd20bd38f969b8dbeacd7fd25bfc3f157d1b281618`.
-- [ ] Phase 4 — Run Condition A (SKILLGUARD baseline) vs. Condition B
-      (dependency-link detector)
+- [x] **Phase 4 — Run Condition A (SKILLGUARD baseline) vs. Condition B
+      (dependency-link detector).** Preregistration committed before either
+      detector existed. Condition A flags 6/131 — exactly the environment-drift
+      sanity-anchor skills — with a v1 control flagging 0, evidencing the
+      check-set is calibrated rather than weakened. Condition B (section-level)
+      flags 76/131, including real precision loss on the planted cosmetic
+      distractors, which is the measurement they were planted to produce.
+      Silent wrong actions: **40/40 for Condition A, 0/40 for Condition B** —
+      every invalidated skill the baseline missed replays cleanly against an
+      unchanged environment while violating current policy. Isolation enforced
+      mechanically (AST leakage check + its own negative test). Step 4
+      fingerprint:
+      `1924fd17d3d90aac9a6c71ef33cb3eceb7fa1f3deaccc43ec71118b61424a69c`.
+      Scoring, CIs, error slices and ablations are Step 5 by design; see
+      `results/RUN_NOTES.md`.
 - [ ] Phase 5 — Results table, bootstrap CIs, error slices, ablations
 
 ## Experimental hygiene
