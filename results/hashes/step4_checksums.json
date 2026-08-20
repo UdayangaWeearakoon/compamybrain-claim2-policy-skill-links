@@ -1,0 +1,17 @@
+{
+  "artifact": "Step 4 preregistration + raw flag tables + execution logs",
+  "frozen_at": "2026-08-20T17:43:54.815209+00:00",
+  "num_files": 8,
+  "algorithm": "sha256",
+  "fingerprint": "1924fd17d3d90aac9a6c71ef33cb3eceb7fa1f3deaccc43ec71118b61424a69c",
+  "files": {
+    "preregistration/STEP4_PREREGISTRATION.md": "a805aed0cb39eba51df33471ba49bb59cdd51a11c50c433daf456385e45b3587",
+    "results/condition_a/control_v1_flags.json": "d0483caf1fc5d679a0595da60d841c155ebde38f8efc98f4fb4caaa044c6ff67",
+    "results/condition_a/flags.json": "c56a5d3d46743dfec02a3b466dd98d786002b0cf675f16c95e14727d66d0dc7c",
+    "results/condition_a/flags.csv": "094b7faf0c0652b0541a449f6efa75b68c87da8c815433a85e9f83898e90ff54",
+    "results/condition_b/flags.json": "a073a263578fa4a1cfd0d3efba6469dae807ece82f7bf64881670b81fdb5bf55",
+    "results/condition_b/flags.csv": "86417dff27611be2262ab8e4af85531860943c8f507106b07d1003a5f8017b6d",
+    "results/silent_wrong_action/silent_wrong_action.json": "bff9724dff66ac408e3e94dd89c24494e1130ff9d9ddc6374c970fa08309c6ac",
+    "results/silent_wrong_action/execution_log.csv": "55aae04d0863fa6dcd8414d98fcdba2f25af1b66b6cce30294b898fa77e1a4ca"
+  }
+}
