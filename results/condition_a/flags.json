@@ -1,0 +1,1007 @@
+{
+  "condition": "A",
+  "description": "SKILLGUARD-style environment-contract validation",
+  "procedure_ref": "preregistration/STEP4_PREREGISTRATION.md section 2",
+  "checks": [
+    "A1_unknown_action",
+    "A2_arity_overflow",
+    "A3_unsatisfied_new_parameter"
+  ],
+  "excluded_check": {
+    "name": "value_domain_conformance",
+    "reason": "151 false positives under v1; ABCD stores action arguments as an untyped positional value list while an action's arg list mixes enumerable and free-text slots, so free-text values are scored against enumerable vocabularies and fail spuriously",
+    "measured_v1_false_positives": 151
+  },
+  "population": 131,
+  "v1_control": {
+    "purpose": "calibration evidence that the check-set is not arbitrarily permissive or arbitrarily strict; a validator that flags skills under the contract version they were distilled from is broken",
+    "num_flagged": 0,
+    "flagged_skill_ids": [],
+    "expected_num_flagged": 0,
+    "control_passed": true
+  },
+  "v2_primary": {
+    "num_flagged": 6,
+    "flagged_skill_ids": [
+      "SK-112",
+      "SK-113",
+      "SK-114",
+      "SK-115",
+      "SK-116",
+      "SK-117"
+    ]
+  },
+  "flags": [
+    {
+      "skill_id": "SK-001",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-002",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-003",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-004",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-005",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-006",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-007",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-008",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-009",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-010",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-011",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-012",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-013",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-014",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-015",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-016",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-017",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-018",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-019",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-020",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-021",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-022",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-023",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-024",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-025",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-026",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-027",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-028",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-029",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-030",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-031",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-032",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-033",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-034",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-035",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-036",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-037",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-038",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-039",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-040",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-041",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-042",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-043",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-044",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-045",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-046",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-047",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-048",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-049",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-050",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-051",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-052",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-054",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-055",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-056",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-057",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-058",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-059",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-060",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-061",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-062",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-063",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-064",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-065",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-066",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-067",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-068",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-069",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-070",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-071",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-072",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-073",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-074",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-075",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-076",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-077",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-078",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-079",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-080",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-081",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-082",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-083",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-084",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-085",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-086",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-087",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-088",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-089",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-091",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-092",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-093",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-094",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-095",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-096",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-097",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-098",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-099",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-100",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-101",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-102",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-103",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-104",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-105",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-106",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-107",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-108",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-109",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-110",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-111",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-112",
+      "flagged": true,
+      "num_violations": 1,
+      "violated_checks": [
+        "A3_unsatisfied_new_parameter"
+      ],
+      "violations": [
+        {
+          "step_index": 2,
+          "action": "select-faq",
+          "check": "A3_unsatisfied_new_parameter",
+          "detail": "signature gained parameter(s) ['topic_category_id'] not present when this call was recorded; the recorded positional value list (1 value(s)) provides no binding for them"
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-113",
+      "flagged": true,
+      "num_violations": 1,
+      "violated_checks": [
+        "A3_unsatisfied_new_parameter"
+      ],
+      "violations": [
+        {
+          "step_index": 2,
+          "action": "select-faq",
+          "check": "A3_unsatisfied_new_parameter",
+          "detail": "signature gained parameter(s) ['topic_category_id'] not present when this call was recorded; the recorded positional value list (1 value(s)) provides no binding for them"
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-114",
+      "flagged": true,
+      "num_violations": 1,
+      "violated_checks": [
+        "A3_unsatisfied_new_parameter"
+      ],
+      "violations": [
+        {
+          "step_index": 2,
+          "action": "select-faq",
+          "check": "A3_unsatisfied_new_parameter",
+          "detail": "signature gained parameter(s) ['topic_category_id'] not present when this call was recorded; the recorded positional value list (1 value(s)) provides no binding for them"
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-115",
+      "flagged": true,
+      "num_violations": 1,
+      "violated_checks": [
+        "A3_unsatisfied_new_parameter"
+      ],
+      "violations": [
+        {
+          "step_index": 2,
+          "action": "select-faq",
+          "check": "A3_unsatisfied_new_parameter",
+          "detail": "signature gained parameter(s) ['topic_category_id'] not present when this call was recorded; the recorded positional value list (1 value(s)) provides no binding for them"
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-116",
+      "flagged": true,
+      "num_violations": 1,
+      "violated_checks": [
+        "A3_unsatisfied_new_parameter"
+      ],
+      "violations": [
+        {
+          "step_index": 2,
+          "action": "select-faq",
+          "check": "A3_unsatisfied_new_parameter",
+          "detail": "signature gained parameter(s) ['topic_category_id'] not present when this call was recorded; the recorded positional value list (1 value(s)) provides no binding for them"
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-117",
+      "flagged": true,
+      "num_violations": 1,
+      "violated_checks": [
+        "A3_unsatisfied_new_parameter"
+      ],
+      "violations": [
+        {
+          "step_index": 2,
+          "action": "select-faq",
+          "check": "A3_unsatisfied_new_parameter",
+          "detail": "signature gained parameter(s) ['topic_category_id'] not present when this call was recorded; the recorded positional value list (1 value(s)) provides no binding for them"
+        }
+      ]
+    },
+    {
+      "skill_id": "SK-118",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-119",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-120",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-121",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-122",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-123",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-124",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-125",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-126",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-127",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-128",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-129",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-130",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-131",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-132",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    },
+    {
+      "skill_id": "SK-133",
+      "flagged": false,
+      "num_violations": 0,
+      "violated_checks": [],
+      "violations": []
+    }
+  ]
+}
