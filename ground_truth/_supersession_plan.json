@@ -1,0 +1,259 @@
+{
+  "target": {
+    "invalidated": 52,
+    "partial": 26,
+    "valid": 37
+  },
+  "achieved_counts": {
+    "invalidated": 40,
+    "partial": 22,
+    "valid": 53
+  },
+  "real_supersession_policies": [
+    "POL-001",
+    "POL-002",
+    "POL-003",
+    "POL-004",
+    "POL-005",
+    "POL-006",
+    "POL-007",
+    "POL-008",
+    "POL-009",
+    "POL-010",
+    "POL-011",
+    "POL-012",
+    "POL-017",
+    "POL-020",
+    "POL-025",
+    "POL-030",
+    "POL-034",
+    "POL-035"
+  ],
+  "actions": [
+    {
+      "policy_id": "POL-004",
+      "rule_id": "POL-004-R3",
+      "type": "hard",
+      "statement": "Guest members without a receipt and outside the 30-day window must be denied the return.",
+      "impacted_skill_ids": [
+        "SK-012"
+      ]
+    },
+    {
+      "policy_id": "POL-004",
+      "rule_id": "POL-004-R2",
+      "type": "value_dependent",
+      "statement": "Return eligibility is gated by membership level: Gold members receive unlimited returns; Silver members are eligible within 6 months of purchase, or with a receipt, or if the item is in original packaging; Bronze members are eligible within 90 days, or with a receipt, or in original packaging; Guest members are eligible within 30 days, or with a receipt.",
+      "impacted_skill_ids": [
+        "SK-010",
+        "SK-011",
+        "SK-012",
+        "SK-013"
+      ]
+    },
+    {
+      "policy_id": "POL-035",
+      "rule_id": "POL-035-R3",
+      "type": "hard",
+      "statement": "For Bronze and Guest members, a Yes response from Ask the Oracle grants the refund and a No response denies it.",
+      "impacted_skill_ids": [
+        "SK-108",
+        "SK-110"
+      ]
+    },
+    {
+      "policy_id": "POL-035",
+      "rule_id": "POL-035-R2",
+      "type": "value_dependent",
+      "statement": "Refund eligibility is gated by membership level: Gold members always receive the disputed amount; Silver members receive a refund only if the disputed amount is less than $10; Bronze and Guest members are evaluated via Ask the Oracle.",
+      "impacted_skill_ids": [
+        "SK-108",
+        "SK-109",
+        "SK-110",
+        "SK-111"
+      ]
+    },
+    {
+      "policy_id": "POL-005",
+      "rule_id": "POL-005-R1",
+      "type": "hard",
+      "statement": "Before adjudicating a mystery fee, the agent must verify identity using full name, account ID, and order ID via Verify Identity.",
+      "impacted_skill_ids": [
+        "SK-014",
+        "SK-015",
+        "SK-016",
+        "SK-017"
+      ]
+    },
+    {
+      "policy_id": "POL-009",
+      "rule_id": "POL-009-R1",
+      "type": "hard",
+      "statement": "Before processing a shipping upgrade or downgrade, the agent must verify identity using full name, account ID, and order ID via Verify Identity.",
+      "impacted_skill_ids": [
+        "SK-027",
+        "SK-028",
+        "SK-029",
+        "SK-030"
+      ]
+    },
+    {
+      "policy_id": "POL-025",
+      "rule_id": "POL-025-R1",
+      "type": "value_dependent",
+      "statement": "A promo code dispute is classified as 'out of date' if the code was issued more than 7 days ago, and 'invalid' otherwise; both classifications follow the same resolution procedure.",
+      "impacted_skill_ids": [
+        "SK-078",
+        "SK-079",
+        "SK-080",
+        "SK-081"
+      ]
+    },
+    {
+      "policy_id": "POL-010",
+      "rule_id": "POL-010-R1",
+      "type": "hard",
+      "statement": "Before adding an item to an order, the agent must verify identity using full name, account ID, and order ID via Verify Identity.",
+      "impacted_skill_ids": [
+        "SK-031",
+        "SK-032",
+        "SK-033",
+        "SK-034"
+      ]
+    },
+    {
+      "policy_id": "POL-011",
+      "rule_id": "POL-011-R1",
+      "type": "hard",
+      "statement": "Before cancelling or returning an order, the agent must verify identity using full name, account ID, and order ID via Verify Identity.",
+      "impacted_skill_ids": [
+        "SK-035",
+        "SK-036",
+        "SK-037",
+        "SK-038"
+      ]
+    },
+    {
+      "policy_id": "POL-034",
+      "rule_id": "POL-034-R2",
+      "type": "value_dependent",
+      "statement": "Extension eligibility is gated strictly by membership level: Gold members always qualify; Silver members qualify only if the payment is no more than 1 day late; Bronze and Guest members never qualify.",
+      "impacted_skill_ids": [
+        "SK-104",
+        "SK-105",
+        "SK-106",
+        "SK-107"
+      ]
+    },
+    {
+      "policy_id": "POL-001",
+      "rule_id": "POL-001-R1",
+      "type": "hard",
+      "statement": "Before offering a refund, the agent must validate the purchase using the customer's username, email address, and order ID via Validate Purchase.",
+      "impacted_skill_ids": [
+        "SK-001",
+        "SK-002",
+        "SK-003"
+      ]
+    },
+    {
+      "policy_id": "POL-002",
+      "rule_id": "POL-002-R1",
+      "type": "hard",
+      "statement": "Before modifying an existing refund, the agent must validate the purchase using the customer's username, email address, and order ID via Validate Purchase.",
+      "impacted_skill_ids": [
+        "SK-004",
+        "SK-005",
+        "SK-006"
+      ]
+    },
+    {
+      "policy_id": "POL-003",
+      "rule_id": "POL-003-R1",
+      "type": "hard",
+      "statement": "Before reporting refund status, the agent must gather username, email address, and order ID, in that order, and validate via Validate Purchase.",
+      "impacted_skill_ids": [
+        "SK-007",
+        "SK-008",
+        "SK-009"
+      ]
+    },
+    {
+      "policy_id": "POL-017",
+      "rule_id": "POL-017-R3",
+      "type": "value_dependent",
+      "statement": "If the Oracle confirms the error, the extra service must be removed via Update Account, and the agent must offer a refund of $40 as the standard erroneous-service-charge amount.",
+      "impacted_skill_ids": [
+        "SK-054",
+        "SK-055",
+        "SK-056"
+      ]
+    },
+    {
+      "policy_id": "POL-006",
+      "rule_id": "POL-006-R1",
+      "type": "hard",
+      "statement": "Before reporting delivery status, the agent must verify identity using full name, account ID, and order ID via Verify Identity.",
+      "impacted_skill_ids": [
+        "SK-018",
+        "SK-019",
+        "SK-020"
+      ]
+    },
+    {
+      "policy_id": "POL-007",
+      "rule_id": "POL-007-R1",
+      "type": "hard",
+      "statement": "Before changing a payment method, the agent must verify identity using full name, account ID, and order ID via Verify Identity.",
+      "impacted_skill_ids": [
+        "SK-021",
+        "SK-022",
+        "SK-023"
+      ]
+    },
+    {
+      "policy_id": "POL-020",
+      "rule_id": "POL-020-R3",
+      "type": "value_dependent",
+      "statement": "If the Oracle confirms the credit is missing, the agent must add the amount requested by the customer, or a standard amount of $40 if the customer does not know, and issue it via Promo Code.",
+      "impacted_skill_ids": [
+        "SK-063",
+        "SK-064",
+        "SK-065"
+      ]
+    },
+    {
+      "policy_id": "POL-008",
+      "rule_id": "POL-008-R1",
+      "type": "hard",
+      "statement": "Before resolving a quantity discrepancy, the agent must verify identity using full name, account ID, and order ID via Verify Identity.",
+      "impacted_skill_ids": [
+        "SK-024",
+        "SK-025",
+        "SK-026"
+      ]
+    },
+    {
+      "policy_id": "POL-012",
+      "rule_id": "POL-012-R1",
+      "type": "hard",
+      "statement": "To recover a username, the agent must collect at least 3 of the following 4 identity items: full name, zip code, phone number, or email address, via Verify Identity.",
+      "impacted_skill_ids": [
+        "SK-039",
+        "SK-040",
+        "SK-041"
+      ]
+    },
+    {
+      "policy_id": "POL-030",
+      "rule_id": "POL-030-R3",
+      "type": "value_dependent",
+      "statement": "A replacement order (new shipment) via Update Order and Make Purchase may only be initiated if the customer has been waiting 7 days (one week) or longer; waits under 7 days do not qualify for a replacement shipment.",
+      "impacted_skill_ids": [
+        "SK-092",
+        "SK-093",
+        "SK-094"
+      ]
+    }
+  ]
+}
