@@ -1,0 +1,47 @@
+{
+  "subflow": "status_credit_missing",
+  "flow": "manage_account",
+  "branch": null,
+  "policy_id": "POL-020",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-020-R1",
+    "POL-020-R2",
+    "POL-020-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status_credit_missing' (flow: Manage Account). Governing policy: Missing Credit Investigation Policy (POL-020 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "sanya afzal"
+      ]
+    },
+    {
+      "button": "record-reason",
+      "values": [
+        "previous purchase"
+      ]
+    },
+    {
+      "button": "ask-the-oracle",
+      "values": []
+    },
+    {
+      "button": "promo-code",
+      "values": []
+    }
+  ],
+  "postcondition": "A promo code is generated and issued to the customer",
+  "provenance_convo_ids": [
+    191,
+    654,
+    1000,
+    1137,
+    1310
+  ],
+  "provenance_count_in_cluster": 32,
+  "cluster_size": 32,
+  "is_negative_control": false,
+  "skill_id": "SK-063"
+}

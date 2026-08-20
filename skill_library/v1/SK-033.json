@@ -1,0 +1,46 @@
+{
+  "subflow": "manage_create",
+  "flow": "order_issue",
+  "branch": "guest",
+  "policy_id": "POL-010",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-010-R1",
+    "POL-010-R2"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_create' (flow: Order Issue). Customer's membership level is guest. Governing policy: Order Item Addition Policy (POL-010 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "alessandro phoenix"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "alessandro phoenix",
+        "a8ufmwwjs9",
+        "4770605087"
+      ]
+    },
+    {
+      "button": "shipping-status",
+      "values": [
+        "in transit"
+      ]
+    }
+  ],
+  "postcondition": "The shipping status is recorded, gating the next step",
+  "provenance_convo_ids": [
+    1324,
+    3501,
+    7497,
+    7547,
+    10093
+  ],
+  "provenance_count_in_cluster": 5,
+  "cluster_size": 25,
+  "is_negative_control": false,
+  "skill_id": "SK-033"
+}

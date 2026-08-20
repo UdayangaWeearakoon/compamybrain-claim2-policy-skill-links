@@ -1,0 +1,53 @@
+{
+  "subflow": "manage_cancel",
+  "flow": "order_issue",
+  "branch": "guest",
+  "policy_id": "POL-011",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-011-R1",
+    "POL-011-R2",
+    "POL-011-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_cancel' (flow: Order Issue). Customer's membership level is guest. Governing policy: Order Cancellation Policy (POL-011 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "rodriguez domingo"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "rodriguez domingo",
+        "6lpx8sp3yg",
+        "5278011093"
+      ]
+    },
+    {
+      "button": "shipping-status",
+      "values": [
+        "out for delivery"
+      ]
+    },
+    {
+      "button": "membership",
+      "values": [
+        "guest"
+      ]
+    }
+  ],
+  "postcondition": "The membership-privileges check is recorded, gating the next step",
+  "provenance_convo_ids": [
+    2435,
+    4597,
+    5844,
+    7292,
+    8551
+  ],
+  "provenance_count_in_cluster": 9,
+  "cluster_size": 27,
+  "is_negative_control": false,
+  "skill_id": "SK-037"
+}

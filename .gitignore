@@ -36,3 +36,14 @@ abcd-master/data/utterances.json
 # Do not add it here. Future phase outputs (skill_library/, ground_truth/,
 # results/) should be tracked the same way once frozen -- only exclude
 # scratch/intermediate working files, never a frozen artifact itself.
+
+# --- Phase 2 intermediate (fully reproducible, not a frozen artifact) ----
+# action_traces.json is a deterministic re-extraction from abcd_v1.1.json.gz
+# (scripts/extract_action_traces.py) -- large (~5.7MB) and not itself a
+# research deliverable. skill_library/v1/ (the actual skills) and
+# dependency_links.* ARE frozen deliverables and stay tracked.
+skill_library/intermediate/
+
+# Working-copy files this session moved aside instead of deleting (the
+# device bridge used to write these files can't delete; safe to remove).
+_to_delete/

@@ -1,0 +1,59 @@
+{
+  "subflow": "manage_create",
+  "flow": "order_issue",
+  "branch": "gold",
+  "policy_id": "POL-010",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-010-R1",
+    "POL-010-R2",
+    "POL-010-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_create' (flow: Order Issue). Customer's membership level is gold. Governing policy: Order Item Addition Policy (POL-010 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "chloe zhang"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "chloe zhang",
+        "wjlvd8xkrn",
+        "9623244425"
+      ]
+    },
+    {
+      "button": "shipping-status",
+      "values": [
+        "delivered"
+      ]
+    },
+    {
+      "button": "membership",
+      "values": [
+        "gold"
+      ]
+    },
+    {
+      "button": "make-purchase",
+      "values": [
+        "guess shirt"
+      ]
+    }
+  ],
+  "postcondition": "The purchase/back-order is completed on the customer's behalf",
+  "provenance_convo_ids": [
+    4877,
+    6451,
+    6735,
+    7440,
+    7729
+  ],
+  "provenance_count_in_cluster": 8,
+  "cluster_size": 20,
+  "is_negative_control": false,
+  "skill_id": "SK-032"
+}

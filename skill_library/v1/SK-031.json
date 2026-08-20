@@ -1,0 +1,52 @@
+{
+  "subflow": "manage_create",
+  "flow": "order_issue",
+  "branch": "bronze",
+  "policy_id": "POL-010",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-010-R1",
+    "POL-010-R2"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_create' (flow: Order Issue). Customer's membership level is bronze. Governing policy: Order Item Addition Policy (POL-010 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "norman bouchard"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "norman bouchard",
+        "euikjcb3na",
+        "3783720205"
+      ]
+    },
+    {
+      "button": "shipping-status",
+      "values": [
+        "out for delivery"
+      ]
+    },
+    {
+      "button": "membership",
+      "values": [
+        "bronze"
+      ]
+    }
+  ],
+  "postcondition": "The membership-privileges check is recorded, gating the next step",
+  "provenance_convo_ids": [
+    3663,
+    4357,
+    4924,
+    5170,
+    5389
+  ],
+  "provenance_count_in_cluster": 10,
+  "cluster_size": 30,
+  "is_negative_control": false,
+  "skill_id": "SK-031"
+}

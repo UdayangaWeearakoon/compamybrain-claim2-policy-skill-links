@@ -1,0 +1,59 @@
+{
+  "subflow": "manage",
+  "flow": "shipping_issue",
+  "branch": null,
+  "policy_id": "POL-029",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-029-R1",
+    "POL-029-R2",
+    "POL-029-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage' (flow: Shipping Issue). Governing policy: Shipping Management Policy (POL-029 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "rodriguez domingo"
+      ]
+    },
+    {
+      "button": "shipping-status",
+      "values": [
+        "received"
+      ]
+    },
+    {
+      "button": "validate-purchase",
+      "values": [
+        "rodriguezd140",
+        "rodriguezd140@email.com",
+        "9807282377"
+      ]
+    },
+    {
+      "button": "update-order",
+      "values": [
+        "change order"
+      ]
+    },
+    {
+      "button": "update-order",
+      "values": [
+        "change order"
+      ]
+    }
+  ],
+  "postcondition": "The order is updated per the requested change",
+  "provenance_convo_ids": [
+    476,
+    936,
+    1220,
+    3061,
+    5532
+  ],
+  "provenance_count_in_cluster": 7,
+  "cluster_size": 7,
+  "is_negative_control": false,
+  "skill_id": "SK-091"
+}

@@ -1,0 +1,49 @@
+{
+  "subflow": "status_service_removed",
+  "flow": "manage_account",
+  "branch": null,
+  "policy_id": "POL-018",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-018-R1",
+    "POL-018-R2",
+    "POL-018-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status_service_removed' (flow: Manage Account). Governing policy: Service Removal Dispute Policy (POL-018 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "joseph banter"
+      ]
+    },
+    {
+      "button": "record-reason",
+      "values": [
+        "spouse"
+      ]
+    },
+    {
+      "button": "ask-the-oracle",
+      "values": []
+    },
+    {
+      "button": "update-account",
+      "values": [
+        "add service"
+      ]
+    }
+  ],
+  "postcondition": "The account is updated per the requested change",
+  "provenance_convo_ids": [
+    1495,
+    1753,
+    2555,
+    2752,
+    2827
+  ],
+  "provenance_count_in_cluster": 29,
+  "cluster_size": 29,
+  "is_negative_control": false,
+  "skill_id": "SK-058"
+}

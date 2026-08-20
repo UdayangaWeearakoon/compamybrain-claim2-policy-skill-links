@@ -1,0 +1,42 @@
+{
+  "subflow": "promo_code_invalid",
+  "flow": "purchase_dispute",
+  "branch": "bronze",
+  "policy_id": "POL-025",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-025-R1",
+    "POL-025-R2",
+    "POL-025-R3",
+    "POL-025-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'promo_code_invalid' (flow: Purchase Dispute). Customer's membership level is bronze. Governing policy: Promo Code Dispute Policy (POL-025 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "crystal minh"
+      ]
+    },
+    {
+      "button": "ask-the-oracle",
+      "values": []
+    },
+    {
+      "button": "promo-code",
+      "values": []
+    }
+  ],
+  "postcondition": "A promo code is generated and issued to the customer",
+  "provenance_convo_ids": [
+    787,
+    808,
+    1786,
+    1886,
+    4318
+  ],
+  "provenance_count_in_cluster": 22,
+  "cluster_size": 45,
+  "is_negative_control": false,
+  "skill_id": "SK-078"
+}

@@ -1,0 +1,47 @@
+{
+  "subflow": "missing",
+  "flow": "shipping_issue",
+  "branch": null,
+  "policy_id": "POL-030",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-030-R1",
+    "POL-030-R2",
+    "POL-030-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'missing' (flow: Shipping Issue). Governing policy: Missing Item Policy (POL-030 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "albert sanders"
+      ]
+    },
+    {
+      "button": "validate-purchase",
+      "values": [
+        "albertsanders187",
+        "albertsanders187@email.com",
+        "0258746938"
+      ]
+    },
+    {
+      "button": "record-reason",
+      "values": [
+        "5"
+      ]
+    }
+  ],
+  "postcondition": "The reason/context is recorded, pending a further step",
+  "provenance_convo_ids": [
+    695,
+    1089,
+    1944,
+    2424,
+    2513
+  ],
+  "provenance_count_in_cluster": 40,
+  "cluster_size": 40,
+  "is_negative_control": false,
+  "skill_id": "SK-093"
+}

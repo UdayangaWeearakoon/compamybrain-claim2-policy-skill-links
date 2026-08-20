@@ -1,0 +1,54 @@
+{
+  "subflow": "manage_extension",
+  "flow": "subscription_inquiry",
+  "branch": "silver",
+  "policy_id": "POL-034",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-034-R1",
+    "POL-034-R2",
+    "POL-034-R3",
+    "POL-034-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_extension' (flow: Subscription Inquiry). Customer's membership level is silver. Governing policy: Subscription Extension Policy (POL-034 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "rodriguez domingo"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "rodriguez domingo",
+        "p3oo8ygiom",
+        "5342637013"
+      ]
+    },
+    {
+      "button": "membership",
+      "values": [
+        "silver"
+      ]
+    },
+    {
+      "button": "update-account",
+      "values": [
+        "extend subscription"
+      ]
+    }
+  ],
+  "postcondition": "The account is updated per the requested change",
+  "provenance_convo_ids": [
+    509,
+    939,
+    1544,
+    4950,
+    5319
+  ],
+  "provenance_count_in_cluster": 9,
+  "cluster_size": 33,
+  "is_negative_control": false,
+  "skill_id": "SK-107"
+}

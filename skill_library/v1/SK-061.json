@@ -1,0 +1,37 @@
+{
+  "subflow": "status_shipping_question",
+  "flow": "manage_account",
+  "branch": null,
+  "policy_id": "POL-019",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-019-R1",
+    "POL-019-R2",
+    "POL-019-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status_shipping_question' (flow: Manage Account). Governing policy: International Shipping Question Policy (POL-019 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "chloe zhang"
+      ]
+    },
+    {
+      "button": "ask-the-oracle",
+      "values": []
+    }
+  ],
+  "postcondition": "A system determination is retrieved, gating the next step",
+  "provenance_convo_ids": [
+    1581,
+    3480,
+    4403,
+    5020,
+    5422
+  ],
+  "provenance_count_in_cluster": 8,
+  "cluster_size": 8,
+  "is_negative_control": false,
+  "skill_id": "SK-061"
+}

@@ -1,0 +1,45 @@
+{
+  "subflow": "status",
+  "flow": "shipping_issue",
+  "branch": null,
+  "policy_id": "POL-028",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-028-R1",
+    "POL-028-R2",
+    "POL-028-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status' (flow: Shipping Issue). Governing policy: Shipping Status Inquiry Policy (POL-028 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "alessandro phoenix"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "alessandro phoenix",
+        "gflqryjpub",
+        "6767133822"
+      ]
+    },
+    {
+      "button": "ask-the-oracle",
+      "values": []
+    }
+  ],
+  "postcondition": "A system determination is retrieved, gating the next step",
+  "provenance_convo_ids": [
+    910,
+    1925,
+    3127,
+    3506,
+    4126
+  ],
+  "provenance_count_in_cluster": 10,
+  "cluster_size": 10,
+  "is_negative_control": false,
+  "skill_id": "SK-088"
+}

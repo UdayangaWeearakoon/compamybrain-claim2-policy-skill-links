@@ -1,0 +1,60 @@
+{
+  "subflow": "manage_extension",
+  "flow": "subscription_inquiry",
+  "branch": "bronze",
+  "policy_id": "POL-034",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-034-R1",
+    "POL-034-R2",
+    "POL-034-R3",
+    "POL-034-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_extension' (flow: Subscription Inquiry). Customer's membership level is bronze. Governing policy: Subscription Extension Policy (POL-034 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "chloe zhang"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "chloe zhang",
+        "6lgb3vvclp",
+        "5576872955"
+      ]
+    },
+    {
+      "button": "membership",
+      "values": [
+        "bronze"
+      ]
+    },
+    {
+      "button": "enter-details",
+      "values": [
+        "(987) 378-5234"
+      ]
+    },
+    {
+      "button": "notify-team",
+      "values": [
+        "manager"
+      ]
+    }
+  ],
+  "postcondition": "The issue is escalated internally rather than resolved directly by the agent",
+  "provenance_convo_ids": [
+    2056,
+    5085,
+    5113,
+    5697,
+    5799
+  ],
+  "provenance_count_in_cluster": 6,
+  "cluster_size": 17,
+  "is_negative_control": false,
+  "skill_id": "SK-104"
+}

@@ -1,0 +1,53 @@
+{
+  "subflow": "mistimed_billing_already_returned",
+  "flow": "purchase_dispute",
+  "branch": "non-gold",
+  "policy_id": "POL-026",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-026-R1",
+    "POL-026-R2",
+    "POL-026-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'mistimed_billing_already_returned' (flow: Purchase Dispute). Customer's membership level is not gold. Governing policy: Mistimed Billing Policy (Already Returned) (POL-026 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "david williams"
+      ]
+    },
+    {
+      "button": "validate-purchase",
+      "values": [
+        "davidwilliams952",
+        "davidwilliams952@email.com",
+        "0043600739"
+      ]
+    },
+    {
+      "button": "record-reason",
+      "values": [
+        "2 weeks"
+      ]
+    },
+    {
+      "button": "update-order",
+      "values": [
+        "give credit"
+      ]
+    }
+  ],
+  "postcondition": "The order is updated per the requested change",
+  "provenance_convo_ids": [
+    911,
+    1009,
+    1699,
+    2589,
+    3622
+  ],
+  "provenance_count_in_cluster": 24,
+  "cluster_size": 83,
+  "is_negative_control": false,
+  "skill_id": "SK-083"
+}

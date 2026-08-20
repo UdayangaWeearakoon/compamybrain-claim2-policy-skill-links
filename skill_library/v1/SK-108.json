@@ -1,0 +1,52 @@
+{
+  "subflow": "manage_dispute_bill",
+  "flow": "subscription_inquiry",
+  "branch": "bronze",
+  "policy_id": "POL-035",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-035-R1",
+    "POL-035-R2",
+    "POL-035-R3",
+    "POL-035-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_dispute_bill' (flow: Subscription Inquiry). Customer's membership level is bronze. Governing policy: Subscription Billing Dispute Policy (POL-035 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "albert sanders"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "albert sanders",
+        "clhev6nkdh",
+        "6251610512"
+      ]
+    },
+    {
+      "button": "membership",
+      "values": [
+        "bronze"
+      ]
+    },
+    {
+      "button": "ask-the-oracle",
+      "values": []
+    }
+  ],
+  "postcondition": "A system determination is retrieved, gating the next step",
+  "provenance_convo_ids": [
+    2164,
+    3023,
+    4782,
+    4798,
+    5783
+  ],
+  "provenance_count_in_cluster": 12,
+  "cluster_size": 44,
+  "is_negative_control": false,
+  "skill_id": "SK-108"
+}

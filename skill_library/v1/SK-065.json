@@ -1,0 +1,31 @@
+{
+  "subflow": "status_credit_missing",
+  "flow": "manage_account",
+  "branch": null,
+  "policy_id": "POL-020",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-020-R1",
+    "POL-020-R2",
+    "POL-020-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status_credit_missing' (flow: Manage Account). Governing policy: Missing Credit Investigation Policy (POL-020 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "alessandro phoenix"
+      ]
+    }
+  ],
+  "postcondition": "The 'pull-up-account' action is taken as the final step.",
+  "provenance_convo_ids": [
+    1487,
+    1961,
+    9383
+  ],
+  "provenance_count_in_cluster": 3,
+  "cluster_size": 3,
+  "is_negative_control": false,
+  "skill_id": "SK-065"
+}

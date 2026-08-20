@@ -1,0 +1,43 @@
+{
+  "subflow": "status_credit_missing",
+  "flow": "manage_account",
+  "branch": null,
+  "policy_id": "POL-020",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-020-R1",
+    "POL-020-R2",
+    "POL-020-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status_credit_missing' (flow: Manage Account). Governing policy: Missing Credit Investigation Policy (POL-020 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "crystal minh"
+      ]
+    },
+    {
+      "button": "record-reason",
+      "values": [
+        "subscription refund"
+      ]
+    },
+    {
+      "button": "ask-the-oracle",
+      "values": []
+    }
+  ],
+  "postcondition": "A system determination is retrieved, gating the next step",
+  "provenance_convo_ids": [
+    1264,
+    1385,
+    1645,
+    2081,
+    2268
+  ],
+  "provenance_count_in_cluster": 31,
+  "cluster_size": 31,
+  "is_negative_control": false,
+  "skill_id": "SK-064"
+}

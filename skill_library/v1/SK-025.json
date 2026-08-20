@@ -1,0 +1,57 @@
+{
+  "subflow": "status_quantity",
+  "flow": "order_issue",
+  "branch": null,
+  "policy_id": "POL-008",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-008-R1",
+    "POL-008-R2",
+    "POL-008-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status_quantity' (flow: Order Issue). Governing policy: Order Quantity Discrepancy Policy (POL-008 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "albert sanders"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "albert sanders",
+        "0ucy1jycy1",
+        "9548369801"
+      ]
+    },
+    {
+      "button": "ask-the-oracle",
+      "values": []
+    },
+    {
+      "button": "shipping-status",
+      "values": [
+        "out for delivery"
+      ]
+    },
+    {
+      "button": "offer-refund",
+      "values": [
+        "59"
+      ]
+    }
+  ],
+  "postcondition": "A refund is issued to the customer",
+  "provenance_convo_ids": [
+    1729,
+    3042,
+    4995,
+    5016,
+    5572
+  ],
+  "provenance_count_in_cluster": 14,
+  "cluster_size": 14,
+  "is_negative_control": false,
+  "skill_id": "SK-025"
+}

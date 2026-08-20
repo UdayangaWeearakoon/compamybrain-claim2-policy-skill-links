@@ -1,0 +1,47 @@
+{
+  "subflow": "recover_username",
+  "flow": "account_access",
+  "branch": null,
+  "policy_id": "POL-012",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-012-R1",
+    "POL-012-R2",
+    "POL-012-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'recover_username' (flow: Account Access). Governing policy: Username Recovery Policy (POL-012 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "joyce wu"
+      ]
+    },
+    {
+      "button": "pull-up-account",
+      "values": [
+        "joyce wu"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "joyce wu",
+        "n/a",
+        "n/a"
+      ]
+    }
+  ],
+  "postcondition": "Identity is verified, gating the next step",
+  "provenance_convo_ids": [
+    2593,
+    3291,
+    4046,
+    7270,
+    8198
+  ],
+  "provenance_count_in_cluster": 5,
+  "cluster_size": 5,
+  "is_negative_control": false,
+  "skill_id": "SK-041"
+}

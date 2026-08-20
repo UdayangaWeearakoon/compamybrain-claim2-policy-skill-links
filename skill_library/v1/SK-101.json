@@ -1,0 +1,53 @@
+{
+  "subflow": "manage_pay_bill",
+  "flow": "subscription_inquiry",
+  "branch": null,
+  "policy_id": "POL-033",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-033-R1",
+    "POL-033-R2",
+    "POL-033-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_pay_bill' (flow: Subscription Inquiry). Governing policy: Subscription Bill Payment Policy (POL-033 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "chloe zhang"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "chloe zhang",
+        "q4hrvddmya",
+        "7823615817"
+      ]
+    },
+    {
+      "button": "enter-details",
+      "values": [
+        "99"
+      ]
+    },
+    {
+      "button": "update-account",
+      "values": [
+        "renew subscription"
+      ]
+    }
+  ],
+  "postcondition": "The account is updated per the requested change",
+  "provenance_convo_ids": [
+    742,
+    1292,
+    1455,
+    1659,
+    2482
+  ],
+  "provenance_count_in_cluster": 48,
+  "cluster_size": 48,
+  "is_negative_control": false,
+  "skill_id": "SK-101"
+}

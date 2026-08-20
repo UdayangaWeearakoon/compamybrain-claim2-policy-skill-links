@@ -1,0 +1,57 @@
+{
+  "subflow": "status_mystery_fee",
+  "flow": "order_issue",
+  "branch": "gold",
+  "policy_id": "POL-005",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-005-R1",
+    "POL-005-R2",
+    "POL-005-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status_mystery_fee' (flow: Order Issue). Customer's membership level is gold. Governing policy: Order Fee Dispute Policy (POL-005 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "david williams"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "david williams",
+        "p1suohzktq",
+        "7364639301"
+      ]
+    },
+    {
+      "button": "ask-the-oracle",
+      "values": []
+    },
+    {
+      "button": "membership",
+      "values": [
+        "gold"
+      ]
+    },
+    {
+      "button": "update-order",
+      "values": [
+        "5"
+      ]
+    }
+  ],
+  "postcondition": "The order is updated per the requested change",
+  "provenance_convo_ids": [
+    234,
+    1232,
+    1908,
+    3570,
+    3716
+  ],
+  "provenance_count_in_cluster": 17,
+  "cluster_size": 32,
+  "is_negative_control": false,
+  "skill_id": "SK-015"
+}

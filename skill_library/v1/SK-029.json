@@ -1,0 +1,42 @@
+{
+  "subflow": "manage_downgrade",
+  "flow": "order_issue",
+  "branch": "guest",
+  "policy_id": "POL-009",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-009-R1",
+    "POL-009-R2",
+    "POL-009-R3",
+    "POL-009-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_downgrade' (flow: Order Issue). Customer's membership level is guest. Governing policy: Order Shipping Tier Change Policy (POL-009 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "david williams"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "david williams",
+        "nhvavobb9c",
+        "8674893747"
+      ]
+    }
+  ],
+  "postcondition": "Identity is verified, gating the next step",
+  "provenance_convo_ids": [
+    878,
+    1233,
+    1824,
+    2668,
+    3197
+  ],
+  "provenance_count_in_cluster": 18,
+  "cluster_size": 55,
+  "is_negative_control": false,
+  "skill_id": "SK-029"
+}

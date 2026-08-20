@@ -1,0 +1,45 @@
+{
+  "subflow": "status_quantity",
+  "flow": "order_issue",
+  "branch": null,
+  "policy_id": "POL-008",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-008-R1",
+    "POL-008-R2",
+    "POL-008-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status_quantity' (flow: Order Issue). Governing policy: Order Quantity Discrepancy Policy (POL-008 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "sanya afzal"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "sanya afzal",
+        "ea6ahjn0ec",
+        "7969620792"
+      ]
+    },
+    {
+      "button": "ask-the-oracle",
+      "values": []
+    }
+  ],
+  "postcondition": "A system determination is retrieved, gating the next step",
+  "provenance_convo_ids": [
+    117,
+    1244,
+    1311,
+    1374,
+    1528
+  ],
+  "provenance_count_in_cluster": 57,
+  "cluster_size": 57,
+  "is_negative_control": false,
+  "skill_id": "SK-024"
+}

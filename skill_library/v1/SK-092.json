@@ -1,0 +1,59 @@
+{
+  "subflow": "missing",
+  "flow": "shipping_issue",
+  "branch": null,
+  "policy_id": "POL-030",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-030-R1",
+    "POL-030-R2",
+    "POL-030-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'missing' (flow: Shipping Issue). Governing policy: Missing Item Policy (POL-030 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "joseph banter"
+      ]
+    },
+    {
+      "button": "validate-purchase",
+      "values": [
+        "jbanter9",
+        "jbanter9@email.com",
+        "8513889366"
+      ]
+    },
+    {
+      "button": "record-reason",
+      "values": [
+        "9"
+      ]
+    },
+    {
+      "button": "update-order",
+      "values": [
+        "8892 lincoln ave, jacksonville, ca 47690"
+      ]
+    },
+    {
+      "button": "make-purchase",
+      "values": [
+        "calvin klein boots"
+      ]
+    }
+  ],
+  "postcondition": "The purchase/back-order is completed on the customer's behalf",
+  "provenance_convo_ids": [
+    450,
+    979,
+    1591,
+    3122,
+    3339
+  ],
+  "provenance_count_in_cluster": 45,
+  "cluster_size": 45,
+  "is_negative_control": false,
+  "skill_id": "SK-092"
+}

@@ -1,0 +1,41 @@
+{
+  "subflow": "status_shipping_question",
+  "flow": "manage_account",
+  "branch": null,
+  "policy_id": "POL-019",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-019-R1",
+    "POL-019-R2",
+    "POL-019-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status_shipping_question' (flow: Manage Account). Governing policy: International Shipping Question Policy (POL-019 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "david williams"
+      ]
+    },
+    {
+      "button": "ask-the-oracle",
+      "values": []
+    },
+    {
+      "button": "send-link",
+      "values": []
+    }
+  ],
+  "postcondition": "A reference link is sent to the customer",
+  "provenance_convo_ids": [
+    1518,
+    1943,
+    2413,
+    3018,
+    3093
+  ],
+  "provenance_count_in_cluster": 48,
+  "cluster_size": 48,
+  "is_negative_control": false,
+  "skill_id": "SK-060"
+}

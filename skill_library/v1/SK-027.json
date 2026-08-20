@@ -1,0 +1,42 @@
+{
+  "subflow": "manage_downgrade",
+  "flow": "order_issue",
+  "branch": "bronze",
+  "policy_id": "POL-009",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-009-R1",
+    "POL-009-R2",
+    "POL-009-R3",
+    "POL-009-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_downgrade' (flow: Order Issue). Customer's membership level is bronze. Governing policy: Order Shipping Tier Change Policy (POL-009 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "sanya afzal"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "sanya afzal",
+        "t0qgrwjwzj",
+        "6957280297"
+      ]
+    }
+  ],
+  "postcondition": "Identity is verified, gating the next step",
+  "provenance_convo_ids": [
+    416,
+    544,
+    2582,
+    3308,
+    3616
+  ],
+  "provenance_count_in_cluster": 8,
+  "cluster_size": 44,
+  "is_negative_control": false,
+  "skill_id": "SK-027"
+}

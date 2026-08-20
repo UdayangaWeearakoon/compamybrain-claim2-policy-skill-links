@@ -1,0 +1,41 @@
+{
+  "subflow": "credit_card",
+  "flow": "troubleshoot_site",
+  "branch": null,
+  "policy_id": "POL-015",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-015-R1",
+    "POL-015-R2",
+    "POL-015-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'credit_card' (flow: Troubleshoot Site). Governing policy: Payment Card and Cart Troubleshooting Policy (POL-015 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "david williams"
+      ]
+    },
+    {
+      "button": "try-again",
+      "values": []
+    },
+    {
+      "button": "log-out-in",
+      "values": []
+    }
+  ],
+  "postcondition": "The customer is instructed to log out/in, no account change is made",
+  "provenance_convo_ids": [
+    715,
+    1355,
+    1428,
+    1431,
+    1775
+  ],
+  "provenance_count_in_cluster": 19,
+  "cluster_size": 19,
+  "is_negative_control": false,
+  "skill_id": "SK-050"
+}

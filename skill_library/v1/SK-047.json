@@ -1,0 +1,49 @@
+{
+  "subflow": "reset_2fa",
+  "flow": "account_access",
+  "branch": null,
+  "policy_id": "POL-014",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-014-R1",
+    "POL-014-R2",
+    "POL-014-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'reset_2fa' (flow: Account Access). Governing policy: Two-Factor Reset Policy (POL-014 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "david williams"
+      ]
+    },
+    {
+      "button": "enter-details",
+      "values": [
+        "7432"
+      ]
+    },
+    {
+      "button": "enter-details",
+      "values": [
+        "243418"
+      ]
+    },
+    {
+      "button": "send-link",
+      "values": []
+    }
+  ],
+  "postcondition": "A reference link is sent to the customer",
+  "provenance_convo_ids": [
+    2063,
+    2338,
+    3566,
+    5021,
+    5064
+  ],
+  "provenance_count_in_cluster": 11,
+  "cluster_size": 11,
+  "is_negative_control": false,
+  "skill_id": "SK-047"
+}

@@ -1,0 +1,55 @@
+{
+  "subflow": "status_due_date",
+  "flow": "subscription_inquiry",
+  "branch": null,
+  "policy_id": "POL-032",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-032-R1",
+    "POL-032-R2",
+    "POL-032-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status_due_date' (flow: Subscription Inquiry). Governing policy: Subscription Status Policy (POL-032 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "norman bouchard"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "norman bouchard",
+        "8lvspgqss0",
+        "8471934753"
+      ]
+    },
+    {
+      "button": "subscription-status",
+      "values": []
+    },
+    {
+      "button": "enter-details",
+      "values": [
+        "14"
+      ]
+    },
+    {
+      "button": "send-link",
+      "values": []
+    }
+  ],
+  "postcondition": "A reference link is sent to the customer",
+  "provenance_convo_ids": [
+    2638,
+    3022,
+    3312,
+    3781,
+    4111
+  ],
+  "provenance_count_in_cluster": 33,
+  "cluster_size": 33,
+  "is_negative_control": false,
+  "skill_id": "SK-100"
+}

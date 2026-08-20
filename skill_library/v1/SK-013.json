@@ -1,0 +1,60 @@
+{
+  "subflow": "return_size",
+  "flow": "product_defect",
+  "branch": "silver",
+  "policy_id": "POL-004",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-004-R1",
+    "POL-004-R2",
+    "POL-004-R4",
+    "POL-004-R5"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'return_size' (flow: Product Defect). Customer's membership level is silver. Governing policy: Product Return Policy (POL-004 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "alessandro phoenix"
+      ]
+    },
+    {
+      "button": "validate-purchase",
+      "values": [
+        "alessandrop894",
+        "alessandrop894@email.com",
+        "1978454970"
+      ]
+    },
+    {
+      "button": "membership",
+      "values": [
+        "silver"
+      ]
+    },
+    {
+      "button": "enter-details",
+      "values": [
+        "3827 circle drive baltimore, mi 65255"
+      ]
+    },
+    {
+      "button": "update-order",
+      "values": [
+        "by mail"
+      ]
+    }
+  ],
+  "postcondition": "The order is updated per the requested change",
+  "provenance_convo_ids": [
+    396,
+    589,
+    876,
+    1373,
+    1482
+  ],
+  "provenance_count_in_cluster": 60,
+  "cluster_size": 108,
+  "is_negative_control": false,
+  "skill_id": "SK-013"
+}

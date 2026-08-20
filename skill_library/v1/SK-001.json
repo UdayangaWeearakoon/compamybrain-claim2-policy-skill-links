@@ -1,0 +1,60 @@
+{
+  "subflow": "refund_initiate",
+  "flow": "product_defect",
+  "branch": null,
+  "policy_id": "POL-001",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-001-R1",
+    "POL-001-R2",
+    "POL-001-R3",
+    "POL-001-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'refund_initiate' (flow: Product Defect). Governing policy: Refund Initiation Policy (POL-001 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "rodriguez domingo"
+      ]
+    },
+    {
+      "button": "validate-purchase",
+      "values": [
+        "rdomingo924",
+        "rdomingo924@email.com",
+        "2870275995"
+      ]
+    },
+    {
+      "button": "record-reason",
+      "values": [
+        "credit card"
+      ]
+    },
+    {
+      "button": "enter-details",
+      "values": [
+        "junbgcgzfz"
+      ]
+    },
+    {
+      "button": "offer-refund",
+      "values": [
+        "89"
+      ]
+    }
+  ],
+  "postcondition": "A refund is issued to the customer",
+  "provenance_convo_ids": [
+    2736,
+    3949,
+    4209,
+    4229,
+    4522
+  ],
+  "provenance_count_in_cluster": 44,
+  "cluster_size": 44,
+  "is_negative_control": false,
+  "skill_id": "SK-001"
+}

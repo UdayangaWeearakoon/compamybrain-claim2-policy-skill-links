@@ -1,0 +1,54 @@
+{
+  "subflow": "cost",
+  "flow": "shipping_issue",
+  "branch": null,
+  "policy_id": "POL-031",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-031-R1",
+    "POL-031-R2",
+    "POL-031-R3",
+    "POL-031-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'cost' (flow: Shipping Issue). Governing policy: Shipping Cost Policy (POL-031 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "rodriguez domingo"
+      ]
+    },
+    {
+      "button": "validate-purchase",
+      "values": [
+        "rodriguezdomingo213",
+        "rodriguezdomingo213@email.com",
+        "5238619247"
+      ]
+    },
+    {
+      "button": "shipping-status",
+      "values": [
+        "delivered"
+      ]
+    },
+    {
+      "button": "offer-refund",
+      "values": [
+        "8"
+      ]
+    }
+  ],
+  "postcondition": "A refund is issued to the customer",
+  "provenance_convo_ids": [
+    906,
+    1805,
+    2065,
+    2226,
+    2454
+  ],
+  "provenance_count_in_cluster": 56,
+  "cluster_size": 56,
+  "is_negative_control": false,
+  "skill_id": "SK-095"
+}

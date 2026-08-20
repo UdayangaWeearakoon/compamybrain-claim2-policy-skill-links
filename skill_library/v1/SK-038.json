@@ -1,0 +1,59 @@
+{
+  "subflow": "manage_cancel",
+  "flow": "order_issue",
+  "branch": "silver",
+  "policy_id": "POL-011",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-011-R1",
+    "POL-011-R2",
+    "POL-011-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_cancel' (flow: Order Issue). Customer's membership level is silver. Governing policy: Order Cancellation Policy (POL-011 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "norman bouchard"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "norman bouchard",
+        "0rwerb62nm",
+        "3699462967"
+      ]
+    },
+    {
+      "button": "shipping-status",
+      "values": [
+        "delivered"
+      ]
+    },
+    {
+      "button": "membership",
+      "values": [
+        "sliver"
+      ]
+    },
+    {
+      "button": "offer-refund",
+      "values": [
+        "69"
+      ]
+    }
+  ],
+  "postcondition": "A refund is issued to the customer",
+  "provenance_convo_ids": [
+    3214,
+    3302,
+    3562,
+    3568,
+    4643
+  ],
+  "provenance_count_in_cluster": 10,
+  "cluster_size": 27,
+  "is_negative_control": false,
+  "skill_id": "SK-038"
+}

@@ -1,0 +1,51 @@
+{
+  "subflow": "manage_pay_bill",
+  "flow": "subscription_inquiry",
+  "branch": null,
+  "policy_id": "POL-033",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-033-R1",
+    "POL-033-R2",
+    "POL-033-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_pay_bill' (flow: Subscription Inquiry). Governing policy: Subscription Bill Payment Policy (POL-033 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "rodriguez domingo"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "rodriguez domingo",
+        "zetfbepup7",
+        "0151897535"
+      ]
+    },
+    {
+      "button": "subscription-status",
+      "values": []
+    },
+    {
+      "button": "update-account",
+      "values": [
+        "renew subscription"
+      ]
+    }
+  ],
+  "postcondition": "The account is updated per the requested change",
+  "provenance_convo_ids": [
+    122,
+    383,
+    949,
+    5003,
+    6168
+  ],
+  "provenance_count_in_cluster": 10,
+  "cluster_size": 10,
+  "is_negative_control": false,
+  "skill_id": "SK-103"
+}

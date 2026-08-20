@@ -40,6 +40,15 @@ policy_corpus/      Versioned policy corpus distilled from ABCD's agent guidelin
 scripts/            Deterministic build scripts for the policy corpus
   build_policy_corpus_v1.py
   freeze_and_hash.py
+skill_library/      Distilled skills (precondition/action/postcondition) + dependency links
+  v1/               131 frozen skills (115 policy-linked, 16 negative control), read-only
+  audit/            20% link-quality audit: sample, two-annotator verdicts, kappa, report
+  hashes/           Per-file SHA-256 + skill-library fingerprint
+  dependency_links.json / .csv   Flat (skill_id, policy_id, policy_version, rule_ids) table
+  CONSTRUCTION.md   Source, construction procedure, composition stats, known limitations
+scripts/            (continued) extract_action_traces.py, distill_skills.py,
+                    validate_skill_library.py, compute_audit_kappa.py,
+                    apply_audit_exclusions.py, freeze_and_hash_skills.py
 ```
 
 ## Getting the data
@@ -71,7 +80,14 @@ Or download directly from the links in the
       rules), hashed and frozen. Corpus fingerprint:
       `dd94cf1c9567fed864126bc48c7bd954e7643033037da4fff704d1b9b7441d87`. See
       `policy_corpus/datasheet.md` for full construction detail.
-- [ ] Phase 2 — Skill distillation + dependency link recording
+- [x] **Phase 2 — Skill distillation + dependency link recording.** 131
+      skills distilled from ABCD action traces under the v1 policy corpus
+      (115 policy-linked, 16 negative control = 12.2%); all 37 v1 policies
+      have >=2 linked skills. 20% sample audited by two independent
+      annotators, Cohen's kappa = 1.0 (threshold 0.8); both flagged the
+      same 2 spurious skills, removed. Skill-library fingerprint:
+      `4a1aea880cb1d5abafe40864a5919a4bf91b37ec5c3a92c3f1331ef5cc48e4e4`.
+      See `skill_library/CONSTRUCTION.md` for full construction detail.
 - [ ] Phase 3 — Inject supersessions (v2 policies) + ground truth labels
 - [ ] Phase 4 — Run Condition A (SKILLGUARD baseline) vs. Condition B
       (dependency-link detector)

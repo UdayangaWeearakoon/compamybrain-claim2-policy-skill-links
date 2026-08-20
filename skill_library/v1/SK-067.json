@@ -1,0 +1,48 @@
+{
+  "subflow": "manage_change_address",
+  "flow": "manage_account",
+  "branch": null,
+  "policy_id": "POL-021",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-021-R1",
+    "POL-021-R2",
+    "POL-021-R3",
+    "POL-021-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_change_address' (flow: Manage Account). Governing policy: Account Profile Update Policy (POL-021 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "crystal minh"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "895754",
+        "cyrstalminh173",
+        "crystalminh173@email.com"
+      ]
+    },
+    {
+      "button": "update-account",
+      "values": [
+        "7788 2nd ave"
+      ]
+    }
+  ],
+  "postcondition": "The account is updated per the requested change",
+  "provenance_convo_ids": [
+    130,
+    242,
+    338,
+    478,
+    872
+  ],
+  "provenance_count_in_cluster": 10,
+  "cluster_size": 10,
+  "is_negative_control": false,
+  "skill_id": "SK-067"
+}

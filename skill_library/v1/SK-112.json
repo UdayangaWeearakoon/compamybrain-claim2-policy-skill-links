@@ -1,0 +1,42 @@
+{
+  "subflow": "boots",
+  "flow": "single_item_query",
+  "branch": null,
+  "policy_id": "POL-036",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-036-R1",
+    "POL-036-R2",
+    "POL-036-R3",
+    "POL-036-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'boots' (flow: Single-Item Query). Governing policy: Single-Item Product FAQ Policy (POL-036 v1).",
+  "action_sequence": [
+    {
+      "button": "search-faq",
+      "values": []
+    },
+    {
+      "button": "search-boots",
+      "values": []
+    },
+    {
+      "button": "select-faq",
+      "values": [
+        "boots_how_1"
+      ]
+    }
+  ],
+  "postcondition": "The 'select-faq' action is taken as the final step.",
+  "provenance_convo_ids": [
+    168,
+    273,
+    345,
+    635,
+    677
+  ],
+  "provenance_count_in_cluster": 139,
+  "cluster_size": 139,
+  "is_negative_control": false,
+  "skill_id": "SK-112"
+}

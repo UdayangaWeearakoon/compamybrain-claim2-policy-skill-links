@@ -1,0 +1,32 @@
+{
+  "subflow": null,
+  "flow": null,
+  "branch": null,
+  "policy_id": null,
+  "policy_version": null,
+  "rule_ids": [],
+  "precondition": "Validate Purchase (username/email/order ID) is required before many unrelated procedures continue, but the *validation mechanic itself* carries no branching logic -- it is a gate, not a rule with a consequence that differs by input, so it was not encoded as a standalone testable rule anywhere on its own. (subcluster: purchase_dispute)",
+  "action_sequence": [
+    {
+      "button": "validate-purchase",
+      "values": [
+        "davidwilliams952",
+        "davidwilliams952@email.com",
+        "0043600739"
+      ]
+    }
+  ],
+  "postcondition": "No policy-governed consequence follows from this step alone; observed across 6 distinct subflows (bad_price_competitor, bad_price_yesterday, mistimed_billing_already_returned, mistimed_billing_never_bought, out_of_stock_general, out_of_stock_one_item).",
+  "provenance_convo_ids": [
+    1699,
+    3581,
+    3608,
+    8309,
+    10585
+  ],
+  "provenance_count_in_cluster": 210,
+  "cluster_size": 1837,
+  "is_negative_control": true,
+  "negative_control_name": "Purchase validation as a bare prerequisite (purchase_dispute)",
+  "skill_id": "SK-129"
+}

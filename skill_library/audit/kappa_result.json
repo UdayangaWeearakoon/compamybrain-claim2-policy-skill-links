@@ -1,0 +1,13 @@
+{
+  "n": 23,
+  "observed_agreement": 1.0,
+  "expected_agreement": 0.8412098298676747,
+  "cohen_kappa": 1.0,
+  "disagreements": [],
+  "flagged_by_both_annotators": [
+    "SK-053",
+    "SK-090"
+  ],
+  "threshold": 0.8,
+  "passes_threshold": true
+}

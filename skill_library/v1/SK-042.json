@@ -1,0 +1,42 @@
+{
+  "subflow": "recover_password",
+  "flow": "account_access",
+  "branch": null,
+  "policy_id": "POL-013",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-013-R1",
+    "POL-013-R2"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'recover_password' (flow: Account Access). Governing policy: Password Recovery Policy (POL-013 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "david williams"
+      ]
+    },
+    {
+      "button": "enter-details",
+      "values": [
+        "dwilliams510"
+      ]
+    },
+    {
+      "button": "make-password",
+      "values": []
+    }
+  ],
+  "postcondition": "A new password is issued",
+  "provenance_convo_ids": [
+    377,
+    582,
+    751,
+    902,
+    933
+  ],
+  "provenance_count_in_cluster": 142,
+  "cluster_size": 142,
+  "is_negative_control": false,
+  "skill_id": "SK-042"
+}

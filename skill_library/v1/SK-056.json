@@ -1,0 +1,47 @@
+{
+  "subflow": "status_service_added",
+  "flow": "manage_account",
+  "branch": null,
+  "policy_id": "POL-017",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-017-R1",
+    "POL-017-R2",
+    "POL-017-R3"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'status_service_added' (flow: Manage Account). Governing policy: Add-on Service Dispute Policy (POL-017 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "chloe zhang"
+      ]
+    },
+    {
+      "button": "record-reason",
+      "values": [
+        "news"
+      ]
+    },
+    {
+      "button": "ask-the-oracle",
+      "values": []
+    },
+    {
+      "button": "offer-refund",
+      "values": [
+        "40"
+      ]
+    }
+  ],
+  "postcondition": "A refund is issued to the customer",
+  "provenance_convo_ids": [
+    4869,
+    9560,
+    10470
+  ],
+  "provenance_count_in_cluster": 3,
+  "cluster_size": 3,
+  "is_negative_control": false,
+  "skill_id": "SK-056"
+}

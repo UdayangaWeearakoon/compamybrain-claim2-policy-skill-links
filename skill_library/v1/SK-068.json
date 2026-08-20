@@ -1,0 +1,62 @@
+{
+  "subflow": "manage_change_address",
+  "flow": "manage_account",
+  "branch": null,
+  "policy_id": "POL-021",
+  "policy_version": "v1",
+  "rule_ids": [
+    "POL-021-R1",
+    "POL-021-R2",
+    "POL-021-R3",
+    "POL-021-R4"
+  ],
+  "precondition": "Customer intent matches ABCD subflow 'manage_change_address' (flow: Manage Account). Governing policy: Account Profile Update Policy (POL-021 v1).",
+  "action_sequence": [
+    {
+      "button": "pull-up-account",
+      "values": [
+        "chloe zhang"
+      ]
+    },
+    {
+      "button": "record-reason",
+      "values": [
+        "4290 woodshore st"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "81035",
+        "6377221345",
+        "chloez84@email.com"
+      ]
+    },
+    {
+      "button": "verify-identity",
+      "values": [
+        "chloez84@email.com",
+        "930805",
+        "81035"
+      ]
+    },
+    {
+      "button": "update-account",
+      "values": [
+        "4390 woodshore st"
+      ]
+    }
+  ],
+  "postcondition": "The account is updated per the requested change",
+  "provenance_convo_ids": [
+    374,
+    1254,
+    1833,
+    2025,
+    2753
+  ],
+  "provenance_count_in_cluster": 10,
+  "cluster_size": 10,
+  "is_negative_control": false,
+  "skill_id": "SK-068"
+}
